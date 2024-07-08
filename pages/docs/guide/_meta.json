@@ -1,0 +1,10 @@
+{
+    "introduction": "Introd",
+    "----": {
+        "type": "separator",
+        "title": "Installation"
+    },
+    "next-js": "Install Next.js",
+    "tailwind-css": "Install Tailwind CSS",
+    "add-utilities": "Add utilities"
+}

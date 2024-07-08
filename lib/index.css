@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  scroll-behavior: smooth;
+  background-color: #000;
+}
+@font-face {
+  font-family: "Geist";
+  src: url("./font/GeistVF.woff2") format("woff2-variations");
+  font-weight: 100 900; /* Adjust the range according to your font */
+  font-style: normal;
+}
+
+.font-fira-300 {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-fira-400 {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-fira-500 {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-fira-600 {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-fira-700 {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.font-montserrat-100 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+.font-montserrat-200 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+.font-montserrat-300 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.font-montserrat-400 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-montserrat-500 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.font-montserrat-600 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.font-montserrat-700 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.font-montserrat-800 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+.font-montserrat-900 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.ghost-bg {
+  background-color: transparent;
+}
+.ghost-text {
+  @apply text-rose-100;
+}
+
+.ghost-hover {
+  background-color: #ffe4e60d;
+}
+.bg-primary-100 {
+  @apply bg-rose-100;
+}
+.bg-primary-200 {
+  @apply bg-rose-200;
+}
+.bg-primary-300 {
+  @apply bg-rose-300;
+}
+.bg-primary-400 {
+  @apply bg-rose-400;
+}
+.bg-primary-500 {
+  @apply bg-rose-500;
+}
+.bg-primary-600 {
+  @apply bg-rose-600;
+}
+.bg-primary-700 {
+  @apply bg-rose-700;
+}
+.bg-primary-800 {
+  @apply bg-rose-800;
+}
+.bg-primary-900 {
+  @apply bg-rose-900;
+}
+
+.text-primary-100 {
+  @apply text-rose-100;
+}
+.text-primary-200 {
+  @apply text-rose-200;
+}
+.text-primary-300 {
+  @apply text-rose-300;
+}
+.text-primary-400 {
+  @apply text-rose-400;
+}
+.text-primary-500 {
+  @apply text-rose-500;
+}
+.text-primary-600 {
+  @apply text-rose-600;
+}
+.text-primary-700 {
+  @apply text-rose-700;
+}
+.text-primary-800 {
+  @apply text-rose-800;
+}
+.text-primary-900 {
+  @apply text-rose-900;
+}
+
+.border-primary-100 {
+  @apply border-rose-100;
+}
+.border-primary-200 {
+  @apply border-rose-200;
+}
+.border-primary-300 {
+  @apply border-rose-300;
+}
+.border-primary-400 {
+  @apply border-rose-400;
+}
+.border-primary-500 {
+  @apply border-rose-500;
+}
+.border-primary-600 {
+  @apply border-rose-600;
+}
+.border-primary-700 {
+  @apply border-rose-700;
+}
+.border-primary-800 {
+  @apply border-rose-800;
+}
+.border-primary-900 {
+  @apply border-rose-900;
+}
+
+.cardeffect {
+  @apply rounded-md border border-gray-100/20 bg-white/5 backdrop-blur-2xl backdrop-filter;
+}
+.bg-linear-zinc-to-neutral {
+  @apply bg-gradient-to-tr from-black to-zinc-950;
+}
+
+.hero-glow {
+  width: calc(100dvw - 10rem);
+  border-radius: 100%;
+  /* background-color: #30304d; */
+  background-color: #513748;
+  height: 10rem;
+}
+.fading-out-2 {
+  mask-image: linear-gradient(180deg, #fff 50%, transparent);
+}
+
+.perspective {
+  perspective: 1000px;
+}
+@keyframes moveInCircle {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translate(-50%, -70%);
+  }
+  50% {
+    transform: translate(-50%, -30%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translate(-70%, -50%);
+  }
+  50% {
+    transform: translate(-30%, -50%);
+  }
+  100% {
+    transform: translate(-70%, -50%);
+  }
+}
+
+/* Rest of your CSS styles here */
+.gradient-bg {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.text-container {
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 96px;
+  opacity: 0.8;
+  user-select: none;
+  text-shadow: -5px -5px rgb(236, 236, 236);
+}
+
+.gradients-container {
+  filter: url(#goo) blur(40px);
+  width: 100%;
+  height: 100%;
+}
+
+.interactive {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -50%;
+  left: -50%;
+  opacity: 0.7;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}

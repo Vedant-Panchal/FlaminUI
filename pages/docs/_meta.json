@@ -1,0 +1,17 @@
+{
+    "-": {
+        "type": "separator",
+        "title": "Keep tabs on us"
+    },
+    "--": {
+        "title": "X @ProtoUI",
+        "href": "https://x.com/ProtoUI",
+        "newWindow": true
+    },
+    "guide":"Guide",
+    "-----": {
+        "type": "separator",
+        "title": "Components"
+    },
+    "form-components": "Form components"
+}
