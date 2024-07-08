@@ -9,9 +9,8 @@
         "newWindow": true
     },
     "guide":"Guide",
-    "-----": {
+    "---": {
         "type": "separator",
         "title": "Components"
-    },
-    "form-components": "Form components"
+    }
 }
