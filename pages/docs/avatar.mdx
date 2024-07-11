@@ -1,0 +1,63 @@
+<div style={{marginTop: "16px", marginBottom: "16px", display: "flex", alignItems: "center", justifyContent: "center", width:"100%", height:"10rem", flexWrap: "wrap", gap:"1em"}}>
+import Avatar from "@components/Avatar/Avatar";
+import {cn} from "@lib/utils/cn"
+
+<Avatar />
+<Avatar
+isRounded={false}
+location="top-right"
+/>
+<Avatar status="online"/>
+<Avatar
+isRounded={false}
+status="online"/>
+</div>
+
+## Usage
+
+```jsx copy
+import Avatar from '@components/Avatar/Avatar';
+import {cn} from "@lib/utils/cn"
+
+function AvatarDemo() {
+  return (
+        <Avatar />
+        <Avatar
+        isRounded={false}
+        location="top-right"
+        />
+        <Avatar status="online"/>
+        <Avatar
+        isRounded={false}
+        status="online"/>
+  );
+}
+```
+
+## Props
+
+The Avatar component accepts the following props:
+
+| Prop        | Type                                                     | Default                                               | Description                                                      |
+| ----------- | -------------------------------------------------------- | ----------------------------------------------------- | ---------------------------------------------------------------- |
+| `src`       | `string`                                                 | `"https://api.dicebear.com/9.x/big-ears-neutral/svg"` | URL of the avatar image.                                         |
+| `alt`       | `string`                                                 | -                                                     | Alt text for the avatar image.                                   |
+| `isRounded` | `boolean`                                                | `true`                                                | Whether the avatar should be circular or square.                 |
+| `status`    | `"online", "offline", "none"`                            | `"none"`                                              | Status of the user.                                              |
+| `className` | `string`                                                 | -                                                     | Additional CSS classes for the status indicator.                 |
+| `location`  | `"top-left", "top-right", "bottom-left", "bottom-right"` | `"bottom-right"`                                      | Position of the status indicator.                                |
+| `size`      | `"xs", "sm", "md", "lg", number`                         | -                                                     | Size of the avatar. Can be a predefined size or a custom number. |
+
+### Size Details
+
+The `size` prop affects the dimensions of the avatar and its status indicator:
+
+- `"xs"`: 32x32px (avatar), 8x8px (status)
+- `"sm"`: 40x40px (avatar), 12x12px (status)
+- `"md"`: 48x48px (avatar), 16x16px (status)
+- `"lg"`: 64x64px (avatar), 20x20px (status)
+- Custom number: Directly sets the width and height in pixels
+
+If no `size` is specified, it defaults to `"md"` (48x48px).
+import { cn } from "@/lib/utils/cn"
+cn, 
