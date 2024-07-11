@@ -1,0 +1,49 @@
+<div style={{marginTop: "16px", marginBottom: "16px", display: "flex", alignItems: "center", justifyContent: "center", width:"100%", height:"10rem", flexWrap: "wrap", gap:"2em"}}>
+
+import { Toggle } from "@components/Toggle/Toggle";
+import { cn } from "@lib/utils/cn";
+
+<Toggle label="Default Toggle" />
+<Toggle variant="squared" label="Squared Toggle" />
+<Toggle variant="squashed" label="Squashed Toggle" />
+
+</div>
+
+## Usage
+
+```jsx copy
+import {Toggle} from "@components/Toggle/Toggle";
+import {cn} from "@lib/utils/cn"
+
+function ToggleDemo() {
+  return (
+    <Toggle label="Default Toggle" />
+    <Toggle variant="squared" label="Squared Toggle" />
+    <Toggle variant="squashed" label="Squashed Toggle" />
+  );
+}
+```
+
+## Props
+
+The Toggle component accepts the following props:
+
+| Prop           | Type                               | Default | Description                                    |
+| -------------- | ---------------------------------- | ------- | ---------------------------------------------- |
+| `label`        | `string`                           | -       | Optional label for the toggle.                 |
+| `onChange`     | `A function with void return type` | -       | Function called when the toggle state changes. |
+| `initialState` | `boolean`                          | `false` | Initial state of the toggle.                   |
+| `className`    | `string`                           | `""`    | Additional CSS classes for the component.      |
+| `variant`      | `"squared" "squashed" ""`          | `""`    | Visual variant of the toggle.                  |
+
+The component also accepts all valid HTML input attributes except `type` and `onChange`.
+
+### Variant Details
+
+The `variant` prop affects the appearance of the toggle:
+
+- `""` (default): Rounded toggle with standard height
+- `"squared"`: Toggle with square corners
+- `"squashed"`: Flatter toggle with rounded corners
+
+If no `variant` is specified, it defaults to the standard rounded appearance.

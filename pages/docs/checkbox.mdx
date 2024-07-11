@@ -1,0 +1,43 @@
+<div style={{marginTop: "16px", marginBottom: "16px", display: "flex", alignItems: "center", justifyContent: "center", width:"100%", height:"10rem", flexWrap: "wrap", gap:"2em"}}>
+
+import Checkbox from "@components/Checkbox/Checkbox";
+import { cn } from "@lib/utils/cn";
+
+<Checkbox label="Label" />
+
+</div>
+
+## Usage
+
+```jsx copy
+import Checkbox from "@components/Checkbox/Checkbox";
+import {cn} from "@lib/utils/cn"
+
+function CheckboxDemo() {
+  return (
+    <Checkbox label="Label" />
+  );
+}
+```
+
+## Props
+
+The Checkbox component accepts the following props:
+
+| Prop | Type | Default | Description |
+| ---- | ---- | ------- | ----------- |
+| `label` | `string` | - | Optional label for the checkbox. |
+| `className` | `string` | - | Additional CSS classes for styling. |
+
+The component also accepts all valid HTML input attributes except `type` and `onChange`.
+
+
+### Styling
+
+The component uses the following Tailwind CSS classes by default:
+
+- Checkbox: rounded, border-2, transition colors
+- Label: font-geist, font-semibold, text-rose-100
+- Checked state: bg-rose-500, text-white
+
+These styles can be customized or extended using the `className` prop.

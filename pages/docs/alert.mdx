@@ -1,0 +1,74 @@
+<div style={{marginTop: "16px", marginBottom: "16px", display: "flex", alignItems: "center", justifyContent: "center", width:"100%", height:"10rem", flexWrap: "wrap", gap:"2em"}}>
+
+import Alert from "@components/Alert/Alert";
+import AlertTitle from "@components/Alert/AlertTitle";
+import AlertDescription from "@components/Alert/AlertDescription";
+import { cn } from "@lib/utils/cn";
+
+<Alert dismissAfter={200000}>
+    <AlertTitle>This is alert title!</AlertTitle>
+    <AlertDescription>This is alert description!</AlertDescription>
+</Alert>
+
+</div>
+
+## Usage
+
+```jsx copy
+import Alert from "@components/Alert/Alert";
+import AlertTitle from "@components/Alert/AlertTitle";
+import AlertDescription from "@components/Alert/AlertDescription";
+import { cn } from "@lib/utils/cn";
+
+function CheckboxDemo() {
+  return (
+    <Alert dismissAfter={2000}>
+        <AlertTitle>This is alert title!</AlertTitle>
+        <AlertDescription>This is alert description!</AlertDescription>
+    </Alert>
+  );
+}
+```
+
+Sure, here are the props for each component without the additional details:
+
+## Alert Component
+
+### Props
+
+The `Alert` component accepts the following props:
+
+| Prop           | Type         | Default | Description                                                   |
+| -------------- | ------------ | ------- | ------------------------------------------------------------- |
+| `onClose`      | `() => void` | -       | Optional callback function triggered when the alert is closed. |
+| `dismissAfter` | `number`     | `1000`  | Time in milliseconds after which the alert will auto-dismiss.  |
+| `children`     | `ReactNode`  | -       | The content of the alert, typically including `AlertTitle` and `AlertDescription`. |
+| `className`    | `string`     | -       | Additional CSS classes for styling.                            |
+
+The component also accepts all valid HTML div attributes.
+
+## AlertTitle Component
+
+### Props
+
+The `AlertTitle` component accepts the following props:
+
+| Prop       | Type                              | Default | Description                           |
+| ---------- | --------------------------------- | ------- | ------------------------------------- |
+| `children` | `ReactNode`                       | -       | The content of the alert title.       |
+| `className`| `string`                          | -       | Additional CSS classes for styling.   |
+
+The component also accepts all valid HTML heading attributes.
+
+## AlertDescription Component
+
+### Props
+
+The `AlertDescription` component accepts the following props:
+
+| Prop        | Type                              | Default | Description                           |
+| ----------- | --------------------------------- | ------- | ------------------------------------- |
+| `children`  | `ReactNode`                       | -       | The content of the alert description. |
+| `className` | `string`                          | -       | Additional CSS classes for styling.   |
+
+The component also accepts all valid HTML paragraph attributes.
