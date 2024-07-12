@@ -11,7 +11,7 @@ import {
   AccordionItem,
 } from "@lib/index";
 import { buttonVariants } from "@components/Button/Variants";
-import { Dot, Gift, MoveRight, Star, StarHalf } from "lucide-react";
+import { Dot, Gift, MoveRight, SquareArrowOutUpRight, Star, StarHalf } from "lucide-react";
 import {
   Dropdown,
   DropdownButton,
@@ -170,8 +170,9 @@ const Home = () => {
               consectetur, adipisci velit...
             </CardBody>
             <CardFooter className="px-2">
-              <CardButton className="px-3 py-1 font-geist text-base">
-                Read More <MoveRight className="w-5" />
+              <CardButton className="px-3 py-2 font-geist text-base flex flex-row mb-4">
+                  <p>Read More</p>
+                  <MoveRight className="w-5" />
               </CardButton>
             </CardFooter>
           </CardContainer>
@@ -191,7 +192,12 @@ const Home = () => {
                 consectetur, adipisci velit...
               </CardBody>
               <CardFooter>
-                <CardLink href={"/backgrounds"} className="cursor-pointer">See your guidelines</CardLink>
+                <CardLink href={"/backgrounds"} className="cursor-pointer flex flex-row items-center">
+                  <p>See your guidelines</p>
+                  <CardIcon>
+                    <SquareArrowOutUpRight className="ml-3 h-4 w-4 text-primary-550 mt-2" />
+                  </CardIcon>
+                </CardLink>
               </CardFooter>
             </CardContainer>
           </Card>
@@ -306,8 +312,11 @@ const Home = () => {
           <Card className="min-h-90 w-[384px]">
             <CardHeader className="flex items-center justify-between p-2">
               <CardTitle className="items-start">Latest Customers</CardTitle>
-              <CardLink href={"/backgrounds"} className="mr-1 items-end">
-                View All
+              <CardLink href={"/backgrounds"} className="mr-1 items-center flex flex-row">
+                <p>View All</p>
+                <CardIcon>
+                  <SquareArrowOutUpRight className="ml-3 h-4 w-4 text-primary-550 mt-1" />
+                </CardIcon>
               </CardLink>
             </CardHeader>
             <CardBody>
