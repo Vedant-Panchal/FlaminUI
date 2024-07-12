@@ -1,0 +1,39 @@
+<div style={{ marginTop: "16px", marginBottom: "16px", display: 'flex', flexWrap: 'wrap', gap: '2em', justifyContent: 'center', alignItems: 'center', width: '100%', height: '20rem' }}>
+import Button from '@components/Button/Button';
+import { buttonVariants } from "@components/Button/Variants";
+import { cn } from '@lib/utils/cn';
+import { ComponentCard } from "@/components/ui/ComponentCards/ComponentCard";
+
+<>
+    {buttonVariants.map((variant) => (
+        <ComponentCard key={variant}>
+            <Button variant={variant}>Button</Button>
+        </ComponentCard>
+    ))}
+</>
+</div>
+
+## Usage 
+
+```tsx copy
+import Button from '@components/Button/Button';
+import {cn} from "@lib/utils/cn";
+
+function ButtonDemo () {
+    return (
+        <Button variant={cn('primary', 'lg')}>Button</Button>
+    );
+}
+```
+## Props
+
+The button component accepts the following props:
+
+| Prop          | Type                           | Description                                                           |
+|---------------|---------------------------     |-----------------------------------------------------------------------|
+| `children`    | `ReactNode`                    | Content to be displayed inside the button                             |
+| `variant`     | `info`, `success`, `warning`,  | The style variant of the button, used to apply different styles       |
+|               | `error`, `disabled`, `ghost`,  |                                                                       |
+|               | `link`                         |                                                                       |
+| `className`   | `string`                       | Additional classes to be added to the button                          |
+| `...props`    | `any`                          | Any other props you want to pass to the button                        |
