@@ -1,0 +1,103 @@
+<div style={{marginTop: "16px", marginBottom: "16px", display: "flex", alignItems: "center", justifyContent: "center", width:"100%", height:"20rem", flexWrap: "wrap", gap:"2em"}}>
+
+import {
+  Dropdown,
+  DropdownButton,
+  DropdownItem,
+  DropdownContent,
+  DropdownLabel,
+} from "@components/Dropdown/Dropdown";
+
+<Dropdown>
+  <DropdownButton defaultText="Select an option" />
+  <DropdownContent>
+    <DropdownLabel>Options</DropdownLabel>
+    <DropdownItem value="Option 1">Option 1</DropdownItem>
+    <DropdownItem value="Option 2">Option 2</DropdownItem>
+    <DropdownItem value="Option 3">Option 3</DropdownItem>
+  </DropdownContent>
+</Dropdown>
+</div>
+
+## Usage
+
+```jsx copy
+
+import {
+  Dropdown,
+  DropdownButton,
+  DropdownItem,
+  DropdownContent,
+  DropdownLabel,
+} from "@components/Dropdown/Dropdown";
+
+function DropdownDemo() {
+  return (
+  <Dropdown>
+      <DropdownButton defaultText="Select an option" />
+      <DropdownContent>
+        <DropdownLabel>Options</DropdownLabel>
+        <DropdownItem value="Option 1">Option 1</DropdownItem>
+        <DropdownItem value="Option 2">Option 2</DropdownItem>
+        <DropdownItem value="Option 3">Option 3</DropdownItem>
+      </DropdownContent>
+  </Dropdown>
+  );
+}
+```
+
+## Props
+
+### Dropdown Props
+
+The `Dropdown` component accepts the following props:
+
+| Prop                | Type                           | Default    | Description                                                                                               |
+| ------------------- | ------------------------------ | ---------- | --------------------------------------------------------------------------------------------------------- |
+| `children`          | `React.ReactNode`              | -          | The dropdown button and content components.                                                               |
+| `dropdownAnimation` | `"default" | "slideUp" | Variants` | `"default"`  | Animation variant for the dropdown container.                                                             |
+| `itemAnimation`     | `"default" | "slideUp" | Variants` | `"default"`  | Animation variant for the dropdown items.                                                                 |
+| `staggerItems`      | `boolean`                      | `false`    | Whether to stagger the children items.                                                                   |
+
+### DropdownButton Props
+
+The `DropdownButton` component accepts the following props:
+
+| Prop        | Type       | Default        | Description                                        |
+| ----------- | ---------- | -------------- | -------------------------------------------------- |
+| `defaultText` | `string`   | -              | Default text displayed on the button.               |
+| `className`  | `ClassValue` | -              | Additional CSS classes for the button.             |
+
+### DropdownContent Props
+
+The `DropdownContent` component accepts the following props:
+
+| Prop      | Type       | Default | Description        |
+| --------- | ---------- | ------- | ------------------ |
+| `children` | `React.ReactNode` | -       | The dropdown items and labels. |
+
+### DropdownItem Props
+
+The `DropdownItem` component accepts the following props:
+
+| Prop      | Type       | Default | Description           |
+| --------- | ---------- | ------- | --------------------- |
+| `value`   | `string`   | -       | The value of the item. |
+| `children` | `React.ReactNode` | -       | The text or content of the item. |
+| `className` | `ClassValue` | -       | Additional CSS classes for the item. |
+
+### DropdownLabel Props
+
+The `DropdownLabel` component accepts the following props:
+
+| Prop      | Type       | Default | Description        |
+| --------- | ---------- | ------- | ------------------ |
+| `children` | `React.ReactNode` | -       | The label text. |
+
+### DropdownList Props
+
+The `DropdownList` component is a wrapper for the dropdown items. It accepts the following props:
+
+| Prop       | Type       | Default | Description       |
+| ---------- | ---------- | ------- | ----------------- |
+| `className` | `string`   | -       | Additional CSS classes for the list. |
