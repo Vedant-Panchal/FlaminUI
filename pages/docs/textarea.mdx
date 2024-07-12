@@ -1,0 +1,143 @@
+## Variants
+
+### Default
+
+<div style={{marginTop: "16px", marginBottom: "16px", display: "flex", alignItems: "center", justifyContent: "center", width:"100%", height:"10rem", flexWrap: "wrap", gap:"1em"}}>
+import {TextArea} from "@components/TextArea/TextArea";
+import { TextAreaVaraints } from "@lib/types/type";
+import {cn} from "@lib/utils/cn"
+
+<TextArea placeholder="Enter your text here..." variant="" />
+
+</div>
+
+### Info
+
+<div
+  style={{
+    marginTop: "16px",
+    marginBottom: "16px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    height: "10rem",
+    flexWrap: "wrap",
+    gap: "1em",
+  }}
+>
+  <TextArea placeholder="Enter your text here..." variant="info" />
+</div>
+
+### Success
+
+<div
+  style={{
+    marginTop: "16px",
+    marginBottom: "16px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    height: "10rem",
+    flexWrap: "wrap",
+    gap: "1em",
+  }}
+>
+  <TextArea placeholder="Enter your text here..." variant="success" />
+</div>
+
+### Error
+
+<div
+  style={{
+    marginTop: "16px",
+    marginBottom: "16px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    height: "10rem",
+    flexWrap: "wrap",
+    gap: "1em",
+  }}
+>
+  <TextArea placeholder="Enter your text here..." variant="error" />
+</div>
+
+### Warning
+
+<div
+  style={{
+    marginTop: "16px",
+    marginBottom: "16px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    height: "10rem",
+    flexWrap: "wrap",
+    gap: "1em",
+  }}
+>
+  <TextArea placeholder="Enter your text here..." variant="warning" />
+</div>
+
+### Disabled
+
+<div
+  style={{
+    marginTop: "16px",
+    marginBottom: "16px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    height: "10rem",
+    flexWrap: "wrap",
+    gap: "1em",
+  }}
+>
+  <TextArea placeholder="Enter your text here..." variant="disabled" />
+</div>
+
+## Usage
+
+```jsx copy
+import {TextArea} from "@components/TextArea/TextArea";
+import { TextAreaVaraints } from "@lib/types/type";
+import {cn} from "@lib/utils/cn"
+
+function AvatarDemo() {
+  return (
+    {/* variants are arranged in order as show above*/}
+    <TextArea placeholder="Enter your text here..." variant="" />
+    <TextArea placeholder="Enter your text here..." variant="info" />
+    <TextArea placeholder="Enter your text here..." variant="success" />
+    <TextArea placeholder="Enter your text here..." variant="error" />
+    <TextArea placeholder="Enter your text here..." variant="warning" />
+    <TextArea placeholder="Enter your text here..." variant="disabled" />
+  );
+}
+```
+
+## Props
+
+| Prop          | Type                                                | Default                     | Description                                                                                   |
+| ------------- | --------------------------------------------------- | --------------------------- | --------------------------------------------------------------------------------------------- |
+| `placeholder` | `string`                                            | `"Enter your text here..."` | Placeholder text when the textarea is empty.                                                  |
+| `className`   | `string`                                            | -                           | Additional CSS classes for customization.                                                     |
+| `value`       | `string`                                            | -                           | The current value of the textarea.                                                            |
+| `variant`     | `TextAreaVaraints` (enum)                           | `""`                        | Variant style of the textarea.                                                                |
+| `...props`    | `React.TextareaHTMLAttributes<HTMLTextAreaElement>` | -                           | Any additional props accepted by HTML `textarea` element (e.g., `onChange`, `onFocus`, etc.). |
+
+## Variants
+
+| Variant    | Description                                                                     | Classes Used                                                                           |
+| ---------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `info`     | Adds a blue border and focus outline.                                           | `border border-sky-300 focus:outline focus:outline-sky-500 focus:outline-offset-4`     |
+| `success`  | Adds a green border and focus outline.                                          | `border border-teal-300 focus:outline focus:outline-teal-500 focus:outline-offset-4`   |
+| `warning`  | Adds an amber border and focus outline.                                         | `border border-amber-300 focus:outline focus:outline-amber-500 focus:outline-offset-4` |
+| `error`    | Adds a red border and focus outline.                                            | `border border-red-300 focus:outline focus:outline-red-500 focus:outline-offset-4`     |
+| `disabled` | Renders the textarea as disabled with reduced opacity and different text color. | `bg-white border text-gray-800 opacity-50 cursor-not-allowed`                          |
+| `none`     | Default state with no additional styling applied.                               | -                                                                                      |
