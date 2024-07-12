@@ -4,7 +4,6 @@
 @tailwind utilities;
 html {
   scroll-behavior: smooth;
-  background-color: #000;
 }
 
 .font-fira-300 {

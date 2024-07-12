@@ -4,7 +4,7 @@ import { Tabs } from "@src/ui/Navbar/Tabs";
 
 const Navbar = () => {
   return (
-    <header className="fixed left-0 right-0 top-0 z-[9999] flex h-max w-full items-center justify-center space-x-8 px-32 py-4 backdrop-blur-xl  bg-[rgb(77,77,77)]/[0.1%] after:content-[''] after:absolute after:w-full after:h-[1.5px] after:bg-gradient-to-r from-[#787878]/0 via-[#DEDEDE] to-[#787878]/0 after:bottom-0 after:right-0 after:opacity-50">
+    <header className="fixed left-0 right-0 top-0 z-[9999] flex h-max w-full items-center justify-center space-x-8 px-32 py-4 backdrop-blur-xl  bg-[rgb(77,77,77)]/[0.1%] after:content-[''] after:absolute after:w-full after:h-[0.5px] after:bg-gradient-to-r from-[#787878]/0 via-[#DEDEDE] to-[#787878]/0 after:bottom-0 after:right-0 after:opacity-50">
       
       <Link href={"/"} className="absolute left-32">
         <p>

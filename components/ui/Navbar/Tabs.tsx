@@ -29,11 +29,12 @@ const SlideTabs = () => {
       className="relative z-[1000] mx-auto flex items-center justify-center w-fit rounded-full h-max overflow-hidden md:py-2 md:px-0.5"
       style={{
         position: "relative",
-        padding: "1px", // Adjust this value to change border thickness
+        padding: "0.8px", // Adjust this value to change border thickness
       }}
     >
+
       <div
-        className="absolute inset-0 -z-10 "
+        className="absolute inset-0 -z-10"
         style={{
           background: "linear-gradient(to right, rgb(120,120,120,0.2), rgba(255,255,255,0.5),rgb(120,120,120,0.2))",
         }}
