@@ -29,6 +29,8 @@ import {
   CardIcon,
   CardImage,
   CardLink,
+  CardCustomer,
+  CardRating,
 } from "@components/Card/Card";
 import Avatar from "@components/Avatar/Avatar";
 import {
@@ -37,8 +39,6 @@ import {
 } from "@components/Accordion/Accordion";
 import { ComponentCard } from "@/components/ui/ComponentCards/ComponentCard";
 import { ComponentShowcase } from "@/components/ui/ComponentCards/ComponentShowcase";
-import { CardCustomer } from "@/lib/components/Card/CardCustomer";
-import { CardRating } from "@/lib/components/Card/CardRating";
 import Alert from "@/lib/components/Alert/Alert";
 import AlertTitle from "@/lib/components/Alert/AlertTitle";
 import AlertDescription from "@/lib/components/Alert/AlertDescription";
@@ -231,11 +231,11 @@ const Home = () => {
               </CardTitle>
               <div className="flex flex-row">
                 <CardIcon className="flex flex-row">
+                  <Star className="mr-1 h-5 w-5 fill-yellow-200 text-yellow-200" />
+                  <Star className="mr-1 h-5 w-5 fill-yellow-200 text-yellow-200" />
+                  <Star className="mr-1 h-5 w-5 fill-yellow-200 text-yellow-200" />
+                  <Star className="mr-1 h-5 w-5 fill-yellow-200 text-yellow-200" />
                   <StarHalf className="mr-1 h-5 w-5 fill-yellow-200 text-yellow-200" />
-                  <Star className="mr-1 h-5 w-5 fill-yellow-200 text-yellow-200" />
-                  <Star className="mr-1 h-5 w-5 fill-yellow-200 text-yellow-200" />
-                  <Star className="mr-1 h-5 w-5 fill-yellow-200 text-yellow-200" />
-                  <Star className="mr-1 h-5 w-5 fill-yellow-200 text-yellow-200" />
                 </CardIcon>
                 <CardRating>5.0</CardRating>
               </div>
@@ -274,7 +274,7 @@ const Home = () => {
             </CardContainer>
           </Card>
         </ComponentCard>
-        <ComponentCard>
+        {/* <ComponentCard>
           <Card className="min-h-28 w-72 rounded-xl p-4 text-center text-white shadow-lg">
             <CardContainer>
               <CardIcon className="mb-6 flex flex-row-reverse text-white">
@@ -301,7 +301,7 @@ const Home = () => {
               </CardFooter>
             </CardContainer>
           </Card>
-        </ComponentCard>
+        </ComponentCard> */}
         <ComponentCard>
           <Card className="min-h-90 w-[384px]">
             <CardHeader className="flex items-center justify-between p-2">

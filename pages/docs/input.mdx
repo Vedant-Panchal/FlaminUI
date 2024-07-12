@@ -1,0 +1,65 @@
+<div style={{ marginTop: "16px", marginBottom: "16px", display: 'flex', flexWrap: 'wrap', gap: '2em', justifyContent: 'center', alignItems: 'center', width: '100%', height: '30rem' }}>
+import { Input } from '@components/Input/Input';
+import { ComponentCard } from "@/components/ui/ComponentCards/ComponentCard";
+
+  <ComponentCard>
+    <Input placeholder="Enter some text" type="email" className="input-field" />
+  </ComponentCard>
+  <ComponentCard>
+    <Input placeholder="Enter some text" type="text" className="input-field" />
+  </ComponentCard>
+  <ComponentCard>
+    <Input placeholder="Add a file" type="file" className="input-field" />
+  </ComponentCard>
+  <ComponentCard>
+    <Input
+      placeholder="Enter a number"
+      type="number"
+      min={0}
+      max={100}
+      step={1}
+      className="input-field"
+    />
+  </ComponentCard>
+  <ComponentCard>
+    <Input
+      placeholder="Enter some text"
+      type="password"
+      showIcon={true}
+      variant="error"
+      className="input-field"
+    />
+  </ComponentCard>
+</div>
+
+## Usage
+
+```tsx copy
+import { Input } from '@components/Input/Input';
+import { cn } from '@lib/utils/cn';
+
+function inputDemo() {
+  return (
+    <Input placeholder="Enter some text" type="email" className="input-field" />
+  );
+}
+```
+
+## Props
+
+The input component accepts the following props:
+
+| Prop          | Type                            |Default       | Description                                                                 |
+|------------   |--------------------             |-----------   |-----------------------------------------------------------------------------|
+|`label`        | `string`                        | `undefined`  | The label for the input field.                                              |
+|`helperText`   | `string`                        | `undefined`  | Helper text to display below the input field.                               |
+|`placeholder`  | `string`                        | `undefined`  | Placeholder text for the input field.                                       |
+|`className`    | `string`                        | `undefined`  | Additional CSS classes to apply to the input field.                         |
+|`variant`      | `default`, `focused`, `filled`, | `""`         | The visual variant of the input                                             |
+|               | `disabled`, `error`             |              |                                                                             | 
+|`type`         | `text`, `email`, `password`,    | `text`       | The type of input field.                                                    |
+|               | `number`, `file`                |              |                                                                             |
+|`showIcon`     | `boolean`                       | `false`      | Whether to show an icon in the input field.                                 |
+|`min`          | `number`                        | `0`          | The minimum value for a number input field.                                 |
+|`max`          | `number`                        | `100`        | The maximum value for a number input field.                                 |
+|`step`         | `number`                        | `1`          | The step value for a number input field.                                    |

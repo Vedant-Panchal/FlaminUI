@@ -1,0 +1,355 @@
+<div style={{ marginTop: "16px", marginBottom: "16px", width: '100%', height:"100rem", display: "flex", alignItems: "center", justifyContent: "center", gap: "1em", flexWrap: "wrap" }}>
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+  CardButton,
+  CardBody,
+  CardContainer,
+  CardIcon,
+  CardImage,
+  CardLink,
+  CardCustomer,
+  CardRating,
+} from "@components/Card/Card";
+import { ComponentCard } from "@/components/ui/ComponentCards/ComponentCard";
+import { Dot, Gift, MoveRight, Star, StarHalf } from "lucide-react";
+import {cn} from "@lib/utils/cn";
+
+<ComponentCard>
+    <Card>
+        <CardContainer>
+            <CardHeader>
+                <CardTitle>Lorem ipsum dolor sit amet</CardTitle>
+            </CardHeader>
+            <CardBody>
+                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit...
+            </CardBody>
+        </CardContainer>
+    </Card>
+</ComponentCard>
+<ComponentCard>
+    <Card>
+        <CardContainer>
+            <CardHeader>
+                <CardTitle>Lorem ipsum dolor sit amet</CardTitle>
+            </CardHeader>
+            <CardBody>
+                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit...
+            </CardBody>
+            <CardFooter>
+                <CardButton>Read Less</CardButton>
+            </CardFooter>
+        </CardContainer>
+    </Card>
+</ComponentCard>
+<Card className="overflow-hidden rounded-lg border border-white/20 shadow-lg">
+    <CardContainer>
+        <CardImage
+            src={
+                "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+            alt={"error"}
+            className="rounded-b-none"
+        ></CardImage>
+        <CardHeader className="mt-2 px-2">
+            <CardTitle>Lorem ipsum dolor sit amet</CardTitle>
+        </CardHeader>
+        <CardBody className="px-2">
+            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit...
+        </CardBody>
+        <CardFooter className="px-2">
+            <CardButton className="px-3 py-1 font-geist text-base">
+                Read More <MoveRight className="w-5" />
+            </CardButton>
+        </CardFooter>
+    </CardContainer>
+</Card>
+<ComponentCard>
+    <Card>
+        <CardContainer>
+            <CardHeader>
+                <CardIcon>
+                    <Gift className="h-10 w-10" />
+                </CardIcon>
+                <CardTitle>Lorem ipsum dolor sit amet</CardTitle>
+            </CardHeader>
+            <CardBody>
+                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit...
+            </CardBody>
+            <CardFooter>
+                <CardLink href={"/backgrounds"} className="cursor-pointer">See your guidelines</CardLink>
+            </CardFooter>
+        </CardContainer>
+    </Card>
+</ComponentCard>
+<Card className="max-h-56 min-w-96 overflow-hidden rounded-lg border border-white/20 shadow-lg">
+    <CardContainer className="flex h-full flex-row">
+        <CardImage
+            src="https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="error"
+            className="w-5/12 flex-none rounded-b-none object-cover"
+        />
+        <div className="flex flex-grow flex-col">
+            <CardHeader className="mt-2 px-2">
+                <CardTitle className="text-lg font-medium">
+                    Lorem ipsum dolor sit amet
+                </CardTitle>
+            </CardHeader>
+            <CardBody className="overflow-hidden px-2">
+                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit...
+            </CardBody>
+        </div>
+    </CardContainer>
+</Card>
+<Card className="overflow-hidden rounded-lg border border-white/20 shadow-lg">
+    <CardContainer>
+        <CardImage
+            src={
+                "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
+            alt={"error"}
+            className="h-52 min-w-80 rounded-b-none object-cover"
+        ></CardImage>
+        <CardHeader className="mt-2 px-2">
+            <CardTitle className="font-bold">
+                Lorem ipsum dolor sit amet ipsum dolor
+            </CardTitle>
+            <div className="flex flex-row">
+                <CardIcon className="flex flex-row">
+                    <Star className="mr-1 h-5 w-5 fill-yellow-200 text-yellow-200" />
+                    <Star className="mr-1 h-5 w-5 fill-yellow-200 text-yellow-200" />
+                    <Star className="mr-1 h-5 w-5 fill-yellow-200 text-yellow-200" />
+                    <Star className="mr-1 h-5 w-5 fill-yellow-200 text-yellow-200" />
+                    <StarHalf className="mr-1 h-5 w-5 fill-yellow-200 text-yellow-200" />
+                </CardIcon>
+                <CardRating>5.0</CardRating>
+            </div>
+        </CardHeader>
+        <CardFooter className="mb-2 mt-6 flex items-center justify-between px-2">
+            <h1 className="text-2xl font-bold text-white">$69.69</h1>
+            <CardButton className="relative">Add to Cart</CardButton>
+        </CardFooter>
+    </CardContainer>
+</Card>
+<ComponentCard>
+    <Card className="min-h-28 w-72 rounded-xl p-4 text-center text-white shadow-lg">
+        <CardContainer>
+            <CardIcon className="mb-6 flex flex-row-reverse text-white">
+                <Dot className="-mx-1" />
+                <Dot className="-mx-1" />
+                <Dot className="-mx-1" />
+            </CardIcon>
+            <CardHeader className="flex flex-col items-center">
+                <CardImage
+                  src="https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Bonnie Green's profile picture"
+                  className="mx-auto mb-4 h-24 w-24 rounded-full"
+                />
+                <CardTitle>Bonnie Green</CardTitle>
+                <p className="text-gray-400">Visual Designer</p>
+            </CardHeader>
+            <CardFooter className="mt-10 flex justify-center space-x-4">
+                <CardButton className="rounded-lg px-4 py-2">
+                  Add friend
+                </CardButton>
+                <CardButton className="rounded-lg bg-[#FFF1F21A] px-4 py-2 text-white hover:bg-[#FFF1F21A]">
+                  Message
+                </CardButton>
+            </CardFooter>
+        </CardContainer>
+    </Card>
+</ComponentCard>
+<ComponentCard>
+    <Card className="min-h-90 w-[384px]">
+        <CardHeader className="flex items-center justify-between p-2">
+            <CardTitle className="items-start">Latest Customers</CardTitle>
+            <CardLink href={"/backgrounds"} className="mr-1 items-end">
+                View All
+            </CardLink>
+        </CardHeader>
+        <CardBody>
+            <CardCustomer
+                imageSrc={
+                  "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+                name={"Neil Sims"}
+                email={"neilsims@email.com"}
+            ></CardCustomer>
+            <CardCustomer
+                imageSrc={
+                  "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+                name={"Neil Sims"}
+                email={"neilsims@email.com"}
+            ></CardCustomer>
+            <CardCustomer
+                imageSrc={
+                  "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+                name={"Neil Sims"}
+                email={"neilsims@email.com"}
+            ></CardCustomer>
+            <CardCustomer
+                imageSrc={
+                  "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+                name={"Neil Sims"}
+                email={"neilsims@email.com"}
+            ></CardCustomer>
+            <CardCustomer
+                imageSrc={
+                  "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+                name={"Neil Sims"}
+                email={"neilsims@email.com"}
+            ></CardCustomer>
+        </CardBody>
+    </Card>
+</ComponentCard>
+</div>
+
+## Usage
+
+```tsx copy
+import {
+  Card,
+  CardContainer,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+  CardBody,
+} from "@components/Card/Card";
+
+function CardDemo() {
+  return (
+    <Card>
+      <CardContainer>
+        <CardHeader>
+          <CardTitle>Card Title</CardTitle>
+        </CardHeader>
+        <CardBody>
+          Card content goes here...
+        </CardBody>
+        <CardFooter>
+          <CardButton>Action</CardButton>
+        </CardFooter>
+      </CardContainer>
+    </Card>
+  );
+}
+```
+## Props
+
+The main container component for a card.
+
+#### Props
+- `className`: `string` (optional) - Additional CSS classes for the card.
+- `children`: `ReactNode` - The content of the card.
+
+### CardContainer
+Wraps the main content of the card.
+#### Props
+- `className`: `string` (optional) - Additional CSS classes for the container.
+- `children`: `ReactNode` - The content of the container.
+
+### CardHeader
+The header section of the card, typically contains the title.
+#### Props
+- `className`: `string` (optional) - Additional CSS classes for the header.
+- `children`: `ReactNode` - The content of the header.
+
+### CardTitle
+The title of the card.
+#### Props
+- `className`: `string` (optional) - Additional CSS classes for the title.
+- `children`: `ReactNode` - The content of the title.
+
+### CardBody
+The main content area of the card.
+#### Props
+- `className`: `string` (optional) - Additional CSS classes for the body.
+- `children`: `ReactNode` - The content of the body.
+
+### CardFooter
+The footer section of the card, typically contains actions or secondary information.
+#### Props
+- `className`: `string` (optional) - Additional CSS classes for the footer.
+- `children`: `ReactNode` - The content of the footer.
+
+### CardButton
+A button component for actions within the card.
+#### Props
+- `className`: `string` (optional) - Additional CSS classes for the button.
+- `children`: `ReactNode` - The content of the button.
+
+### CardIcon
+An icon component to be used within the card.
+#### Props
+- `className`: `string` (optional) - Additional CSS classes for the icon.
+- `children`: `ReactNode` - The content of the icon.
+
+### CardImage
+An image component to be used within the card.
+#### Props
+- `src`: `string` - The source URL of the image.
+- `alt`: `string` - Alternative text for the image.
+- `className`: `string` (optional) - Additional CSS classes for the image.
+
+### CardLink
+A link component for navigation within the card.
+#### Props
+- `href`: `string` - The URL the link points to.
+- `className`: `string` (optional) - Additional CSS classes for the link.
+- `children`: `ReactNode` - The content of the link.
+
+### CardCustomer
+A component to display customer information.
+#### Props
+- `imageSrc`: `string` - The source URL of the customer's image.
+- `name`: `string` - The name of the customer.
+- `email`: `string` - The email of the customer.
+
+### CardRating
+A component to display a rating.
+#### Props
+- `children`: `ReactNode` - The content of the rating (usually a number).
+
+{/* The Card component accepts the following props:
+
+|Component      | Prop      | Type          | Default   | Description                                   |
+|---------------|-----------|-----------    |-----------|-------------------------------                |
+|Card           | className | `string`      | -         | Additional CSS classes.                       |
+|               | children	| `ReactNode`   | -	        | The content of the card                       |
+|CardContainer  | className | `string`      | -         | Additional CSS classes.                       |
+|               | children	| `ReactNode`   | -	        | The content of the container                  |
+|CardHeader     | className | `string`      | -         | Additional CSS classes.                       |
+|               | children	| `ReactNode`   | -	        | The content of the header                     |
+|CardTitle      | className | `string`      | -         | Additional CSS classes.                       |
+|               | children	| `ReactNode`   | -	        | The content of the title                      |
+|CardBody       | className | `string`      | -         | Additional CSS classes.                       |
+|               | children	| `ReactNode`   | -	        | The content of the body                       |
+|CardFooter     | className | `string`      | -         | Additional CSS classes.                       |
+|               | children	| `ReactNode`   | -	        | The content of the footer                     |
+|CardButton     | className | `string`      | -         | Additional CSS classes.                       |
+|               | children	| `ReactNode`   | -	        | The content of the button                     |
+|CardIcon       | className | `string`      | -         | Additional CSS classes.                       |
+|               | children	| `ReactNode`   | -	        | The content of the icon                       |
+|CardImage      | className | `string`      | -         | Additional CSS classes.                       |
+|               | src	    | `string`      | -	        | The source URL of the image                   |
+|               | alt	    | `string`      | -	        | Alternative text for the image                |
+|CardLink       | className | `string`      | -         | Additional CSS classes.                       |
+|               | children	| `ReactNode`   | -	        | The content of the card                       |
+|               | href	    | `string`      | -	        | The content of the card                       |
+|CardLink       | className | `string`      | -         | The URL the link points to                    |
+|               | children	| `ReactNode`   | -	        | The content of the card                       |
+|CardCustomer   | imageSrc  | `string`      | -         | The source URL of the customer's image.       |
+|               | name	    | `string`      | -	        | The name of customer                          |
+|               | email	    | `string`      | -	        | The email of customer                         |
+|CardRating     | children	| `ReactNode`   | -	        | The content of the card                       | */}
