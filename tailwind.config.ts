@@ -64,8 +64,7 @@ const config = {
       fontFamily: {
         fira: ["Fira Code", "monospace"],
         montserrat: ["Montserrat", "sans-serif"],
-        sans: ['var(--font-geist-sans)'],
-        mono: ['var(--font-geist-mono)'],
+        geist: ['var(--font-geist-sans)'],
       },
     },
   },
