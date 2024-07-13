@@ -45,9 +45,9 @@ const CodePreview: React.FC<CodePreviewProps> = ({ component, code }) => {
               {copied ? (
                 <motion.div
                   key="check"
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.3 }}
                 >
                   <Check className="h-4 w-4 text-green-500" />
@@ -55,9 +55,9 @@ const CodePreview: React.FC<CodePreviewProps> = ({ component, code }) => {
               ) : (
                 <motion.div
                   key="clipboard"
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.3 }}
                 >
                   <Clipboard className="h-4 w-4" />
@@ -67,7 +67,7 @@ const CodePreview: React.FC<CodePreviewProps> = ({ component, code }) => {
           </button>
         )}
       </div>
-      <div className="p-4 bg-zinc-950 text-white h-full">
+      <div className="p-8 bg-zinc-950 text-white h-full w-full">
         {showCode ? (
           <pre className="overflow-auto h-full">{code}</pre>
         ) : (
