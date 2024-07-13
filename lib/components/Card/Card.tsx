@@ -8,6 +8,8 @@ import { CardImage } from "./CardImage";
 import { CardIcon } from "./CardIcon";
 import { CardLink } from "./CardLink";
 import { CardFooter } from "./CardFooter";
+import { CardCustomer } from "./CardCustomer";
+import { CardRating } from "./CardRating";
 
 export {
   CardContainer,
@@ -19,6 +21,8 @@ export {
   CardIcon,
   CardLink,
   CardFooter,
+  CardCustomer,
+  CardRating,
 };
 
 type CardProps = {

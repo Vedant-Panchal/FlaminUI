@@ -60,12 +60,12 @@ const config = {
       backgroundImage: {
         linear:
           "linear-gradient(180deg, #1a1a1a 0%, #1c1a1a 50%, #0e0e0e 100%)",
+        noise:"url('/noise.svg')"
       },
       fontFamily: {
         fira: ["Fira Code", "monospace"],
         montserrat: ["Montserrat", "sans-serif"],
-        sans: ['var(--font-geist-sans)'],
-        mono: ['var(--font-geist-mono)'],
+        geist: ['var(--font-geist-sans)'],
       },
     },
   },

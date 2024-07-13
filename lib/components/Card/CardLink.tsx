@@ -1,6 +1,5 @@
 import React from "react";
 import { cn } from "@lib/utils/cn";
-import { SquareArrowOutUpRight } from "lucide-react";
 import Link from "next/link";
 
 type CardLinkProps = {
@@ -20,7 +19,6 @@ export const CardLink = ({ children, className, href }: CardLinkProps) => {
       href={href}
     >
       {children}
-      <SquareArrowOutUpRight className="ml-3 h-4 w-4 text-primary-550" />
     </Link>
   );
 };
