@@ -10,6 +10,7 @@ import {
   EyeOff,
   ChevronUp,
   ChevronDown,
+  Plus,
 } from "lucide-react";
 
 type InputVariants =
@@ -96,22 +97,20 @@ export const Input = ({
     });
   };
 
-  // have to fix the size of an eye icon
-
   const getIcon = () => {
     if (!showIcon) return null;
     if (type === "password") {
       return showPassword ? (
         <EyeOff
           onClick={togglePasswordVisibility}
-          className="absolute inset-y-4 right-0 flex items-center pr-3 text-red-200"
+          className="absolute inset-y-4 right-0 flex items-center pr-3 text-white"
           width={45}
         />
       ) : (
         <Eye
           width={45}
           onClick={togglePasswordVisibility}
-          className="absolute inset-y-4 right-0 flex items-center pr-3 text-red-200"
+          className="absolute inset-y-4 right-0 flex items-center pr-3 text-white"
         />
       );
     }
@@ -132,10 +131,18 @@ export const Input = ({
             <input type="file" id="file-input" className="hidden" {...props} />
             <label
               htmlFor="file-input"
-              className={cn("cursor-pointer", className)}
+              className={cn(
+                "flex flex-col items-center space-y-1 cursor-pointer",
+                className,
+              )}
             >
-              {placeholder || "Choose a file"}
+              <span className="flex flex-col items-center mb-2">
+                <Plus />
+              </span>
             </label>
+            <span className="pointer-events-none">
+                {placeholder || "Add a file"}
+            </span>
           </>
         )}
         {type !== "file" && (
@@ -179,16 +186,16 @@ export const Input = ({
               <>
                 <div className="mt-1 flex">
                   <div
-                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 1 ? "bg-red-500" : "bg-gray-200"}`}
+                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 1 ? "bg-red-500" : "bg-transparent"}`}
                   ></div>
                   <div
-                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 2 ? "bg-yellow-500" : "bg-gray-200"}`}
+                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 2 ? "bg-yellow-500" : "bg-transparent"}`}
                   ></div>
                   <div
-                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 3 ? "bg-amber-600" : "bg-gray-200"}`}
+                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 3 ? "bg-amber-600" : "bg-transparent"}`}
                   ></div>
                   <div
-                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 4 ? "bg-green-500" : "bg-gray-200"}`}
+                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 4 ? "bg-green-500" : "bg-transparent"}`}
                   ></div>
                 </div>
                 <div className="mt-1 text-sm text-red-100">
@@ -212,9 +219,9 @@ const getIconForVariant = (
   switch (variant) {
     case "focused":
     case "filled":
-      return <X className="text-red-200" onClick={handleClear} />;
+      return <X className="text-white" onClick={handleClear} />;
     case "error":
-      return <AlertCircle className="text-red-500" onClick={handleAlert} />;
+      return <AlertCircle className="text-white" onClick={handleAlert} />;
     default:
       return null;
   }
