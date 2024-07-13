@@ -16,8 +16,8 @@ function Section1() {
         <EllipseLeft className="absolute -top-96 z-50 -left-[calc(100%-34rem)] w-fit h-fit -rotate-[10.311deg] " />
        {/* //*Right Lower ellipse  */}
         <motion.div
-          initial={{ right: -150, bottom: -200, zIndex: 10,rotate:0,opacity:0 }}
-          animate={{ bottom: [-200, 400],right:[-150,20,-100],rotate:[0,10],opacity:[0,1,0] }}
+          initial={{ right: -150, bottom: -200, zIndex: 10,opacity:0 }}
+          animate={{ bottom: [-200, 400],right:[-150,20,-100],opacity:[0,1,0] }}
           transition={{
             repeat: Infinity,
             repeatType: "reverse",
@@ -46,8 +46,8 @@ function Section1() {
 
        {/* //*Left Lower ellipse  */}
         <motion.div
-          initial={{ left: '-30rem', bottom: 400, zIndex: 10,rotate:0 }}
-          animate={{ bottom: [400, -200],left:['-30rem',0,'-30rem'],rotate:[0,10] }}
+          initial={{ left: '-30rem', bottom: 400, zIndex: 10 }}
+          animate={{ bottom: [400, -200],left:['-30rem',0,'-30rem'] }}
           transition={{
             repeat: Infinity,
             repeatType: "reverse",
@@ -62,7 +62,7 @@ function Section1() {
        {/* //*Left Upper ellipse  */}
         <motion.div
           initial={{ left: "-30rem", bottom: -200, zIndex: 40 }}
-          animate={{ bottom: [-200, 400],left:['-30rem','-7rem','-30rem'],rotate:[0,0] }}
+          animate={{ bottom: [-200, 400],left:['-30rem','-7rem','-30rem'] }}
           transition={{
             repeat: Infinity,
             repeatType: "reverse",
