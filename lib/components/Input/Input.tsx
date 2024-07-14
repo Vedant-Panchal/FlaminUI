@@ -1,25 +1,13 @@
 "use client";
+
 import React, { useState } from "react";
 import { cn } from "@lib/utils/cn";
 import { Label } from "./Label";
 import { HelperText } from "./HelperText";
-import {
-  X,
-  AlertCircle,
-  Eye,
-  EyeOff,
-  ChevronUp,
-  ChevronDown,
-  Plus,
-} from "lucide-react";
+import { X, AlertCircle, Eye, EyeOff, ChevronUp, ChevronDown, Paperclip } from "lucide-react";
+import Button from "../Button/Button";
 
-type InputVariants =
-  | "default"
-  | "focused"
-  | "filled"
-  | "disabled"
-  | "error"
-  | "";
+type InputVariants = "default" | "focused" | "filled" | "disabled" | "error" | "";
 
 type InputProps = {
   label?: string;
@@ -47,21 +35,18 @@ export const Input = ({
   step = 1,
   ...props
 }: InputProps) => {
-  const [inputValue, setInputValue] = useState(
-    type === "number" ? props.value || 0 : "",
-  );
+  const [inputValue, setInputValue] = useState(type === "number" ? props.value || 0 : "");
   const [showPassword, setShowPassword] = useState(false);
   const [passwordStrength, setPasswordStrength] = useState<number | null>(null);
+  const [fileName, setFileName] = useState<string | null>(null);
 
   const togglePasswordVisibility = () => setShowPassword((prev) => !prev);
 
   const evaluatePassword = (password: string) => {
     if (!password) return setPasswordStrength(null);
     if (password.length < 6) return setPasswordStrength(1);
-    if (/^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/.test(password))
-      return setPasswordStrength(4);
-    if (/^(?=.*[A-Z])(?=.*\d).{6,}$/.test(password))
-      return setPasswordStrength(3);
+    if (/^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/.test(password)) return setPasswordStrength(4);
+    if (/^(?=.*[A-Z])(?=.*\d).{6,}$/.test(password)) return setPasswordStrength(3);
     return setPasswordStrength(2);
   };
 
@@ -97,6 +82,15 @@ export const Input = ({
     });
   };
 
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      setFileName(file.name);
+    } else {
+      setFileName(null);
+    }
+  };
+
   const getIcon = () => {
     if (!showIcon) return null;
     if (type === "password") {
@@ -119,30 +113,30 @@ export const Input = ({
 
   return (
     <div className="relative space-y-1 font-geist font-normal text-zinc-100">
-      {label && (
-        <Label
-          text={label}
-          htmlFor={type === "file" ? "file-input" : undefined}
-        />
-      )}
-      <div className="relative">
+      {label && <Label text={label} htmlFor={type === "file" ? "file-input" : undefined} />}
+      <div className="relative flex items-center">
         {type === "file" && (
           <>
-            <input type="file" id="file-input" className="hidden" {...props} />
-            <label
-              htmlFor="file-input"
-              className={cn(
-                "flex flex-col items-center space-y-1 cursor-pointer",
-                className,
-              )}
-            >
-              <span className="flex flex-col items-center mb-2">
-                <Plus />
-              </span>
-            </label>
-            <span className="pointer-events-none">
-                {placeholder || "Add a file"}
-            </span>
+            <input
+              type="file"
+              id="file-input"
+              className="hidden"
+              onChange={handleFileChange}
+              {...props}
+            />
+            <div className="flex min-h-14 min-w-80 items-center rounded-lg bg-transparent px-3 py-2 font-geist text-base font-normal text-zinc-100 outline outline-1 outline-gray-100/10 selection:bg-gray-400/40 placeholder:text-zinc-400 focus:outline focus:outline-gray-100/80 space-x-2">
+              <label htmlFor="file-input" className="cursor-pointer">
+                <Paperclip className="text-gray-500" />
+              </label>
+              <span className="flex-1 text-white">{fileName || "Add a file"}</span>
+              <Button
+                variant=""
+                className="p-2 bg-white text-black rounded-lg"
+                onClick={() => document.getElementById("file-input")?.click()}
+              >
+                Upload
+              </Button>
+            </div>
           </>
         )}
         {type !== "file" && (
