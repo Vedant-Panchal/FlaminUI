@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body className="w-screen min-h-screen h-screen max-h-max"> 
+      <body className="w-screen min-h-screen h-screen max-h-max overflow-x-hidden"> 
         <Navbar />
         <main className="h-full max-h-max w-screen bg-noise/30 bg-repeat ">
         {children}
