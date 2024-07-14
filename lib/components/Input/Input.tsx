@@ -1,24 +1,13 @@
 "use client";
+
 import React, { useState } from "react";
 import { cn } from "@lib/utils/cn";
 import { Label } from "./Label";
 import { HelperText } from "./HelperText";
-import {
-  X,
-  AlertCircle,
-  Eye,
-  EyeOff,
-  ChevronUp,
-  ChevronDown,
-} from "lucide-react";
+import { X, AlertCircle, Eye, EyeOff, ChevronUp, ChevronDown, Paperclip } from "lucide-react";
+import Button from "../Button/Button";
 
-type InputVariants =
-  | "default"
-  | "focused"
-  | "filled"
-  | "disabled"
-  | "error"
-  | "";
+type InputVariants = "default" | "focused" | "filled" | "disabled" | "error" | "";
 
 type InputProps = {
   label?: string;
@@ -46,21 +35,18 @@ export const Input = ({
   step = 1,
   ...props
 }: InputProps) => {
-  const [inputValue, setInputValue] = useState(
-    type === "number" ? props.value || 0 : "",
-  );
+  const [inputValue, setInputValue] = useState(type === "number" ? props.value || 0 : "");
   const [showPassword, setShowPassword] = useState(false);
   const [passwordStrength, setPasswordStrength] = useState<number | null>(null);
+  const [fileName, setFileName] = useState<string | null>(null);
 
   const togglePasswordVisibility = () => setShowPassword((prev) => !prev);
 
   const evaluatePassword = (password: string) => {
     if (!password) return setPasswordStrength(null);
     if (password.length < 6) return setPasswordStrength(1);
-    if (/^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/.test(password))
-      return setPasswordStrength(4);
-    if (/^(?=.*[A-Z])(?=.*\d).{6,}$/.test(password))
-      return setPasswordStrength(3);
+    if (/^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/.test(password)) return setPasswordStrength(4);
+    if (/^(?=.*[A-Z])(?=.*\d).{6,}$/.test(password)) return setPasswordStrength(3);
     return setPasswordStrength(2);
   };
 
@@ -96,7 +82,14 @@ export const Input = ({
     });
   };
 
-  // have to fix the size of an eye icon
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      setFileName(file.name);
+    } else {
+      setFileName(null);
+    }
+  };
 
   const getIcon = () => {
     if (!showIcon) return null;
@@ -104,14 +97,14 @@ export const Input = ({
       return showPassword ? (
         <EyeOff
           onClick={togglePasswordVisibility}
-          className="absolute inset-y-4 right-0 flex items-center pr-3 text-red-200"
+          className="absolute inset-y-4 right-0 flex items-center pr-3 text-white"
           width={45}
         />
       ) : (
         <Eye
           width={45}
           onClick={togglePasswordVisibility}
-          className="absolute inset-y-4 right-0 flex items-center pr-3 text-red-200"
+          className="absolute inset-y-4 right-0 flex items-center pr-3 text-white"
         />
       );
     }
@@ -120,22 +113,30 @@ export const Input = ({
 
   return (
     <div className="relative space-y-1 font-geist font-normal text-zinc-100">
-      {label && (
-        <Label
-          text={label}
-          htmlFor={type === "file" ? "file-input" : undefined}
-        />
-      )}
-      <div className="relative">
+      {label && <Label text={label} htmlFor={type === "file" ? "file-input" : undefined} />}
+      <div className="relative flex items-center">
         {type === "file" && (
           <>
-            <input type="file" id="file-input" className="hidden" {...props} />
-            <label
-              htmlFor="file-input"
-              className={cn("cursor-pointer", className)}
-            >
-              {placeholder || "Choose a file"}
-            </label>
+            <input
+              type="file"
+              id="file-input"
+              className="hidden"
+              onChange={handleFileChange}
+              {...props}
+            />
+            <div className="flex min-h-14 min-w-80 items-center rounded-lg bg-transparent px-3 py-2 font-geist text-base font-normal text-zinc-100 outline outline-1 outline-gray-100/10 selection:bg-gray-400/40 placeholder:text-zinc-400 focus:outline focus:outline-gray-100/80 space-x-2">
+              <label htmlFor="file-input" className="cursor-pointer">
+                <Paperclip className="text-white" />
+              </label>
+              <span className="flex-1 text-zinc-400">{fileName || "Add a file"}</span>
+              <Button
+                variant=""
+                className="p-2 bg-white text-black rounded-lg"
+                onClick={() => document.getElementById("file-input")?.click()}
+              >
+                Upload
+              </Button>
+            </div>
           </>
         )}
         {type !== "file" && (
@@ -179,16 +180,16 @@ export const Input = ({
               <>
                 <div className="mt-1 flex">
                   <div
-                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 1 ? "bg-red-500" : "bg-gray-200"}`}
+                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 1 ? "bg-red-500" : "bg-transparent"}`}
                   ></div>
                   <div
-                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 2 ? "bg-yellow-500" : "bg-gray-200"}`}
+                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 2 ? "bg-yellow-500" : "bg-transparent"}`}
                   ></div>
                   <div
-                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 3 ? "bg-amber-600" : "bg-gray-200"}`}
+                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 3 ? "bg-amber-600" : "bg-transparent"}`}
                   ></div>
                   <div
-                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 4 ? "bg-green-500" : "bg-gray-200"}`}
+                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 4 ? "bg-green-500" : "bg-transparent"}`}
                   ></div>
                 </div>
                 <div className="mt-1 text-sm text-red-100">
@@ -212,9 +213,9 @@ const getIconForVariant = (
   switch (variant) {
     case "focused":
     case "filled":
-      return <X className="text-red-200" onClick={handleClear} />;
+      return <X className="text-white" onClick={handleClear} />;
     case "error":
-      return <AlertCircle className="text-red-500" onClick={handleAlert} />;
+      return <AlertCircle className="text-white" onClick={handleAlert} />;
     default:
       return null;
   }
