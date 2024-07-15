@@ -1,4 +1,4 @@
-<div style={{ marginBottom: '16px', marginTop: '16px' }}>
+<div style={{ marginBottom: '16px', marginTop: '16px'}}>
 import {
   Accordion,
   AccordionItem,
@@ -7,54 +7,20 @@ import {
 } from "@components/Accordion/Accordion";
 import {cn} from "@lib/utils/cn"
 
-
-<Accordion
-className="w-[500px] gap-3"
-border={false}
-variant="rounded"
->
-<AccordionItem index={0}>
-    <AccordionButton>Accordion Item 1</AccordionButton>
-    <AccordionContent>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. At est
-    blanditiis, optio repellendus consectetur possimus dolorem iusto
-    pariatur soluta odit.
-    </AccordionContent>
-</AccordionItem>
-<AccordionItem index={1}>
-    <AccordionButton>Accordion Item 2</AccordionButton>
-    <AccordionContent>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab
-    explicabo nesciunt a dolor recusandae vero eligendi mollitia,
-    beatae voluptatum amet temporibus! Earum corporis illo eos
-    itaque enim pariatur, voluptatem aperiam porro temporibus
-    praesentium quas rem odio mollitia a non! Consequatur laudantium
-    facere incidunt neque, delectus nulla beatae quis optio
-    eligendi!
-    </AccordionContent>
-</AccordionItem>
-<AccordionItem index={2}>
-    <AccordionButton>Accordion Item 3</AccordionButton>
-    <AccordionContent>
-    Lorem ipsum dolor sit amet consectetur.
-    </AccordionContent>
-</AccordionItem>
-<AccordionItem index={3}>
-    <AccordionButton>Accordion Item 4</AccordionButton>
-    <AccordionContent>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo,
-    provident!
-    </AccordionContent>
-</AccordionItem>
-<AccordionItem index={4}>
-    <AccordionButton>Accordion Item 5</AccordionButton>
-    <AccordionContent>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    Tempore nihil ut earum fugiat vero odio impedit, itaque sunt
-    nostrum recusandae aliquid quam sed optio mollitia.
-    </AccordionContent>
-</AccordionItem>
-</Accordion>
+    <Accordion variant="rounded" border={true}>
+      <AccordionItem index={0}>
+        <AccordionButton>Section 1</AccordionButton>
+        <AccordionContent>Content for section 1</AccordionContent>
+      </AccordionItem>
+      <AccordionItem index={1}>
+        <AccordionButton>Section 2</AccordionButton>
+        <AccordionContent>Content for section 2</AccordionContent>
+      </AccordionItem>
+      <AccordionItem index={2}>
+        <AccordionButton>Section 3</AccordionButton>
+        <AccordionContent>Content for section 3</AccordionContent>
+      </AccordionItem>
+    </Accordion>
 </div>
 
 ## Usage
@@ -66,7 +32,7 @@ import {
   AccordionButton,
   AccordionContent,
 } from "@components/Accordion/Accordion";
-import {cn} from "@lib/utils/cn"
+import { cn } from "@lib/utils/cn";
 
 function AccordionDemo() {
   return (
@@ -79,6 +45,10 @@ function AccordionDemo() {
         <AccordionButton>Section 2</AccordionButton>
         <AccordionContent>Content for section 2</AccordionContent>
       </AccordionItem>
+      <AccordionItem index={2}>
+        <AccordionButton>Section 3</AccordionButton>
+        <AccordionContent>Content for section 3</AccordionContent>
+      </AccordionItem>
     </Accordion>
   );
 }
@@ -90,39 +60,39 @@ function AccordionDemo() {
 
 The main wrapper component for the accordion.
 
-#### Props
-
-- `children`: ReactNode - The accordion items.
-- `className`: ClassNameValue (optional) - Additional CSS classes.
-- `variant`: "default" | "rounded" | "rectangle" (optional) - The visual style of the accordion.
-- `border`: boolean (optional) - Whether to show a border around the accordion.
+| Prop        | Type                                    | Default | Description                                    |
+| ----------- | --------------------------------------- | ------- | ---------------------------------------------- |
+| `children`  | `ReactNode`                             | -       | The accordion items.                           |
+| `className` | `ClassNameValue`                        | -       | Additional CSS classes.                        |
+| `variant`   | `"default" \| "rounded" \| "rectangle"` | -       | The visual style of the accordion.             |
+| `border`    | `boolean`                               | -       | Whether to show a border around the accordion. |
 
 ### AccordionItem
 
 Represents a single item in the accordion.
 
-#### Props
-
-- `index`: number - The index of the item in the accordion.
-- `children`: ReactNode - The content of the item (should include AccordionButton and AccordionContent).
-- `className`: ClassNameValue (optional) - Additional CSS classes.
+| Prop        | Type             | Default | Description                                                                       |
+| ----------- | ---------------- | ------- | --------------------------------------------------------------------------------- |
+| `index`     | `number`         | -       | The index of the item in the accordion.                                           |
+| `children`  | `ReactNode`      | -       | The content of the item. Should include `AccordionButton` and `AccordionContent`. |
+| `className` | `ClassNameValue` | -       | Additional CSS classes.                                                           |
 
 ### AccordionButton
 
 The clickable header of an accordion item.
 
-#### Props
-
-- `isActive`: boolean (optional) - Whether the item is currently expanded.
-- `onClick`: () => void (optional) - Function to call when the button is clicked.
-- `className`: ClassNameValue (optional) - Additional CSS classes.
-- `children`: ReactNode - The content of the button.
+| Prop        | Type             | Default | Description                                  |
+| ----------- | ---------------- | ------- | -------------------------------------------- |
+| `isActive`  | `boolean`        | -       | Whether the item is currently expanded.      |
+| `onClick`   | `() => void`     | -       | Function to call when the button is clicked. |
+| `className` | `ClassNameValue` | -       | Additional CSS classes.                      |
+| `children`  | `ReactNode`      | -       | The content of the button.                   |
 
 ### AccordionContent
 
 The expandable content of an accordion item.
 
-#### Props
-
-- `className`: string (optional) - Additional CSS classes.
-- `children`: ReactNode - The content to display when the item is expanded.
+| Prop        | Type        | Default | Description                                       |
+| ----------- | ----------- | ------- | ------------------------------------------------- |
+| `className` | `string`    | -       | Additional CSS classes.                           |
+| `children`  | `ReactNode` | -       | The content to display when the item is expanded. |
