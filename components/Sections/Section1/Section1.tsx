@@ -26,13 +26,13 @@ function Section1() {
           }}
           className="absolute "
         >
-          <ColoredEllipse className="blur-[90px]" />
+          <ColoredEllipse className="blur-[90px] rotate-12" />
         </motion.div>
         
        {/* //*Right Upper ellipse  */}
         <motion.div
           initial={{ right: "-30rem", bottom: 400, zIndex: 40 }}
-          animate={{ bottom: [400, -200],right:['-30rem','-7rem','-30rem']}}
+          animate={{ bottom: [400, -200],right:['-30rem','-10rem','-30rem']}}
           transition={{
             repeat: Infinity,
             repeatType: "reverse",
@@ -62,7 +62,7 @@ function Section1() {
        {/* //*Left Upper ellipse  */}
         <motion.div
           initial={{ left: "-30rem", bottom: -200, zIndex: 40 }}
-          animate={{ bottom: [-200, 400],left:['-30rem','-7rem','-30rem'] }}
+          animate={{ bottom: [-200, 400],left:['-30rem','-10rem','-30rem'] }}
           transition={{
             repeat: Infinity,
             repeatType: "reverse",
@@ -71,7 +71,7 @@ function Section1() {
           }}
           className="absolute"
         >
-          <ColoredEllipse className="blur-[90px] scale-[65%]" />
+          <ColoredEllipse className="blur-[90px] scale-[65%] -rotate-180" />
         </motion.div>
         <div className="absolute inset-0 z-[50] bg-noise mix-blend-darken bg-repeat object-cover pointer-events-none"></div>
       </div>

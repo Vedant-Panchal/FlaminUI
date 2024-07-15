@@ -1,8 +1,8 @@
 import { motion, Transition } from "framer-motion";
-import { Code, MonitorPlay } from "lucide-react";
+import { Code, TvMinimal } from "lucide-react";
 
 const TOGGLE_CLASSES =
-  "text-sm font-medium font-geist flex items-center gap-2 px-3 md:pl-3 md:pr-3.5 py-3 md:py-1.5 transition-colors relative z-10";
+  "text-sm font-medium font-geist flex items-center py px-6 gap-2.5 md:py-2 transition-colors relative z-10";
 
 interface SwitchButtonProps {
   selected: "preview" | "code";
@@ -26,8 +26,8 @@ const SwitchButton: React.FC<SwitchButtonProps> = ({ selected, setSelected }) =>
         }`}
         onClick={handlePreviewClick}
       >
-        <MonitorPlay className="relative z-10 md:text-sm" size={18} />
-        <span className="relative z-10">View</span>
+        <TvMinimal className="relative z-10 md:text-sm" size={18} />
+        <div className="relative z-10 font-semibold">Preview</div>
       </button>
       <button
         className={`${TOGGLE_CLASSES} ${
@@ -36,7 +36,7 @@ const SwitchButton: React.FC<SwitchButtonProps> = ({ selected, setSelected }) =>
         onClick={handleCodeClick}
       >
         <Code className="relative z-10 md:text-sm" size={18} />
-        <span className="relative z-10">Code</span>
+        <div className="relative z-10 font-semibold text">Code</div>
       </button>
       <div
         className={`absolute inset-0 z-0 flex ${
@@ -46,9 +46,9 @@ const SwitchButton: React.FC<SwitchButtonProps> = ({ selected, setSelected }) =>
         <motion.span
           layout
           transition={
-            { type: "spring", damping: 15, stiffness: 100 } as Transition
+            { type: "spring", damping: 30, stiffness: 300 } as Transition
           }
-          className="h-full w-1/2 rounded-md bg-zinc-900"
+          className="h-full w-1/2 rounded-lg bg-[#0D0D0D]"
         />
       </div>
     </div>

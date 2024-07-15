@@ -27,11 +27,11 @@ function Section2() {
           {/* Dotted animation */}
           <div className="absolute z-50 left-0 top-20 scale-75">
             <DottedDesign className="brightness-200 absolute" />
-            <DottedMask className="brightness-75 absolute" />
+            <DottedMask className="brightness-100 absolute" />
           </div>
           <div className="absolute z-50 right-0 top-20 rotate-180 scale-75">
             <DottedDesign className="brightness-200 absolute" />
-            <DottedMask className="brightness-75 absolute" />
+            <DottedMask className="brightness-100 absolute" />
           </div>
           {/* Text reveal */}
           <AnimatedText scrollValue={scrollYProgress} />
