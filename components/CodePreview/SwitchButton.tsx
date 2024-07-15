@@ -1,27 +1,15 @@
 import { motion, Transition } from "framer-motion";
-import { useState } from "react";
 import { Code, MonitorPlay } from "lucide-react";
 
 const TOGGLE_CLASSES =
   "text-sm font-medium font-geist flex items-center gap-2 px-3 md:pl-3 md:pr-3.5 py-3 md:py-1.5 transition-colors relative z-10";
 
-interface SliderToggleProps {
+interface SwitchButtonProps {
   selected: "preview" | "code";
   setSelected: (value: "preview" | "code") => void;
-  display?: "preview" | "code";
-  setDisplay?: (value: "preview" | "code") => void;
 }
 
-const CodePreviewSwitch = () => {
-  const [selected, setSelected] = useState<"preview" | "code">("preview");
-  return (
-    <div className="transition-colors mt-4 mb-4">
-      <SliderToggle selected={selected} setSelected={setSelected} />
-    </div>
-  );
-};
-
-const SliderToggle = ({ selected, setSelected }: SliderToggleProps) => {
+const SwitchButton: React.FC<SwitchButtonProps> = ({ selected, setSelected }) => {
   const handlePreviewClick = () => {
     setSelected("preview");
   };
@@ -67,4 +55,4 @@ const SliderToggle = ({ selected, setSelected }: SliderToggleProps) => {
   );
 };
 
-export default CodePreviewSwitch;
+export default SwitchButton;

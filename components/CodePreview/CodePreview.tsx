@@ -1,14 +1,3 @@
-import CodePreview from "/components/CodePreview/CodePreview.tsx"
-import Avatar from "@components/Avatar/Avatar"
-
-# My Documentation
-
-Here's an example of how to use the `MyComponent`:
-
-<CodePreview
-  preview={<Avatar />}
->
-```jsx filename="example.js"
 import { useState } from "react";
 import SwitchButton from "./SwitchButton";
 
@@ -31,5 +20,3 @@ const CodePreview: React.FC<CodePreviewProps> = ({ children, preview }) => {
 };
 
 export default CodePreview;
-```
-</CodePreview>
