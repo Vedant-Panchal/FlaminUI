@@ -71,16 +71,28 @@ const CodePreview: React.FC<CodePreviewProps> = ({
   }, [code, language]);
 
   return (
-    <div className="flex flex-col items-start justify-center gap-2 w-full">
+    <div className="flex flex-col items-start justify-center gap-2 w-full mt-5">
       <SwitchButton selected={selected} setSelected={setSelected} />
       {selected === "preview" ? (
         <div
-          className={`w-full h-full flex items-center min-h-[350px] p-2 justify-center bg-[#0D0D0D] rounded-lg border border-white/10`}
+          className={`w-full h-full flex items-center min-h-[350px] p-2 justify-center  rounded-lg border border-white/10`}
+          style={{
+            backdropFilter: "blur(11px) saturate(184%)",
+            WebkitBackdropFilter: "blur(11px) saturate(184%)",
+            backgroundColor: "rgba(36, 36, 36, 0.2)",
+          }}
         >
           <div>{preview}</div>
         </div>
       ) : (
-        <div className="relative overflow-x-hidden rounded-lg w-full border border-white/10">
+        <div
+          className="relative overflow-x-hidden rounded-lg w-full border border-white/10"
+          style={{
+            backdropFilter: "blur(11px) saturate(184%)",
+            WebkitBackdropFilter: "blur(11px) saturate(184%)",
+            backgroundColor: "rgba(36, 36, 36, 0.2)",
+          }}
+        >
           <div className="flex justify-between px-4 text-white text-xs items-center bg-[#0D0D0D] border-b border-white/20 py-2 absolute top-0 left-0 z-10 w-full">
             <p className="text-sm italic font-medium text-white/70">
               {fileName}
@@ -108,12 +120,12 @@ const CodePreview: React.FC<CodePreviewProps> = ({
             showLineNumbers={true}
             wrapLines={true}
             customStyle={{
-              backgroundColor: "#0D0D0D",
+              backgroundColor: "transparent",
               borderRadius: "1em",
               padding: "2em",
               overflowY: "auto",
               minHeight: "350px",
-              height:"500px"
+              height: "500px",
             }}
             codeTagProps={{ className: "font-geist text-red-200 mt-6" }}
           >
