@@ -4,6 +4,10 @@ import { ColoredEllipse } from "./ColoredEllipse";
 import { SpinningSVG } from "./SpinSvg";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import ReactIcon from "./ReactIcon";
+import NextIcon from "./NextIcon";
+import TailwindIcon from "./TailwindIcon";
+import FramerIcon from "./FramerIcon";
 motion;
 function Section1() {
   return (
@@ -14,10 +18,14 @@ function Section1() {
         <EllipseRight className="absolute -top-96 z-50 -right-[calc(100%-34rem)] w-fit h-fit rotate-[10.311deg] " />
         <EllipseLeft className="absolute -top-96 z-20 -left-[calc(100%-45em)] w-fit h-fit -rotate-[10.311deg] " />
         <EllipseLeft className="absolute -top-96 z-50 -left-[calc(100%-34rem)] w-fit h-fit -rotate-[10.311deg] " />
-       {/* //*Right Lower ellipse  */}
+        {/* //*Right Lower ellipse  */}
         <motion.div
-          initial={{ right: -150, bottom: -200, zIndex: 10,opacity:0 }}
-          animate={{ bottom: [-200, 400],right:[-150,20,-100],opacity:[0,1,0] }}
+          initial={{ right: -150, bottom: -200, zIndex: 10, opacity: 0 }}
+          animate={{
+            bottom: [-200, 400],
+            right: [-150, 20, -100],
+            opacity: [0, 1, 0],
+          }}
           transition={{
             repeat: Infinity,
             repeatType: "reverse",
@@ -26,13 +34,16 @@ function Section1() {
           }}
           className="absolute "
         >
-          <ColoredEllipse className="blur-[90px]" />
+          <ColoredEllipse className="blur-[90px] rotate-12" />
         </motion.div>
-        
-       {/* //*Right Upper ellipse  */}
+
+        {/* //*Right Upper ellipse  */}
         <motion.div
           initial={{ right: "-30rem", bottom: 400, zIndex: 40 }}
-          animate={{ bottom: [400, -200],right:['-30rem','-7rem','-30rem']}}
+          animate={{
+            bottom: [400, -200],
+            right: ["-30rem", "-10rem", "-30rem"],
+          }}
           transition={{
             repeat: Infinity,
             repeatType: "reverse",
@@ -44,10 +55,10 @@ function Section1() {
           <ColoredEllipse className="blur-[90px] scale-[65%]" />
         </motion.div>
 
-       {/* //*Left Lower ellipse  */}
+        {/* //*Left Lower ellipse  */}
         <motion.div
-          initial={{ left: '-30rem', bottom: 400, zIndex: 10 }}
-          animate={{ bottom: [400, -200],left:['-30rem',0,'-30rem'] }}
+          initial={{ left: "-30rem", bottom: 400, zIndex: 10 }}
+          animate={{ bottom: [400, -200], left: ["-30rem", 0, "-30rem"] }}
           transition={{
             repeat: Infinity,
             repeatType: "reverse",
@@ -59,10 +70,13 @@ function Section1() {
           <ColoredEllipse className="blur-[90px]" />
         </motion.div>
 
-       {/* //*Left Upper ellipse  */}
+        {/* //*Left Upper ellipse  */}
         <motion.div
           initial={{ left: "-30rem", bottom: -200, zIndex: 40 }}
-          animate={{ bottom: [-200, 400],left:['-30rem','-7rem','-30rem'] }}
+          animate={{
+            bottom: [-200, 400],
+            left: ["-30rem", "-10rem", "-30rem"],
+          }}
           transition={{
             repeat: Infinity,
             repeatType: "reverse",
@@ -71,7 +85,7 @@ function Section1() {
           }}
           className="absolute"
         >
-          <ColoredEllipse className="blur-[90px] scale-[65%]" />
+          <ColoredEllipse className="blur-[90px] scale-[65%] -rotate-180" />
         </motion.div>
         <div className="absolute inset-0 z-[50] bg-noise mix-blend-darken bg-repeat object-cover pointer-events-none"></div>
       </div>
@@ -105,6 +119,21 @@ function Section1() {
               Docs
             </span>
           </Link>
+        </div>
+        <div className="flex items-center justify-between space-x-5 mt-4 text-sm text-[#999999] font-geist font-semibold">
+          <span className="flex items-center justify-between gap-2">
+            <ReactIcon />
+            React
+          </span>
+          <span className="flex items-center justify-between gap-2">
+            <NextIcon /> Next JS
+          </span>
+          <span className="flex items-center justify-between gap-2">
+            <TailwindIcon /> Tailwind
+          </span>
+          <span className="flex items-center justify-between gap-2">
+            <FramerIcon /> Framer Motion
+          </span>
         </div>
       </div>
     </div>

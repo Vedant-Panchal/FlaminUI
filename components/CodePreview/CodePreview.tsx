@@ -1,0 +1,128 @@
+import { useState, useEffect } from "react";
+import SwitchButton from "./SwitchButton";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism"; // Ensure correct path
+import prettier from "prettier";
+import parserTypescript from "prettier/parser-typescript";
+import parserBabel from "prettier/parser-babel"; // For JSX/TSX
+import { Check, Copy } from "lucide-react";
+
+interface CodePreviewProps {
+  code: string;
+  preview: React.ReactNode;
+  language: "typescript" | "jsx" | "tsx"; // Extend this list as needed
+  fileName?: string;
+}
+
+const CodePreview: React.FC<CodePreviewProps> = ({
+  code,
+  preview,
+  language,
+  fileName = "example.tsx",
+}) => {
+  const [selected, setSelected] = useState<"preview" | "code">("code");
+  const [processedCode, setProcessedCode] = useState<string>(code);
+  const [copy, setCopy] = useState(false);
+  // Function to preprocess code with Prettier
+  const preprocessCode = async (
+    code: string,
+    language: string
+  ): Promise<string> => {
+    try {
+      const formattedCode = await prettier.format(code, {
+        parser: language,
+        plugins: [
+          parserTypescript, // For TypeScript and TSX
+          parserBabel, // For JSX and TSX
+        ],
+        singleQuote: true,
+        trailingComma: "es5",
+        printWidth: 80, // Adjust print width if needed
+      });
+
+      // Remove extra newlines and trim spaces
+      return formattedCode.replace(/\n\s*\n/g, "\n").trim();
+    } catch (error) {
+      console.error("Prettier formatting error:", error);
+      return code; // Return original code if formatting fails
+    }
+  };
+
+  // Determine the Prettier parser based on the language
+  const getParser = (lang: string): string => {
+    switch (lang) {
+      case "typescript":
+        return "typescript";
+      case "jsx":
+        return "babel";
+      case "tsx":
+        return "babel-ts";
+      default:
+        return "babel";
+    }
+  };
+
+  useEffect(() => {
+    const formatCode = async () => {
+      const formattedCode = await preprocessCode(code, getParser(language));
+      setProcessedCode(formattedCode);
+    };
+    formatCode();
+  }, [code, language]);
+
+  return (
+    <div className="flex flex-col items-start justify-center gap-2 w-full">
+      <SwitchButton selected={selected} setSelected={setSelected} />
+      {selected === "preview" ? (
+        <div
+          className={`w-full h-full flex items-center min-h-[350px] p-2 justify-center bg-[#0D0D0D] rounded-lg border border-white/10`}
+        >
+          <div>{preview}</div>
+        </div>
+      ) : (
+        <div className="relative overflow-x-hidden rounded-lg w-full border border-white/10">
+          <div className="flex justify-between px-4 text-white text-xs items-center bg-[#0D0D0D] border-b border-white/20 py-2 absolute top-0 left-0 z-10 w-full">
+            <p className="text-sm italic font-medium text-white/70">
+              {fileName}
+            </p>
+            <button
+              className={`inline-flex items-center gap-1 p-2 rounded-md bg-white/10 hover:bg-white/20 transition-colors duration-200 ease-in-out`}
+              onClick={() => {
+                navigator.clipboard.writeText(processedCode);
+                setCopy(true);
+                setTimeout(() => {
+                  setCopy(false);
+                }, 1000);
+              }}
+            >
+              {copy ? (
+                <Check size={15} className="text-green-600" strokeWidth={3} />
+              ) : (
+                <Copy size={15} />
+              )}
+            </button>
+          </div>
+          <SyntaxHighlighter
+            language={language}
+            style={vscDarkPlus}
+            showLineNumbers={true}
+            wrapLines={true}
+            customStyle={{
+              backgroundColor: "#0D0D0D",
+              borderRadius: "1em",
+              padding: "2em",
+              overflowY: "auto",
+              minHeight: "350px",
+              height:"500px"
+            }}
+            codeTagProps={{ className: "font-geist text-red-200 mt-6" }}
+          >
+            {processedCode}
+          </SyntaxHighlighter>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default CodePreview;

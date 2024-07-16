@@ -126,9 +126,9 @@ export const Input = ({
             />
             <div className="flex min-h-14 min-w-80 items-center rounded-lg bg-transparent px-3 py-2 font-geist text-base font-normal text-zinc-100 outline outline-1 outline-gray-100/10 selection:bg-gray-400/40 placeholder:text-zinc-400 focus:outline focus:outline-gray-100/80 space-x-2">
               <label htmlFor="file-input" className="cursor-pointer">
-                <Paperclip className="text-gray-500" />
+                <Paperclip className="text-white" />
               </label>
-              <span className="flex-1 text-white">{fileName || "Add a file"}</span>
+              <span className="flex-1 text-zinc-400">{fileName || "Add a file"}</span>
               <Button
                 variant=""
                 className="p-2 bg-white text-black rounded-lg"

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar/Navbar";
+import Footer from "@/components/ui/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,11 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body className="w-screen min-h-screen h-screen max-h-max overflow-x-hidden"> 
+      <body className="w-screen h-max overflow-x-hidden"> 
         <Navbar />
         <main className="h-full max-h-max w-screen bg-noise/30 bg-repeat ">
         {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
