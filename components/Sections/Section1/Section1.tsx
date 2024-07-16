@@ -87,7 +87,6 @@ function Section1() {
         >
           <ColoredEllipse className="blur-[90px] scale-[65%] -rotate-180" />
         </motion.div>
-          <ColoredEllipse className="blur-[90px] rotate-12" />
         <div className="absolute inset-0 z-[50] bg-noise mix-blend-darken bg-repeat object-cover pointer-events-none"></div>
       </div>
       <div className="absolute w-full h-[1000px]  z-[50] bg-gradient-to-t from-black from-10% via-white/0 to-black to-90%"></div>
