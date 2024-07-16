@@ -5,7 +5,6 @@ import "./globals.css";
 import Navbar from "@/components/ui/Navbar/Navbar";
 import Footer from "@/components/ui/Footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "ProtoUI 🚀🚀",

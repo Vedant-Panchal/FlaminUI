@@ -3,7 +3,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="relative md:h-24 px-32 py-4 flex w-full items-center justify-center gap-2 backdrop-blur-xl  bg-[rgb(77,77,77)]/[0.1%] after:content-[''] after:absolute after:w-full after:h-[0.5px] after:bg-gradient-to-r from-[#787878]/0 via-[#DEDEDE] to-[#787878]/0 after:top-0 after:right-0 after:opacity-50">
+    <div className="relative md:h-24 px-32 py-4 flex w-full items-center justify-center gap-2 backdrop-blur-xl  bg-black/50 after:content-[''] after:absolute after:w-full after:h-[1px] after:bg-gradient-to-r from-[#787878]/0 via-[#DEDEDE] to-[#787878]/0 after:top-[0] after:right-0 after:opacity-50">
       <Link href={"/"} className="flex-1">
         <p>
           <span className="bg-gradient-to-br from-[#FFF] to-[#999] bg-clip-text font-fira text-2xl font-bold text-transparent">
