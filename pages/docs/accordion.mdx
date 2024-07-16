@@ -1,4 +1,4 @@
-<div style={{ marginBottom: '16px', marginTop: '16px'}}>
+import CodePreview from "/components/CodePreview/CodePreview.tsx"
 import {
   Accordion,
   AccordionItem,
@@ -7,26 +7,29 @@ import {
 } from "@components/Accordion/Accordion";
 import {cn} from "@lib/utils/cn"
 
-    <Accordion variant="rounded" border={true}>
-      <AccordionItem index={0}>
-        <AccordionButton>Section 1</AccordionButton>
-        <AccordionContent>Content for section 1</AccordionContent>
-      </AccordionItem>
-      <AccordionItem index={1}>
-        <AccordionButton>Section 2</AccordionButton>
-        <AccordionContent>Content for section 2</AccordionContent>
-      </AccordionItem>
-      <AccordionItem index={2}>
-        <AccordionButton>Section 3</AccordionButton>
-        <AccordionContent>Content for section 3</AccordionContent>
-      </AccordionItem>
-    </Accordion>
-</div>
+<div style={{marginTop:"16px"}}>
+<CodePreview
+preview = 
+{
+<Accordion variant="rounded" border={true}>
+  <AccordionItem index={0}>
+    <AccordionButton>Section 1</AccordionButton>
+    <AccordionContent></AccordionContent>
+  </AccordionItem>
+  <AccordionItem index={1}>
+    <AccordionButton>Section 2</AccordionButton>
+    <AccordionContent>Content for section 2</AccordionContent>
+  </AccordionItem>
+  <AccordionItem index={2}>
+    <AccordionButton>Section 3</AccordionButton>
+    <AccordionContent>Content for section 3</AccordionContent>
+  </AccordionItem>
+</Accordion>
+} 
 
-## Usage
-
-```jsx copy
-import {
+code = 
+{
+`import {
   Accordion,
   AccordionItem,
   AccordionButton,
@@ -51,8 +54,12 @@ function AccordionDemo() {
       </AccordionItem>
     </Accordion>
   );
+}`
 }
-```
+
+language="jsx" 
+/>
+</div>
 
 ## Components
 

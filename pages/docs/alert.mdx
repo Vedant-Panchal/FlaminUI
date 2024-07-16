@@ -1,25 +1,24 @@
-<div style={{marginTop: "16px", marginBottom: "16px", display: "flex", alignItems: "center", justifyContent: "center", width:"100%", height:"10rem", flexWrap: "wrap", gap:"2em"}}>
-
+import CodePreview from "/components/CodePreview/CodePreview.tsx"
 import Alert from "@components/Alert/Alert";
 import AlertTitle from "@components/Alert/AlertTitle";
 import AlertDescription from "@components/Alert/AlertDescription";
 import { cn } from "@lib/utils/cn";
 
-<Alert dismissAfter={200000}>
+<div style={{marginTop: "16px"}}>
+
+<CodePreview
+preview =
+{<Alert dismissAfter={200000}>
     <AlertTitle>This is alert title!</AlertTitle>
     <AlertDescription>This is alert description!</AlertDescription>
-</Alert>
+</Alert>} 
 
-</div>
-
-## Usage
-
-```jsx copy
-import Alert from "@components/Alert/Alert";
+code =
+{
+`import Alert from "@components/Alert/Alert";
 import AlertTitle from "@components/Alert/AlertTitle";
 import AlertDescription from "@components/Alert/AlertDescription";
 import { cn } from "@lib/utils/cn";
-
 function CheckboxDemo() {
   return (
     <Alert dismissAfter={2000}>
@@ -27,10 +26,12 @@ function CheckboxDemo() {
         <AlertDescription>This is alert description!</AlertDescription>
     </Alert>
   );
-}
-```
+}`}
 
-Sure, here are the props for each component without the additional details:
+language="jsx"
+/>
+
+</div>
 
 ## Alert Component
 
