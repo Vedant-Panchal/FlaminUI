@@ -1,34 +1,8 @@
-<div 
-  style={{ 
-    marginBottom: '16px',
-    marginTop: '16px',
-    width: '100%', 
-    minHeight: '100vh', 
-    position: 'relative',
-    overflow: 'auto',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '2rem 0'
-  }}
->
 import { NorthernDotted } from "@components/Backgrounds/NorthernDotted";
 import { NorthernSquare } from "@components/Backgrounds/NorthernSquare";
 import { DottedGridFaded } from "@components/Backgrounds/DottedGridFaded";
 import { SquareGridFaded } from "@components/Backgrounds/SquareGridFaded";
+import  CodePreview  from "@src/CodePreview/CodePreview"
+import BackGroundPreview from "@src/BackGroundPreview/BackGroundPreview" ;
 
-  <div className="w-full flex flex-col items-center gap-16">
-    <div className="relative w-full h-96 flex justify-center items-center bg-gray-100">
-      <SquareGridFaded squareSize="sm" faded={false} className="absolute inset-0 w-full h-full" />
-    </div>
-    <div className="relative w-full h-96 flex justify-center items-center bg-gray-100">
-      <DottedGridFaded faded={false} className="absolute inset-0 w-full h-full" />
-    </div>
-    <div className="relative w-full h-96 flex justify-center items-center bg-gray-100">
-      <NorthernDotted dotSize="sm" className="absolute inset-0 w-full h-full" />
-    </div>
-    <div className="relative w-full h-96 flex justify-center items-center bg-gray-100">
-      <NorthernSquare squareSize="md" className="absolute inset-0 w-full h-full" />
-    </div>
-  </div>
-</div>
+<BackGroundPreview />

@@ -114,7 +114,7 @@ export const Input = ({
   return (
     <div className="relative space-y-1 font-geist font-normal text-zinc-100">
       {label && <Label text={label} htmlFor={type === "file" ? "file-input" : undefined} />}
-      <div className="relative flex items-center">
+      <div className="relative flex flex-col items-start ">
         {type === "file" && (
           <>
             <input
@@ -178,7 +178,7 @@ export const Input = ({
             )}
             {type === "password" && (
               <>
-                <div className="mt-1 flex">
+                <div className="mt-1 flex w-full">
                   <div
                     className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 1 ? "bg-red-500" : "bg-transparent"}`}
                   ></div>
