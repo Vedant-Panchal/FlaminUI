@@ -1,38 +1,41 @@
-<div style={{marginTop: "16px", marginBottom: "16px", display: "flex", alignItems: "center", justifyContent: "center", width:"100%", height:"10rem", flexWrap: "wrap", gap:"1em"}}>
 import Avatar from "@components/Avatar/Avatar";
 import {cn} from "@lib/utils/cn"
+import CodePreview from "/components/CodePreview/CodePreview.tsx"
 
-<Avatar />
-<Avatar
-isRounded={false}
-location="top-right"
-/>
-<Avatar status="online"/>
-<Avatar
-isRounded={false}
-status="online"/>
-</div>
+## Avatar
+
+Avatars are used to show a thumbnail representation of an individual or business in the interface.
+
 
 ## Usage
 
-```jsx copy
-import Avatar from '@components/Avatar/Avatar';
+<CodePreview 
+preview = 
+{ 
+  <div style={{display:"flex", alignItems:"center", justifyContent:"center", flexWrap:"wrap", gap:"1rem"}}>
+  <Avatar />
+  <Avatar isRounded={false} location="top-right" />
+  <Avatar status="online"/>
+  <Avatar isRounded={false} status="online"/>
+  </div>
+}
+
+code = 
+{`import Avatar from '@components/Avatar/Avatar';
 import {cn} from "@lib/utils/cn"
 
 function AvatarDemo() {
   return (
-        <Avatar />
-        <Avatar
-        isRounded={false}
-        location="top-right"
-        />
-        <Avatar status="online"/>
-        <Avatar
-        isRounded={false}
-        status="online"/>
+    <Avatar />
+    <Avatar isRounded={false} location="top-right" />
+    <Avatar status="online"/>
+    <Avatar isRounded={false} status="online"/>
   );
-}
-```
+}`}
+
+fileName="AvatarDemo.jsx"
+language="jsx"
+/>
 
 ## Props
 

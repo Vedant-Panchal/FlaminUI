@@ -1,16 +1,16 @@
-<div style={{marginTop: "16px", marginBottom: "16px", display: "flex", alignItems: "center", justifyContent: "center", width:"100%", height:"10rem", flexWrap: "wrap", gap:"2em"}}>
-
 import Checkbox from "@components/Checkbox/Checkbox";
 import { cn } from "@lib/utils/cn";
+import CodePreview from "/components/CodePreview/CodePreview.tsx"
 
-<Checkbox label="Label" />
+## Checkbox
 
-</div>
+Checkboxes are used to select or deselect a value.
 
 ## Usage
 
-```jsx copy
-import Checkbox from "@components/Checkbox/Checkbox";
+<CodePreview preview={<Checkbox label="Label" />}
+
+code={`import Checkbox from "@components/Checkbox/Checkbox";
 import {cn} from "@lib/utils/cn"
 
 function CheckboxDemo() {
@@ -18,7 +18,11 @@ function CheckboxDemo() {
     <Checkbox label="Label" />
   );
 }
-```
+`}
+
+fileName="CheckboxDemo.jsx"
+language="jsx" 
+/>
 
 ## Props
 

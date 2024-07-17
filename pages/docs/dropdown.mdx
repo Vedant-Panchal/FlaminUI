@@ -1,5 +1,3 @@
-<div style={{marginTop: "16px", marginBottom: "16px", display: "flex", alignItems: "center", justifyContent: "center", width:"100%", height:"20rem", flexWrap: "wrap", gap:"2em"}}>
-
 import {
   Dropdown,
   DropdownButton,
@@ -7,7 +5,15 @@ import {
   DropdownContent,
   DropdownLabel,
 } from "@components/Dropdown/Dropdown";
+import CodePreview from "/components/CodePreview/CodePreview.tsx"
 
+## Dropdown
+
+Displays a menu to the user, such as a set of actions or functions. Triggered by a button.
+
+## Usage
+
+<CodePreview preview={<>
 <Dropdown>
   <DropdownButton defaultText="Select an option" />
   <DropdownContent>
@@ -17,13 +23,9 @@ import {
     <DropdownItem value="Option 3">Option 3</DropdownItem>
   </DropdownContent>
 </Dropdown>
-</div>
-
-## Usage
-
-```jsx copy
-
-import {
+</>
+} 
+code={`import {
   Dropdown,
   DropdownButton,
   DropdownItem,
@@ -44,7 +46,10 @@ function DropdownDemo() {
   </Dropdown>
   );
 }
-```
+`}
+
+fileName="DropdownDemo.jsx"
+language="jsx"/>
 
 ## Props
 

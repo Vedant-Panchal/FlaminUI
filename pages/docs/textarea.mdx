@@ -1,116 +1,34 @@
-## Variants
-
-### Default
-
-<div style={{marginTop: "16px", marginBottom: "16px", display: "flex", alignItems: "center", justifyContent: "center", width:"100%", height:"10rem", flexWrap: "wrap", gap:"1em"}}>
 import {TextArea} from "@components/TextArea/TextArea";
 import { TextAreaVaraints } from "@lib/types/type";
 import {cn} from "@lib/utils/cn"
+import CodePreview from "/components/CodePreview/CodePreview.tsx"
 
-<TextArea placeholder="Enter your text here..." variant="" />
+## TextArea
 
-</div>
-
-### Info
-
-<div
-  style={{
-    marginTop: "16px",
-    marginBottom: "16px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    height: "10rem",
-    flexWrap: "wrap",
-    gap: "1em",
-  }}
->
-  <TextArea placeholder="Enter your text here..." variant="info" />
-</div>
-
-### Success
-
-<div
-  style={{
-    marginTop: "16px",
-    marginBottom: "16px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    height: "10rem",
-    flexWrap: "wrap",
-    gap: "1em",
-  }}
->
-  <TextArea placeholder="Enter your text here..." variant="success" />
-</div>
-
-### Error
-
-<div
-  style={{
-    marginTop: "16px",
-    marginBottom: "16px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    height: "10rem",
-    flexWrap: "wrap",
-    gap: "1em",
-  }}
->
-  <TextArea placeholder="Enter your text here..." variant="error" />
-</div>
-
-### Warning
-
-<div
-  style={{
-    marginTop: "16px",
-    marginBottom: "16px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    height: "10rem",
-    flexWrap: "wrap",
-    gap: "1em",
-  }}
->
-  <TextArea placeholder="Enter your text here..." variant="warning" />
-</div>
-
-### Disabled
-
-<div
-  style={{
-    marginTop: "16px",
-    marginBottom: "16px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    height: "10rem",
-    flexWrap: "wrap",
-    gap: "1em",
-  }}
->
-  <TextArea placeholder="Enter your text here..." variant="disabled" />
-</div>
+Textarea allows users to enter text in multiple lines.
 
 ## Usage
 
-```jsx copy
-import {TextArea} from "@components/TextArea/TextArea";
+<CodePreview language="jsx" fileName="TextAreaDemo.jsx"
+
+preview = {
+  <div style={{display:"flex", flexDirection: "column", alignItems:"center", justifyContetn:"center", flexWrap:"wrap", gap:"1rem"}} >
+    <TextArea placeholder="Enter your text here..." variant="" />
+    <TextArea placeholder="Enter your text here..." variant="info" />
+    <TextArea placeholder="Enter your text here..." variant="success" />
+    <TextArea placeholder="Enter your text here..." variant="error" />
+    <TextArea placeholder="Enter your text here..." variant="warning" />
+    <TextArea placeholder="Enter your text here..." variant="disabled" />
+  </div>
+}
+
+code ={`import {TextArea} from "@components/TextArea/TextArea";
 import { TextAreaVaraints } from "@lib/types/type";
 import {cn} from "@lib/utils/cn"
 
-function AvatarDemo() {
+function TextAreaDemo() {
   return (
-    {/* variants are arranged in order as show above*/}
+    {/* variants are arranged in order as shown in the preview*/}
     <TextArea placeholder="Enter your text here..." variant="" />
     <TextArea placeholder="Enter your text here..." variant="info" />
     <TextArea placeholder="Enter your text here..." variant="success" />
@@ -118,8 +36,9 @@ function AvatarDemo() {
     <TextArea placeholder="Enter your text here..." variant="warning" />
     <TextArea placeholder="Enter your text here..." variant="disabled" />
   );
-}
-```
+}`}
+
+/>
 
 ## Props
 

@@ -4,7 +4,11 @@ import AlertTitle from "@components/Alert/AlertTitle";
 import AlertDescription from "@components/Alert/AlertDescription";
 import { cn } from "@lib/utils/cn";
 
-<div style={{marginTop: "16px"}}>
+## Alert
+
+Displays a callout for user attention.
+
+## Usage 
 
 <CodePreview
 preview =
@@ -19,7 +23,7 @@ code =
 import AlertTitle from "@components/Alert/AlertTitle";
 import AlertDescription from "@components/Alert/AlertDescription";
 import { cn } from "@lib/utils/cn";
-function CheckboxDemo() {
+function AlertDemo() {
   return (
     <Alert dismissAfter={2000}>
         <AlertTitle>This is alert title!</AlertTitle>
@@ -28,14 +32,13 @@ function CheckboxDemo() {
   );
 }`}
 
+fileName="AlertDemo.jsx"
 language="jsx"
 />
 
-</div>
+## Props
 
-## Alert Component
-
-### Props
+### Alert Component
 
 The `Alert` component accepts the following props:
 
@@ -48,9 +51,7 @@ The `Alert` component accepts the following props:
 
 The component also accepts all valid HTML div attributes.
 
-## AlertTitle Component
-
-### Props
+### AlertTitle Component
 
 The `AlertTitle` component accepts the following props:
 
@@ -61,9 +62,7 @@ The `AlertTitle` component accepts the following props:
 
 The component also accepts all valid HTML heading attributes.
 
-## AlertDescription Component
-
-### Props
+### AlertDescription Component
 
 The `AlertDescription` component accepts the following props:
 

@@ -7,14 +7,19 @@ import {
 } from "@components/Accordion/Accordion";
 import {cn} from "@lib/utils/cn"
 
-<div style={{marginTop:"16px"}}>
+## Accordion
+
+A vertically stacked set of interactive headings that each reveal a section of content.
+
+## Usage 
+
 <CodePreview
 preview = 
 {
 <Accordion variant="rounded" border={true}>
   <AccordionItem index={0}>
     <AccordionButton>Section 1</AccordionButton>
-    <AccordionContent></AccordionContent>
+    <AccordionContent>Never Gonna Give You Up, Yeet!</AccordionContent>
   </AccordionItem>
   <AccordionItem index={1}>
     <AccordionButton>Section 2</AccordionButton>
@@ -57,11 +62,11 @@ function AccordionDemo() {
 }`
 }
 
+fileName="AccordionDemo.jsx"
 language="jsx" 
 />
-</div>
 
-## Components
+## Props
 
 ### Accordion
 
@@ -102,4 +107,5 @@ The expandable content of an accordion item.
 | Prop        | Type        | Default | Description                                       |
 | ----------- | ----------- | ------- | ------------------------------------------------- |
 | `className` | `string`    | -       | Additional CSS classes.                           |
-| `children`  | `ReactNode` | -       | The content to display when the item is expanded. |
+| `children`  | `ReactNode` | -       | The content to display when the item is expanded. |import { cpuUsage } from "process";
+

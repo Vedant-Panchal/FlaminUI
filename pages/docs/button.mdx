@@ -1,22 +1,29 @@
-<div style={{ marginTop: "16px", marginBottom: "16px", display: 'flex', flexWrap: 'wrap', gap: '2em', justifyContent: 'center', alignItems: 'center', width: '100%', height: '20rem' }}>
 import Button from '@components/Button/Button';
 import { buttonVariants } from "@components/Button/Variants";
 import { cn } from '@lib/utils/cn';
 import { ComponentCard } from "@/components/ui/ComponentCards/ComponentCard";
+import CodePreview from "/components/CodePreview/CodePreview.tsx"
 
-<>
-    {buttonVariants.map((variant) => (
-        <ComponentCard key={variant}>
-            <Button variant={variant}>Button</Button>
-        </ComponentCard>
-    ))}
-</>
+## Button
+
+Displays a button or a component that looks like a button.
+
+## Usage
+
+<CodePreview 
+
+preview={
+<div style={{display:"flex", alignItems:"center", justifyContetn:"center", flexWrap:"wrap", gap:"1rem"}}>
+{buttonVariants.map((variant) => (
+    <ComponentCard key={variant} className>
+        <Button variant={variant}>Button</Button>
+    </ComponentCard>
+))}
 </div>
+}
 
-## Usage 
-
-```tsx copy
-import Button from '@components/Button/Button';
+code =
+{`import Button from '@components/Button/Button';
 import {cn} from "@lib/utils/cn";
 
 function ButtonDemo () {
@@ -24,7 +31,11 @@ function ButtonDemo () {
         <Button variant={cn('primary', 'lg')}>Button</Button>
     );
 }
-```
+`}
+
+fileName="ButtonDemo.jsx"
+language="jsx"/>
+
 ## Props
 
 The button component accepts the following props:
@@ -36,4 +47,4 @@ The button component accepts the following props:
 |               | `error`, `disabled`, `ghost`,  |                                                                       |
 |               | `link`                         |                                                                       |
 | `className`   | `string`                       | Additional classes to be added to the button                          |
-| `...props`    | `any`                          | Any other props you want to pass to the button                        |
+| `...props`    | `any`                          | Any other props you want to pass to the button                        |import { cpuUsage } from 'process';
