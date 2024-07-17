@@ -1,40 +1,44 @@
-<div style={{marginTop: "16px", marginBottom: "16px", display: "flex", alignItems: "center", justifyContent: "center", width:"100%", height:"10rem", flexWrap: "wrap", gap:"2em"}}>
-
+import CodePreview from "/components/CodePreview/CodePreview.tsx"
 import Alert from "@components/Alert/Alert";
 import AlertTitle from "@components/Alert/AlertTitle";
 import AlertDescription from "@components/Alert/AlertDescription";
 import { cn } from "@lib/utils/cn";
 
-<Alert dismissAfter={200000}>
+## Alert
+
+Displays a callout for user attention.
+
+## Usage 
+
+<CodePreview
+preview =
+{<Alert dismissAfter={200000}>
     <AlertTitle>This is alert title!</AlertTitle>
     <AlertDescription>This is alert description!</AlertDescription>
-</Alert>
+</Alert>} 
 
-</div>
-
-## Usage
-
-```jsx copy
-import Alert from "@components/Alert/Alert";
+code =
+{
+`import Alert from "@components/Alert/Alert";
 import AlertTitle from "@components/Alert/AlertTitle";
 import AlertDescription from "@components/Alert/AlertDescription";
 import { cn } from "@lib/utils/cn";
-
-function CheckboxDemo() {
+function AlertDemo() {
   return (
     <Alert dismissAfter={2000}>
         <AlertTitle>This is alert title!</AlertTitle>
         <AlertDescription>This is alert description!</AlertDescription>
     </Alert>
   );
-}
-```
+}`}
 
-Sure, here are the props for each component without the additional details:
+fileName="AlertDemo.jsx"
+language="jsx"
+/>
 
-## Alert Component
+## Props
 
-### Props
+### Alert Component
 
 The `Alert` component accepts the following props:
 
@@ -47,9 +51,7 @@ The `Alert` component accepts the following props:
 
 The component also accepts all valid HTML div attributes.
 
-## AlertTitle Component
-
-### Props
+### AlertTitle Component
 
 The `AlertTitle` component accepts the following props:
 
@@ -60,9 +62,7 @@ The `AlertTitle` component accepts the following props:
 
 The component also accepts all valid HTML heading attributes.
 
-## AlertDescription Component
-
-### Props
+### AlertDescription Component
 
 The `AlertDescription` component accepts the following props:
 

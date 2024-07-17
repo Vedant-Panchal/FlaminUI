@@ -1,18 +1,23 @@
-<div style={{marginTop: "16px", marginBottom: "16px", display: "flex", alignItems: "center", justifyContent: "center", width:"100%", height:"10rem", flexWrap: "wrap", gap:"2em"}}>
-
 import { Toggle } from "@components/Toggle/Toggle";
 import { cn } from "@lib/utils/cn";
+import CodePreview from "/components/CodePreview/CodePreview.tsx"
 
-<Toggle label="Default Toggle" />
-<Toggle variant="squared" label="Squared Toggle" />
-<Toggle variant="squashed" label="Squashed Toggle" />
+## Toggle
 
-</div>
+A two-state button that can be either on or off.
 
 ## Usage
 
-```jsx copy
-import {Toggle} from "@components/Toggle/Toggle";
+<CodePreview preview={
+<div style={{display:"flex", alignItems:"center", justifyContent:"center", flexWrap:"wrap", gap:"1rem"}}>
+
+<Toggle label="Default Toggle" />
+<Toggle variant="squared" label="Squared Toggle"/>
+<Toggle variant="squashed" label="Squashed Toggle" />
+
+</div>}
+
+code ={`import {Toggle} from "@components/Toggle/Toggle";
 import {cn} from "@lib/utils/cn"
 
 function ToggleDemo() {
@@ -22,7 +27,10 @@ function ToggleDemo() {
     <Toggle variant="squashed" label="Squashed Toggle" />
   );
 }
-```
+`}
+
+fileName="ToggleDemo.jsx"
+language="jsx"/>
 
 ## Props
 
@@ -46,4 +54,4 @@ The `variant` prop affects the appearance of the toggle:
 - `"squared"`: Toggle with square corners
 - `"squashed"`: Flatter toggle with rounded corners
 
-If no `variant` is specified, it defaults to the standard rounded appearance.
+If no `variant` is specified, it defaults to the standard rounded appearance.Toggle, 
