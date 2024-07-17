@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState } from "react";
 import { cn } from "@lib/utils/cn";
 import { Label } from "./Label";
@@ -114,7 +112,7 @@ export const Input = ({
   return (
     <div className="relative space-y-1 font-geist font-normal text-zinc-100">
       {label && <Label text={label} htmlFor={type === "file" ? "file-input" : undefined} />}
-      <div className="relative flex items-center">
+      <div className="relative flex flex-col items-start">
         {type === "file" && (
           <>
             <input
@@ -146,57 +144,59 @@ export const Input = ({
                 {getIcon()}
               </span>
             )}
-            <input
-              type={type === "password" && showPassword ? "text" : type}
-              placeholder={placeholder}
-              value={inputValue}
-              onChange={(e) => {
-                setInputValue(e.target.value);
-                if (type === "password") evaluatePassword(e.target.value);
-              }}
-              disabled={variant === "disabled"}
-              pattern={type === "email" ? ".*@.*" : undefined}
-              className={cn(
-                "min-h-14 min-w-80 appearance-none rounded-lg bg-transparent px-3 py-2 font-geist text-base font-normal text-zinc-100 outline outline-1 outline-gray-100/10 selection:bg-gray-400/40 placeholder:text-zinc-400 focus:outline focus:outline-gray-100/80",
-                className,
-                showIcon ? "pr-10" : "",
-                switchInputVariant(variant),
+            <div style={{ minHeight: "6rem" /* Adjust height as needed */, position: 'relative' }}>
+              <input
+                type={type === "password" && showPassword ? "text" : type}
+                placeholder={placeholder}
+                value={inputValue}
+                onChange={(e) => {
+                  setInputValue(e.target.value);
+                  if (type === "password") evaluatePassword(e.target.value);
+                }}
+                disabled={variant === "disabled"}
+                pattern={type === "email" ? ".*@.*" : undefined}
+                className={cn(
+                  "min-h-14 min-w-80 appearance-none rounded-lg bg-transparent px-3 py-2 font-geist text-base font-normal text-zinc-100 outline outline-1 outline-gray-100/10 selection:bg-gray-400/40 placeholder:text-zinc-400 focus:outline focus:outline-gray-100/80",
+                  className,
+                  showIcon ? "pr-10" : "",
+                  switchInputVariant(variant),
+                )}
+                {...props}
+              />
+              {type === "number" && (
+                <div className="absolute inset-y-0 right-0 flex flex-col items-center justify-center pr-3">
+                  <ChevronUp
+                    className="cursor-pointer"
+                    onClick={handleIncrement}
+                  />
+                  <ChevronDown
+                    className="cursor-pointer"
+                    onClick={handleDecrement}
+                  />
+                </div>
               )}
-              {...props}
-            />
-            {type === "number" && (
-              <div className="absolute inset-y-0 right-0 flex flex-col items-center justify-center pr-3">
-                <ChevronUp
-                  className="cursor-pointer"
-                  onClick={handleIncrement}
-                />
-                <ChevronDown
-                  className="cursor-pointer"
-                  onClick={handleDecrement}
-                />
-              </div>
-            )}
-            {type === "password" && (
-              <>
-                <div className="mt-1 flex">
-                  <div
-                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 1 ? "bg-red-500" : "bg-transparent"}`}
-                  ></div>
-                  <div
-                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 2 ? "bg-yellow-500" : "bg-transparent"}`}
-                  ></div>
-                  <div
-                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 3 ? "bg-amber-600" : "bg-transparent"}`}
-                  ></div>
-                  <div
-                    className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 4 ? "bg-green-500" : "bg-transparent"}`}
-                  ></div>
-                </div>
-                <div className="mt-1 text-sm text-red-100">
-                  {getStrengthLabel(passwordStrength)}
-                </div>
-              </>
-            )}
+              {type === "password" && (
+                <>
+                  <div className="mt-2 flex w-full">
+                    <div
+                      className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 1 ? "bg-red-500" : "bg-transparent"}`}
+                    ></div>
+                    <div
+                      className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 2 ? "bg-yellow-500" : "bg-transparent"}`}
+                    ></div>
+                    <div
+                      className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 3 ? "bg-amber-600" : "bg-transparent"}`}
+                    ></div>
+                    <div
+                      className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 4 ? "bg-green-500" : "bg-transparent"}`}
+                    ></div>
+                  </div>
+                  <div className="mt-1 text-sm text-red-100">
+                    {getStrengthLabel(passwordStrength)}
+                  </div>
+                </>
+              )}
+            </div>
           </>
         )}
       </div>

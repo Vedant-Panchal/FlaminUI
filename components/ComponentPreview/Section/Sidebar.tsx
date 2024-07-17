@@ -1,22 +1,71 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Sidebar: React.FC = () => {
   return (
     <div className="w-64 h-full text-white p-4 ml-8">
-      <h2 className="text-2xl font-bold mb-4">All Components</h2>
+      <h2 className="text-2xl font-bold mb-8">All Components</h2>
       <ul>
-        <li className="mb-2"><a href="docs/accordion" className="hover:underline">Accordion</a></li>
-        <li className="mb-2"><a href="docs/alert" className="hover:underline">Alert</a></li>
-        <li className="mb-2"><a href="docs/avatar" className="hover:underline">Avatar</a></li>
-        <li className="mb-2"><a href="docs/backgrounds" className="hover:underline">Backgrounds</a></li>
-        <li className="mb-2"><a href="docs/button" className="hover:underline">Button</a></li>
-        <li className="mb-2"><a href="docs/card" className="hover:underline">Card</a></li>
-        <li className="mb-2"><a href="docs/checkbox" className="hover:underline">Checkbox</a></li>
-        <li className="mb-2"><a href="docs/dropdown" className="hover:underline">Dropdown</a></li>
-        <li className="mb-2"><a href="docs/input" className="hover:underline">Input</a></li>
-        <li className="mb-2"><a href="docs/radio" className="hover:underline">Radio</a></li>
-        <li className="mb-2"><a href="docs/textarea" className="hover:underline">Textarea</a></li>
-        <li className="mb-2"><a href="docs/toggle" className="hover:underline">Toggle</a></li>
+        <li className="mb-2 hover:text-primary-550 hover:pl-4 transition-all p-2 rounded-md">
+          <Link href="/docs/accordion">
+            Accordion
+          </Link>
+        </li>
+        <li className="mb-2 hover:text-primary-550 hover:pl-4 transition-all p-2 rounded-md">
+          <Link href="/docs/alert">
+            Alert
+          </Link>
+        </li>
+        <li className="mb-2 hover:text-primary-550 hover:pl-4 transition-all p-2 rounded-md">
+          <Link href="/docs/avatar">
+            Avatar
+          </Link>
+        </li>
+        <li className="mb-2 hover:text-primary-550 hover:pl-4 transition-all p-2 rounded-md">
+          <Link href="/docs/backgrounds">
+            Backgrounds
+          </Link>
+        </li>
+        <li className="mb-2 hover:text-primary-550 hover:pl-4 transition-all p-2 rounded-md">
+          <Link href="/docs/button">
+            Button
+          </Link>
+        </li>
+        <li className="mb-2 hover:text-primary-550 hover:pl-4 transition-all p-2 rounded-md">
+          <Link href="/docs/card">
+            Card
+          </Link>
+        </li>
+        <li className="mb-2 hover:text-primary-550 hover:pl-4 transition-all p-2 rounded-md">
+          <Link href="/docs/checkbox">
+            Checkbox
+          </Link>
+        </li>
+        <li className="mb-2 hover:text-primary-550 hover:pl-4 transition-all p-2 rounded-md">
+          <Link href="/docs/dropdown">
+            Dropdown
+          </Link>
+        </li>
+        <li className="mb-2 hover:text-primary-550 hover:pl-4 transition-all p-2 rounded-md">
+          <Link href="/docs/input">
+            Input
+          </Link>
+        </li>
+        <li className="mb-2 hover:text-primary-550 hover:pl-4 transition-all p-2 rounded-md">
+          <Link href="/docs/radio">
+            Radio
+          </Link>
+        </li>
+        <li className="mb-2 hover:text-primary-550 hover:pl-4 transition-all p-2 rounded-md">
+          <Link href="/docs/textarea">
+            Textarea
+          </Link>
+        </li>
+        <li className="mb-2 hover:text-primary-550 hover:pl-4 transition-all p-2 rounded-md">
+          <Link href="/docs/toggle">
+            Toggle
+          </Link>
+        </li>
       </ul>
     </div>
   );
