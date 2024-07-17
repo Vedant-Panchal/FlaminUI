@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils/cn";
 import React from "react";
 
 type SquareSize = "xs" | "sm" | "md" | "lg" | "xl";
@@ -13,18 +14,20 @@ const sizeMap: Record<SquareSize, number> = {
 type SquareGridFadedProps = {
   squareSize?: SquareSize | number;
   faded?: boolean;
+  className?: string;
 };
 
 export const SquareGridFaded = ({
   squareSize = "md",
   faded = false,
+  className
 }: SquareGridFadedProps) => {
   const size =
     typeof squareSize === "number" ? squareSize : sizeMap[squareSize];
   const gridSize = `${size}em ${size}em`;
 
   return (
-    <div className="relative h-screen w-screen overflow-hidden bg-black">
+    <div className={cn("relative h-screen w-screen overflow-hidden bg-black",className)}>
       {/* Grid */}
       <div
         className="absolute inset-0 h-full w-full"

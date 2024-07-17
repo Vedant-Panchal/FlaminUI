@@ -1,3 +1,5 @@
+"use client"
+import { cn } from "@/lib/utils/cn";
 import { motion } from "framer-motion";
 import React from "react";
 
@@ -11,14 +13,15 @@ const sizeMap: Record<dotSize, number> = {
 };
 
 type NorthernDottedProps = {
-  dotSize: dotSize;
+  dotSize?: dotSize;
+  className?: string;
 };
 
-export const NorthernDotted = ({ dotSize }: NorthernDottedProps) => {
+export const NorthernDotted = ({ dotSize="xs",className }: NorthernDottedProps) => {
   const size = sizeMap[dotSize];
-  const bgSize = `${size}em ${size}em`;
+  const bgSize = `${size}rem ${size}rem`;
   return (
-    <div className="relative h-screen w-screen overflow-hidden bg-transparent">
+    <div className={cn("relative h-screen w-screen overflow-hidden bg-transparent",className)}>
       <motion.div
         className="absolute z-10 h-[700px] w-[700px] rounded-full bg-blue-500 blur-3xl"
         transition={{
@@ -75,7 +78,7 @@ export const NorthernDotted = ({ dotSize }: NorthernDottedProps) => {
       <motion.div className="absolute inset-0 z-[1000] m-auto h-fit w-fit bg-gradient-to-b from-slate-200 to-slate-50/60 bg-clip-text text-center font-geist text-8xl font-extrabold tracking-tight text-transparent">
         Northern Lights,
         <br />
-        through Dots
+       Dotted
       </motion.div>
 
       <div
@@ -86,7 +89,7 @@ export const NorthernDotted = ({ dotSize }: NorthernDottedProps) => {
           backgroundSize: bgSize,
           backgroundPosition: "center center",
           opacity: 1,
-          //   mixBlendMode: 'overlay',
+            // mixBlendMode: 'overlay',
         }}
       ></div>
     </div>

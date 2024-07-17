@@ -1,12 +1,24 @@
+import { cn } from "@/lib/utils/cn";
 import React from "react";
+type dotSize = "xs" | "sm" | "md" | "lg";
 
+const sizeMap: Record<dotSize, number> = {
+  xs: 0.8,
+  sm: 1,
+  md: 1.25,
+  lg: 1.5,
+};
 type DottedGridFadedProps = {
   faded?: boolean;
+  className?: string;
+  dotSize?: dotSize;
 };
 
-export const DottedGridFaded = ({ faded = false }: DottedGridFadedProps) => {
+export const DottedGridFaded = ({ faded = false,className,dotSize="xs" }: DottedGridFadedProps) => {
+  const size = sizeMap[dotSize];
+  const bgSize = `${size}rem ${size}rem`;
   return (
-    <div className="relative h-screen w-screen overflow-hidden bg-black">
+    <div className={cn("relative h-screen w-screen overflow-hidden bg-black",className)}>
       {/* Dots */}
       <div
         className="absolute inset-0 h-full w-full bg-black"
@@ -14,7 +26,7 @@ export const DottedGridFaded = ({ faded = false }: DottedGridFadedProps) => {
           backgroundImage: `
           radial-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px)
         `,
-          backgroundSize: "10px 10px",
+          backgroundSize: bgSize,
         }}
       />
       {/* Text */}
