@@ -1,4 +1,5 @@
 "use client";
+import { cn } from "@/lib/utils/cn";
 import React, { useEffect, useRef } from "react";
 
 interface GradientProps {
@@ -37,6 +38,7 @@ interface FluxBg {
   backgroundColor3?: string;
   interactiveColor?: string;
   blendingMode?: MixBlendMode | undefined;
+  className?: string;
 }
 
 const defaultGradients: GradientProps[] = [
@@ -87,6 +89,7 @@ const FluxBg: React.FC<FluxBg> = ({
   backgroundColor3 = "rgb(30, 40, 255)", // Tailwind blue-900
   interactiveColor = "99, 102, 241", // Tailwind indigo-500
   blendingMode = "hard-light",
+  className,
 }) => {
   const interBubbleRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -107,8 +110,11 @@ const FluxBg: React.FC<FluxBg> = ({
     }
 
     const handleMouseMove = (event: MouseEvent) => {
-      tgX = event.clientX;
-      tgY = event.clientY;
+      if (containerRef.current) {
+        const containerRect = containerRef.current.getBoundingClientRect();
+        tgX = event.clientX - containerRect.left;
+        tgY = event.clientY - containerRect.top;
+      }
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -134,19 +140,19 @@ const FluxBg: React.FC<FluxBg> = ({
         opacity: gradient.opacity || 1,
       };
 
-      return <div key={index} className={`g${index + 1}`} style={style}></div>;
+      return <div key={index} className={``} style={style}></div>;
     });
   };
 
   return (
     <div
-      className="gradient-bg"
+      className={cn("h-full w-full relative overflow-hidden", className)}
       ref={containerRef}
       style={{
         background: `linear-gradient(109.6deg, ${backgroundColor1} 11.2%, ${backgroundColor2} 51.2%, ${backgroundColor3} 98.6%)`,
       }}
     >
-      <div className="text-container bg-gradient-to-b from-gray-100/80 to-slate-100/20 bg-clip-text font-geist font-extrabold leading-8 tracking-tight text-transparent">
+      <div className="absolute inset-0 p-2 z-[1000] m-auto h-fit w-fit bg-gradient-to-b from-slate-200 to-slate-50/60 bg-clip-text text-center font-geist text-7xl font-extrabold tracking-tight text-transparent">
         Flux Background
       </div>
       <svg>
@@ -167,7 +173,7 @@ const FluxBg: React.FC<FluxBg> = ({
           </filter>
         </defs>
       </svg>
-      <div className="gradients-container">
+      <div className="w-full h-full" style={{ filter: `url(#goo) blur(40px)` }}>
         {generateGradients()}
         <div
           className="interactive"

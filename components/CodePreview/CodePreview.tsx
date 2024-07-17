@@ -20,7 +20,7 @@ const CodePreview: React.FC<CodePreviewProps> = ({
   language,
   fileName = "example.tsx",
 }) => {
-  const [selected, setSelected] = useState<"preview" | "code">("code");
+  const [selected, setSelected] = useState<"preview" | "code">("preview");
   const [processedCode, setProcessedCode] = useState<string>(code);
   const [copy, setCopy] = useState(false);
   // Function to preprocess code with Prettier
@@ -82,7 +82,7 @@ const CodePreview: React.FC<CodePreviewProps> = ({
             backgroundColor: "rgba(36, 36, 36, 0.2)",
           }}
         >
-          <div>{preview}</div>
+          {preview}
         </div>
       ) : (
         <div
@@ -126,6 +126,7 @@ const CodePreview: React.FC<CodePreviewProps> = ({
               overflowY: "auto",
               minHeight: "350px",
               height: "500px",
+              scrollbarWidth: "none",
             }}
             codeTagProps={{ className: "font-geist text-red-200 mt-6" }}
           >
