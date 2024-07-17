@@ -1,34 +1,101 @@
-<div 
-  style={{ 
-    marginBottom: '16px',
-    marginTop: '16px',
-    width: '100%', 
-    minHeight: '100vh', 
-    position: 'relative',
-    overflow: 'auto',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '2rem 0'
-  }}
->
 import { NorthernDotted } from "@components/Backgrounds/NorthernDotted";
 import { NorthernSquare } from "@components/Backgrounds/NorthernSquare";
 import { DottedGridFaded } from "@components/Backgrounds/DottedGridFaded";
 import { SquareGridFaded } from "@components/Backgrounds/SquareGridFaded";
 
-  <div className="w-full flex flex-col items-center gap-16">
-    <div className="relative w-full h-96 flex justify-center items-center bg-gray-100">
-      <SquareGridFaded squareSize="sm" faded={false} className="absolute inset-0 w-full h-full" />
-    </div>
-    <div className="relative w-full h-96 flex justify-center items-center bg-gray-100">
-      <DottedGridFaded faded={false} className="absolute inset-0 w-full h-full" />
-    </div>
-    <div className="relative w-full h-96 flex justify-center items-center bg-gray-100">
-      <NorthernDotted dotSize="sm" className="absolute inset-0 w-full h-full" />
-    </div>
-    <div className="relative w-full h-96 flex justify-center items-center bg-gray-100">
-      <NorthernSquare squareSize="md" className="absolute inset-0 w-full h-full" />
-    </div>
+
+<div
+  style={{
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    gap: "4rem",
+  }}
+>
+  <div
+    style={{
+      position: "relative",
+      width: "100%",
+      height: "24rem",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "#f3f4f6",
+    }}
+  >
+    <SquareGridFaded
+      squareSize="sm"
+      faded={false}
+      style={{
+        position: "absolute",
+        inset: "0",
+        width: "100%",
+        height: "100%",
+      }}
+    />
+  </div>
+  <div
+    style={{
+      position: "relative",
+      width: "100%",
+      height: "24rem",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "#f3f4f6",
+    }}
+  >
+    <DottedGridFaded
+      faded={false}
+      style={{
+        position: "absolute",
+        inset: "0",
+        width: "100%",
+        height: "100%",
+      }}
+    />
+  </div>
+  <div
+    style={{
+      position: "relative",
+      width: "100%",
+      height: "24rem",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "#f3f4f6",
+    }}
+  >
+    <NorthernDotted
+      dotSize="sm"
+      style={{
+        position: "absolute",
+        inset: "0",
+        width: "100%",
+        height: "100%",
+      }}
+    />
+  </div>
+  <div
+    style={{
+      position: "relative",
+      width: "100%",
+      height: "24rem",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "#f3f4f6",
+    }}
+  >
+    <NorthernSquare
+      squareSize="md"
+      style={{
+        position: "absolute",
+        inset: "0",
+        width: "100%",
+        height: "100%",
+      }}
+    />
   </div>
 </div>
