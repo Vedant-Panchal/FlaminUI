@@ -1,10 +1,10 @@
 {
-    "extends": "./tsconfig.json",
-    "compilerOptions": {
-      "module": "CommonJS",
-      "outDir": "./cli/dist",
-      "noEmit": false
-    },
-    "include": ["cli/**/*"],
-    "exclude": ["node_modules", "**/*.spec.ts"]
-  }
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "outDir": "./dist",
+    "noEmit": false
+  },
+  "include": ["lib/cli/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

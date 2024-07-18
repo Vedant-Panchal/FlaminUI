@@ -2,8 +2,9 @@
   "name": "protoui",
   "version": "1.0.0",
   "private": false,
+  "type": "module",
   "bin": {
-    "protoui": "./cli/index.js"
+    "protoui": "./dist/cli/index.js"
   },
   "scripts": {
     "dev": "next dev",
