@@ -1,0 +1,72 @@
+import CodeCopy from "/components/CodePreview/CodeCopy.tsx"
+
+## Install Tailwind CSS
+
+Install Tailwind CSS with Next.js
+
+### Create your project
+
+```bash copy
+npx create-next-app@latest my-project --typescript --eslint
+cd my-project
+```
+
+### Install Tailwind CSS
+ 
+``` bash copy
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+### Configure your template paths
+
+<CodeCopy 
+code={
+  `/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+
+    // Or if using \`src\` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+`}
+
+fileName = "tailwind.config.ts"
+lineNumbers={[3, 4, 5, 6, 7, 8, 9, 10]}
+/>
+
+### Add the Tailwind directives to your CSS
+
+<CodeCopy 
+
+    code={`@tailwind base;
+@tailwind components;
+@tailwind utilities;`}
+
+    fileName="globals.css"
+/>
+
+### Start your build process
+
+```bash copy 
+npm run dev
+```
+
+### Start using Tailwind
+
+<CodeCopy 
+
+    code={`export default function Home() {
+    return <h1 className="text-3xl font-bold underline">Hello world!</h1>;`}
+
+    fileName="index.ts"
+    lineNumbers={[2]}
+/>

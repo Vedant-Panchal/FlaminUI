@@ -140,7 +140,7 @@ export const Input = ({
         {type !== "file" && (
           <>
             {showIcon && (
-              <span className="absolute inset-y-0 right-0 flex cursor-pointer items-center justify-center pr-3">
+              <span className="absolute inset-y-0 z-10 right-0 flex cursor-pointer items-center justify-center pr-3 mb-9">
                 {getIcon()}
               </span>
             )}
@@ -164,7 +164,7 @@ export const Input = ({
                 {...props}
               />
               {type === "number" && (
-                <div className="absolute inset-y-0 right-0 flex flex-col items-center justify-center pr-3">
+                <div className="absolute inset-y-0 right-0 flex flex-col items-center justify-center pr-3 mb-9">
                   <ChevronUp
                     className="cursor-pointer"
                     onClick={handleIncrement}
