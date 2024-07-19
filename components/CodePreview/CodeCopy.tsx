@@ -8,20 +8,17 @@ import { Check, Copy } from "lucide-react";
 
 interface CodeCopyProps {
   code: string;
-  preview: React.ReactNode;
-  language: "typescript" | "jsx" | "tsx"; // Extend this list as needed
+  language: "typescript" | "jsx" | "tsx" | "markdown" | "css"; // Extend this list as needed
   fileName?: string;
   lineNumbers?: Array<number>;
 }
 
 const CodeCopy: React.FC<CodeCopyProps> = ({
   code,
-  preview,
   language,
   lineNumbers = [],
-  fileName = "example.tsx",
+  fileName = "",
 }) => {
-  const [selected, setSelected] = useState<"preview" | "code">("preview");
   const [processedCode, setProcessedCode] = useState<string>(code);
   const [copy, setCopy] = useState(false);
 
@@ -36,6 +33,7 @@ const CodeCopy: React.FC<CodeCopyProps> = ({
         plugins: [
           parserTypescript, // For TypeScript and TSX
           parserBabel, // For JSX and TSX
+
         ],
         singleQuote: true,
         trailingComma: "es5",
@@ -101,7 +99,7 @@ const CodeCopy: React.FC<CodeCopyProps> = ({
         </button>
       </div>
       <SyntaxHighlighter
-        language={language}
+      language={language}
         style={vscDarkPlus}
         showLineNumbers={true}
         wrapLines={true}
@@ -116,7 +114,10 @@ const CodeCopy: React.FC<CodeCopyProps> = ({
         }}
         codeTagProps={{ className: "font-geist mt-6" }}
         lineProps={(lineNumber) => {
-          const style: React.CSSProperties = { display: "block", width: "100%" };
+          const style: React.CSSProperties = {
+            display: "block",
+            width: "100%",
+          };
           if (lineNumbers.includes(lineNumber)) {
             style.backgroundColor = "rgba(255, 255, 255, 0.1)";
           }
