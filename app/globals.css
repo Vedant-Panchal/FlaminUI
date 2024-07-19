@@ -252,3 +252,12 @@ input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
+
+.custom-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; 
+}

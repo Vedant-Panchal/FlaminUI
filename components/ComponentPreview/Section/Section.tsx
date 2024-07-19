@@ -44,7 +44,7 @@ import { Toggle } from "@components/Toggle/Toggle";
 const Section: React.FC = () => {
   return (
     <div className="flex mt-28">
-      <div className='absolute top-28 mt-6'>
+      <div className='relative'>
         <Sidebar />
       </div>
       <div className="flex-grow p-6 text-white mr-8 ml-[240px]">
@@ -53,7 +53,7 @@ const Section: React.FC = () => {
             <CardDisplay 
               title="Accordion" 
               description="An accordion component with expand/collapse functionality."
-              buttonText="Learn More"
+              buttonText="Try Now"
               buttonLink="/docs/accordion"
               buttonIcon={<ChevronRight className="h-6 w-6" />}
             >
@@ -77,7 +77,7 @@ const Section: React.FC = () => {
             <CardDisplay
               title='CardDisplay'
               description='A CardDisplay component to display content.'
-              buttonText='Learn More'
+              buttonText='Try Now'
               buttonLink='/docs/card'
               buttonIcon={<ChevronRight className="h-6 w-6" />}
             >
@@ -111,7 +111,7 @@ const Section: React.FC = () => {
             <CardDisplay
               title='Alert'
               description='An alert component to display messages.'
-              buttonText='Learn More'
+              buttonText='Try Now'
               buttonLink='/docs/alert'
               buttonIcon={<ChevronRight className="h-6 w-6" />}
             >
@@ -125,7 +125,7 @@ const Section: React.FC = () => {
             <CardDisplay
               title='Avatar'
               description='An avatar component to display user profile images.'
-              buttonText='Learn More'
+              buttonText='Try Now'
               buttonLink='/docs/avatar'
               buttonIcon={<ChevronRight className="h-6 w-6" />}
             >
@@ -140,7 +140,7 @@ const Section: React.FC = () => {
             <CardDisplay
               title='Button'
               description='A button component to trigger actions.'
-              buttonText='Learn More'
+              buttonText='Try Now'
               buttonLink='/docs/button'
               buttonIcon={<ChevronRight className="h-6 w-6" />}
             >
@@ -151,7 +151,7 @@ const Section: React.FC = () => {
             <CardDisplay
               title='Checkbox'
               description='A checkbox component to select options.'
-              buttonText='Learn More'
+              buttonText='Try Now'
               buttonLink='/docs/checkbox'
               buttonIcon={<ChevronRight className="h-6 w-6" />}
             >
@@ -162,7 +162,7 @@ const Section: React.FC = () => {
             <CardDisplay
               title='Dropdown'
               description='A dropdown component to select options.'
-              buttonText='Learn More'
+              buttonText='Try Now'
               buttonLink='/docs/dropdown'
               buttonIcon={<ChevronRight className="h-6 w-6" />}
             >
@@ -181,7 +181,7 @@ const Section: React.FC = () => {
             <CardDisplay
               title='Input'
               description='An input component to enter data.'
-              buttonText='Learn More'
+              buttonText='Try Now'
               buttonLink='/docs/input'
               buttonIcon={<ChevronRight className="h-6 w-6" />}
             >
@@ -198,7 +198,7 @@ const Section: React.FC = () => {
             <CardDisplay
               title='Radio'
               description='A radio component to select options.'
-              buttonText='Learn More'
+              buttonText='Try Now'
               buttonLink='/docs/radio'
               buttonIcon={<ChevronRight className="h-6 w-6" />}
             >
@@ -209,7 +209,7 @@ const Section: React.FC = () => {
             <CardDisplay
               title='Textarea'
               description='A textarea component to enter multiple lines of text.'
-              buttonText='Learn More'
+              buttonText='Try Now'
               buttonLink='/docs/textarea'
               buttonIcon={<ChevronRight className="h-6 w-6" />}
             >
@@ -220,7 +220,7 @@ const Section: React.FC = () => {
             <CardDisplay
               title='Toggle'
               description='A toggle component to switch between two states.'
-              buttonText='Learn More'
+              buttonText='Try Now'
               buttonLink='/docs/toggle'
               buttonIcon={<ChevronRight className="h-6 w-6" />}
             >
