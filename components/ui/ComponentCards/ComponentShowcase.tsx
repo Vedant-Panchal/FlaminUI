@@ -22,7 +22,7 @@ export const ComponentShowcase = ({
       )}
       {...props}
     >
-      <div className="font-geist text-2xl font-semibold text-primary-100">
+      <div className="font-geist text-2xl font-semibold text-rose-100">
         {title}
       </div>
       <div className="flex h-max w-full flex-wrap items-center justify-center gap-x-2 gap-y-2">

@@ -55,7 +55,7 @@ export const CardCustomer = ({
       </div>
       <div
         className={cn(
-          "font-bold text-primary-550",
+          "font-bold text-[#F65571]",
           className && className.includes("amount") ? className : "",
         )}
       >
