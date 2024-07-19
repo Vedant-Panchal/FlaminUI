@@ -101,6 +101,7 @@ const CodeCopy: React.FC<CodeCopyProps> = ({
         </button>
       </div>
       <SyntaxHighlighter
+        language={language}
         style={vscDarkPlus}
         showLineNumbers={true}
         wrapLines={true}
