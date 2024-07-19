@@ -1,0 +1,64 @@
+import CodeCopy from "/components/CodePreview/CodeCopy.tsx";
+
+## Add Utilities
+
+Commonly used utilities for using Proto UI
+
+### Install Dependencies
+
+```bash copy
+npm i framer-motion clsx tailwind-merge
+```
+
+### Add util file
+
+<CodeCopy 
+  code={`import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}`}
+
+  fileName="lib/utils.ts"
+/>
+
+### Base Tailwind Config file
+
+<CodeCopy 
+  code={`const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/app/**/*.{js,ts,jsx,tsx}",
+
+    // Or if using 'src' directory:
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {},
+  },
+  plugins: [addVariablesForColors],
+};
+
+// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [\`--\${key}\`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}`}
+
+  fileName="tailwind.config.ts"
+  lineNumbers={[1, 2, 3, 15, 19, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]}
+/>
