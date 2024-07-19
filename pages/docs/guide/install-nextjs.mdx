@@ -1,4 +1,4 @@
-import CodePreview from "/components/CodePreview/CodePreview.tsx"
+import CodeCopy from "@src/CodePreview/CodeCopy";
 
 ## Install Next.js
 
@@ -6,25 +6,30 @@ Install Next.js with Create Next App
 
 ### Create a new project
 
-```bash copy
-npx create-next-app@latest my-nextjs-app
-```
+<CodeCopy
+  code={`npx create-next-app@latest my-nextjs-app`}
+  language="markdown"
+/>
 
 ### On installation, you'll see the following prompts:
- 
-``` bash copy
-What is your project named? my-app
+
+<CodeCopy
+  code={`What is your project named? my-app
 Would you like to use TypeScript? No / Yes
 Would you like to use ESLint? No / Yes
 Would you like to use Tailwind CSS? No / Yes
-Would you like to use `src/` directory? No / Yes
+Would you like to use \`src/\` directory? No / Yes
 Would you like to use App Router? (recommended) No / Yes
 Would you like to customize the default import alias (@/*)? No / Yes
-What import alias would you like configured? @/*
-```
+What import alias would you like configured? @/*`}
+  language="markdown"
+/>
+
 ### Start the app
 
-``` bash copy
-cd my-app
-npm run dev
-```
+<CodeCopy
+  code={`cd my-app
+npm run dev`}
+  language="markdown"
+/>
+

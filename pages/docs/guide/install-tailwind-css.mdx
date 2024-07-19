@@ -4,23 +4,18 @@ import CodeCopy from "/components/CodePreview/CodeCopy.tsx"
 
 Install Tailwind CSS with Next.js
 
-### Create your project
-
-```bash copy
-npx create-next-app@latest my-project --typescript --eslint
-cd my-project
-```
-
 ### Install Tailwind CSS
- 
-``` bash copy
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
+
+<CodeCopy 
+language="markdown"
+code={`npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p`}
+/>
 
 ### Configure your template paths
 
 <CodeCopy 
+language="typescript"
 code={
   `/** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -31,44 +26,42 @@ module.exports = {
 
     // Or if using \`src\` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
-`}
+
+],
+theme: {
+extend: {},
+},
+plugins: [],
+};`}
 
 fileName = "tailwind.config.ts"
-language="typescript"
 lineNumbers={[3, 4, 5, 6, 7, 8, 9, 10]}
 />
 
 ### Add the Tailwind directives to your CSS
 
 <CodeCopy 
-
+language="css"
     code={`@tailwind base;
 @tailwind components;
 @tailwind utilities;`}
 
-    fileName="globals.css"
+fileName="globals.css"
+
 />
 
 ### Start your build process
 
-```bash copy 
-npm run dev
-```
+<CodeCopy language="markdown" code={`npm run dev`} />
 
 ### Start using Tailwind
 
 <CodeCopy 
+language="typescript"
+code={`export default function Home() {
+return <h1 className="text-3xl font-bold underline">Hello world!</h1>
+};`}
 
-    code={`export default function Home() {
-    return <h1 className="text-3xl font-bold underline">Hello world!</h1>;`}
-
-    fileName="index.ts"
-    language="typescript"
-    lineNumbers={[2]}
+fileName="index.tsx"
+lineNumbers={[2]}
 />
