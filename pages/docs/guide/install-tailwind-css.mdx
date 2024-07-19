@@ -1,4 +1,4 @@
-import CodeCopy from "@src/CodePreview/CodeCopy";
+import CodeCopy from "/components/CodePreview/CodeCopy.tsx"
 
 ## Install Tailwind CSS
 
@@ -6,9 +6,9 @@ Install Tailwind CSS with Next.js
 
 ### Install Tailwind CSS
 
-<CodeCopy
-  language="markdown"
-  code={`npm install -D tailwindcss postcss autoprefixer
+<CodeCopy 
+language="markdown"
+code={`npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p`}
 />
 
@@ -32,8 +32,7 @@ theme: {
 extend: {},
 },
 plugins: [],
-};
-`}
+};`}
 
 fileName = "tailwind.config.ts"
 lineNumbers={[3, 4, 5, 6, 7, 8, 9, 10]}
@@ -47,7 +46,7 @@ language="css"
 @tailwind components;
 @tailwind utilities;`}
 
-    fileName="globals.css"
+fileName="globals.css"
 
 />
 
@@ -59,11 +58,10 @@ language="css"
 
 <CodeCopy 
 language="typescript"
-    code={`export default function Home() {
-    return <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    };`}
+code={`export default function Home() {
+return <h1 className="text-3xl font-bold underline">Hello world!</h1>
+};`}
 
-    fileName="index.tsx"
-    lineNumbers={[2]}
-
+fileName="index.tsx"
+lineNumbers={[2]}
 />
