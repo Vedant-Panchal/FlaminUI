@@ -113,7 +113,7 @@ const CodeCopy: React.FC<CodeCopyProps> = ({
           maxHeight: "500px",
           scrollbarWidth: "none",
         }}
-        codeTagProps={{ className: "font-geist text-red-200 mt-6" }}
+        codeTagProps={{ className: "font-geist mt-6" }}
         lineProps={(lineNumber) => {
           const style: React.CSSProperties = { display: "block", width: "100%" };
           if (lineNumbers.includes(lineNumber)) {
