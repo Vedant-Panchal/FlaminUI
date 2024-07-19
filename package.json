@@ -4,7 +4,7 @@
   "private": false,
   "type": "module",
   "bin": {
-    "protoui": "./dist/cli/index.js"
+    "protoui": "./lib/cli/index.js"
   },
   "scripts": {
     "dev": "next dev",
