@@ -1,18 +1,16 @@
 {
-  "name": "protoui",
-  "version": "1.0.0",
+  "name": "protoyoui",
+  "version": "1.0.2",
   "private": false,
   "type": "module",
   "bin": {
-    "protoui": "./lib/cli/index.js"
+    "protoui": "cli/index.js"
   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "build-lib": "tsc -p tsconfig.lib.json && npm run build-cli",
-    "build-cli": "tsc -p tsconfig.cli.json"
+    "lint": "next lint"
   },
   "dependencies": {
     "chalk": "^5.3.0",
