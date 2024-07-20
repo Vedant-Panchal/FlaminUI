@@ -11,7 +11,7 @@ export const HelperText = ({
 }: HelperTextProps) => {
   return (
     <p
-      className={`mt-2 text-sm ${variant === "error" ? "text-red-500" : "text-primary-200"} ${className}`}
+      className={`mt-2 text-sm ${variant === "error" ? "text-red-500" : "text-rose-200"} ${className}`}
     >
       {text}
     </p>

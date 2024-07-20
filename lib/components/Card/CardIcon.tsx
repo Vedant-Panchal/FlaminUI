@@ -8,6 +8,6 @@ type CardIconProps = {
 
 export const CardIcon = ({ children, className }: CardIconProps) => {
   return (
-    <div className={cn("mb-2 text-primary-550", className)}>{children}</div>
+    <div className={cn("mb-2 text-[#F65571]", className)}>{children}</div>
   );
 };
