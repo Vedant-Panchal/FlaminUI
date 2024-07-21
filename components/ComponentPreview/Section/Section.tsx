@@ -98,7 +98,7 @@ const Section: React.FC = () => {
                             <CardLink href={"/backgrounds"} className="cursor-pointer flex flex-row items-center">
                               <p>See your guidelines</p>
                               <CardIcon>
-                                <SquareArrowOutUpRight className="ml-3 h-4 w-4 text-primary-550 mt-2" />
+                                <SquareArrowOutUpRight className="ml-3 h-4 w-4 text-[#F65571] mt-2" />
                               </CardIcon>
                             </CardLink>
                         </CardFooter>
