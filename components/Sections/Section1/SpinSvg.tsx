@@ -8,7 +8,7 @@ export const SpinningSVG = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     animate={{ rotate: 360 }}
-    transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+    transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
     className={'blur-sm'}
   >
     <g filter="url(#filter0_f_559_22173)">

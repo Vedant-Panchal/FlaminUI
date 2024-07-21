@@ -6,7 +6,7 @@ import type { AppProps } from "next/app";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <div className="relative pt-16">
+      <div className="relative">
         <div className="fixed inset-0 z-20 bg-noise mix-blend-darken bg-repeat object-cover pointer-events-none"></div>
 
 

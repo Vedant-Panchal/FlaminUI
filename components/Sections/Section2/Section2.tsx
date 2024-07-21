@@ -19,17 +19,17 @@ function Section2() {
   }, [scrollYProgress]);
 
   return (
-    <div className="h-[300vh] relative max-h-max" ref={containerRef}>
+    <div className="h-[300vh] w-full relative max-h-max" ref={containerRef}>
       {" "}
       {/* Increased height for scrolling */}
-      <div className="w-full h-screen sticky top-0 flex items-center justify-center">
-        <div className="flex items-center justify-center w-2/3 h-96 bg-black">
+      <div className="w-full h-screen sticky md:top-0 top-10 flex items-center justify-center bg-red-500/0">
+        <div className="flex items-center justify-center md:w-2/3 h-96 bg-black px-4 md:px-0">
           {/* Dotted animation */}
-          <div className="absolute z-50 left-0 top-20 scale-75">
+          <div className="absolute z-50 md:left-0 md:top-20  portrait:top-[-8rem] portrait:right-[-5rem] scale-[0.3] md:scale-75 ">
             <DottedDesign className="brightness-200 absolute" />
             <DottedMask className="brightness-100 absolute" />
           </div>
-          <div className="absolute z-50 right-0 top-20 rotate-180 scale-75">
+          <div className="absolute z-50 md:right-0 md:top-20 portrait:-bottom-40 portrait:-left-20 rotate-180 scale-[0.3] md:scale-75">
             <DottedDesign className="brightness-200 absolute" />
             <DottedMask className="brightness-100 absolute" />
           </div>

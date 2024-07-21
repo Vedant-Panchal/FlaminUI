@@ -19,9 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body className="w-screen h-max overflow-x-hidden"> 
+      <body className="w-screen h-max"> 
         <Navbar />
-        <main className="h-full max-h-max w-screen bg-noise/30 bg-repeat ">
+        <main className="h-full max-h-max w-screen overflow-x-clip bg-noise/30 bg-repeat ">
         {children}
         </main>
         <Footer />

@@ -16,14 +16,14 @@ function AnimatedText({ scrollValue }: AnimatedTextProps) {
 
   return (
     <p className="flex flex-col items-center justify-start">
-      <span className="text-wrap w-[49vw] font-geist text-4xl text-center leading-tight">
+      <span className="text-wrap w-full md:w-[49vw] font-geist md:text-4xl text-2xl text-center md:leading-tight">
         <motion.span
           style={{
             opacity: introOpacity,
           }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
         >
-          <motion.span style={{ fontSize: introFontSize }}>
+          <motion.span style={{ fontSize: introFontSize }} className="text-xl">
             <span className="bg-gradient-to-br from-[#FFF] to-[#999] bg-clip-text font-fira font-bold text-transparent">
               {`Introducing <Proto>`}
             </span>
@@ -33,7 +33,7 @@ function AnimatedText({ scrollValue }: AnimatedTextProps) {
           </motion.span>
         </motion.span>
         <br className="mb-6" />
-        <motion.span className="mt-10" style={{ opacity: introOpacity }}>
+        <motion.span className="md:mt-10" style={{ opacity: introOpacity }}>
           {words.map((word, i) => {
             const start = 0.2 + (i / words.length) * 0.8; // Start after the intro animation
             const end = start + 0.8 / words.length;
@@ -78,7 +78,7 @@ const Word = ({
           {children}
         </motion.span>
         <motion.span
-          className="text-white font-medium"
+          className="text-white/90 font-medium"
           style={{ opacity }}
         >
           {children}

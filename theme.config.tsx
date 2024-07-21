@@ -29,27 +29,27 @@ const CustomHead = () => {
   );
 };
 
-const Navbar = () => {
-  const { search } = useConfig();
-  const SearchComponent: any = search?.component;
-  return (
-    <header className="fixed z-50 top-0 flex h-max w-full items-center justify-between px-32 py-4 backdrop-blur-xl bg-[rgb(77,77,77)]/[0.1%] after:content-[''] after:absolute after:w-full after:h-[0.5px] after:bg-gradient-to-r from-[#787878]/0 via-[#DEDEDE] to-[#787878]/0 after:bottom-0 after:right-0 after:opacity-50">
-      <Link href="/" className="flex items-center space-x-2">
-        <div>
-          <span className="bg-gradient-to-br from-[#FFF] to-[#999] bg-clip-text font-fira text-2xl font-bold text-transparent">
-            {"<"}Proto{">"}
-          </span>
-          <span className="bg-gradient-to-r from-[#FB7185] to-[#F43F5E] bg-clip-text font-sans text-xl font-black text-transparent">
-            UI
-          </span>
-        </div>
-      </Link>
-      <div className="flex-grow flex justify-end items-center">
-        <SearchComponent />
-      </div>
-    </header>
-  );
-};
+// const Navbar = () => {
+//   const { search } = useConfig();
+//   const SearchComponent: any = search?.component;
+//   return (
+//     <header className="fixed z-50 top-0 flex h-max w-full items-center justify-between px-32 py-4 backdrop-blur-xl bg-[rgb(77,77,77)]/[0.1%] after:content-[''] after:absolute after:w-full after:h-[0.5px] after:bg-gradient-to-r from-[#787878]/0 via-[#DEDEDE] to-[#787878]/0 after:bottom-0 after:right-0 after:opacity-50">
+//       <Link href="/" className="flex items-center space-x-2">
+//         <div>
+//           <span className="bg-gradient-to-br from-[#FFF] to-[#999] bg-clip-text font-fira text-2xl font-bold text-transparent">
+//             {"<"}Proto{">"}
+//           </span>
+//           <span className="bg-gradient-to-r from-[#FB7185] to-[#F43F5E] bg-clip-text font-sans text-xl font-black text-transparent">
+//             UI
+//           </span>
+//         </div>
+//       </Link>
+//       <div className="flex-grow flex justify-end items-center">
+//         <SearchComponent />
+//       </div>
+//     </header>
+//   );
+// };
 
 const themeConfig: DocsThemeConfig = {
   logo: (
@@ -80,9 +80,6 @@ const themeConfig: DocsThemeConfig = {
     defaultMenuCollapseLevel: 1,
     toggleButton: false,
     autoCollapse: false,
-  },
-  navbar: {
-    component: Navbar,
   },
   head: CustomHead,
   darkMode: false,
