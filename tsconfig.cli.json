@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "outDir": "./dist",
+    "noEmit": false
+  },
+  "include": ["lib/cli/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
