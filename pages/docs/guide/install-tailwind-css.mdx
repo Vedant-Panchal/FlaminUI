@@ -1,10 +1,14 @@
+--- 
+title: "Install Tailwind CSS"
+date: "2024-07-22"
+---
+
 import CodeCopy from "/components/CodePreview/CodeCopy.tsx"
 
-## Install Tailwind CSS
-
-Install Tailwind CSS with Next.js
 
 ### Install Tailwind CSS
+
+If you are using any framework other than the NextJS then install the TailwindCSS first
 
 <CodeCopy 
 language="markdown"
@@ -12,30 +16,37 @@ code={`npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p`}
 />
 
-### Configure your template paths
+### Configure Tailwind
+
+Add the following content in your Tailwind configuration File.
 
 <CodeCopy 
 language="typescript"
 code={
-  `/** @type {import('tailwindcss').Config} */
-module.exports = {
+  `import type { Config } from "tailwindcss"
+const config = {
+  darkMode: ["class"],
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-
-    // Or if using \`src\` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-
-],
-theme: {
-extend: {},
-},
-plugins: [],
-};`}
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+    './lib/**/*.{js,ts,jsx,tsx}'
+  ],
+  prefix: "",
+  theme: {
+    extend: {
+      backgroundColor: {
+        "ghost-bg": "ghost-bg",
+        "ghost-text": "ghost-text",
+        "ghost-hover": "ghost-hover",
+      },
+    },
+  },
+} satisfies Config
+export default config`}
 
 fileName = "tailwind.config.ts"
-lineNumbers={[3, 4, 5, 6, 7, 8, 9, 10]}
 />
 
 ### Add the Tailwind directives to your CSS
@@ -48,20 +59,4 @@ language="css"
 
 fileName="globals.css"
 
-/>
-
-### Start your build process
-
-<CodeCopy language="markdown" code={`npm run dev`} />
-
-### Start using Tailwind
-
-<CodeCopy 
-language="typescript"
-code={`export default function Home() {
-return <h1 className="text-3xl font-bold underline">Hello world!</h1>
-};`}
-
-fileName="index.tsx"
-lineNumbers={[2]}
 />

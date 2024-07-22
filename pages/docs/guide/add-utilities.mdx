@@ -1,13 +1,14 @@
+--- 
+title: "Add Utilities"
+date: "2024-07-22"
+---
+
 import CodeCopy from "@src/CodePreview/CodeCopy";
-
-## Add Utilities
-
-Commonly used utilities for using Proto UI
 
 ### Install Dependencies
 <CodeCopy
   language="markdown"
-  code={`npm i framer-motion clsx tailwind-merge`}
+  code={`npm i framer-motion clsx tailwind-merge twmerge`}
 />
 
 ### Add util file
@@ -23,44 +24,3 @@ language="markdown"
 fileName="lib/utils.ts"
 />
 
-### Base Tailwind Config file
-
-<CodeCopy 
-language="typescript"
-code={`const {
-default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
-
-/** @type {import('tailwindcss').Config} \*/
-module.exports = {
-content: [
-"./src/pages/**/_.{js,ts,jsx,tsx}",
-"./src/components/\*\*/_.{js,ts,jsx,tsx}",
-"./src/app/\*_/_.{js,ts,jsx,tsx}",
-
-    // Or if using 'src' directory:
-    "./src/**/*.{js,ts,jsx,tsx}",
-
-],
-darkMode: "class",
-theme: {
-extend: {},
-},
-plugins: [addVariablesForColors],
-};
-
-// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
-function addVariablesForColors({ addBase, theme }) {
-let allColors = flattenColorPalette(theme("colors"));
-let newVars = Object.fromEntries(
-Object.entries(allColors).map(([key, val]) => [\`--\${key}\`, val])
-);
-
-addBase({
-":root": newVars,
-});
-}`}
-
-fileName="tailwind.config.ts"
-lineNumbers={[1, 2, 3, 15, 19, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]}
-/>
