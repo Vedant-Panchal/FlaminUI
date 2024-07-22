@@ -6,6 +6,21 @@
 html {
   scroll-behavior: smooth;
   background-color: black;
+
+  /* Chrome, Edge and Safari */
+  *::-webkit-scrollbar {
+    height: 4px;
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background-color: #0a0a0a;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #191919;
+  }
 }
 
 .font-fira-300 {
@@ -172,9 +187,9 @@ input[type="number"] {
 
 .custom-scrollbar {
   scrollbar-width: none;
-  -ms-overflow-style: none; 
+  -ms-overflow-style: none;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }

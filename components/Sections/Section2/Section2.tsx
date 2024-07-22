@@ -23,7 +23,7 @@ function Section2() {
       {" "}
       {/* Increased height for scrolling */}
       <div className="w-full h-screen sticky md:top-0 top-10 flex items-center justify-center bg-red-500/0">
-        <div className="flex items-center justify-center md:w-2/3 h-96 bg-black px-4 md:px-0">
+        <div className="flex items-center justify-center md:w-2/3 md:h-96 h-full bg-black px-4 md:px-0">
           {/* Dotted animation */}
           <div className="absolute z-50 md:left-0 md:top-20  portrait:top-[-8rem] portrait:right-[-5rem] scale-[0.3] md:scale-75 ">
             <DottedDesign className="brightness-200 absolute" />
