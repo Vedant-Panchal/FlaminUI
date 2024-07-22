@@ -1,7 +1,12 @@
 {
+  "--": {
+    "title": "X @ProtoUI",
+    "href": "https://x.com/ProtoUI",
+    "newWindow": true
+  },
   "docs": {
     "title": "Docs",
-    "type":"page",
-    "display":"hidden"
+    "type": "page",
+    "display": "hidden"
   }
 }
