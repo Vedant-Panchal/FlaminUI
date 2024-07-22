@@ -1,0 +1,18 @@
+{
+  "introduction": {
+    "title": "Introduction",
+    "order": 1
+  },
+  "install-nextjs": {
+    "title": "Install NextJS",
+    "order": 2
+  },
+  "install-tailwind-css": {
+    "title": "Install Tailwind CSS",
+    "order": 3
+  },
+  "add-utilities": {
+    "title": "Add Utilities",
+    "order": 4
+  }
+}
