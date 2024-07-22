@@ -19,7 +19,7 @@ const CardDisplay: React.FC<CardDisplayProps> = ({ title, description, children,
       <div className="flex flex-row justify-between items-start">
         <div className="flex-1">
           <h3 className="text-xl font-bold mb-2">{title}</h3>
-          <p>{description}</p>
+          <p className='mr-2'>{description}</p>
         </div>
         <div className="mt-4 flex items-center">
           <Link href={buttonLink} className="px-4 py-2 bg-white text-black rounded-md inline-flex items-center">
