@@ -62,7 +62,7 @@ const Section: React.FC = () => {
             onChange={toggleSidebar}
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 md:w-ful">
           <div id="Accordion" className="mb-6">
             <CardDisplay 
               title="Accordion" 
