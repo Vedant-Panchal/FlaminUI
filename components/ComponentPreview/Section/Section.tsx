@@ -52,17 +52,15 @@ const Section: React.FC = () => {
   };
 
   return (
-    <div className="flex mt-28">
+    <div className="md:flex-row md:items-start md:justify-start flex flex-col items-start justify-start relative">
       <div className={`relative ${sidebarVisible ? 'block' : 'hidden'} md:block`}>
         <Sidebar />
       </div>
-      <div className="flex-grow p-6 text-white mr-8 md:ml-[240px] ml-6">
-        <div className="md:hidden absolute top-28 left-0 mt-8">
-          <ToggleSwitch 
-            onChange={toggleSidebar}
-          />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 md:w-ful">
+      <div className={`md:hidden block sticky top-[125px] w-max h-max z-[1000] ${sidebarVisible ? "left-1/2" : "left-0"}`}>
+        <ToggleSwitch onChange={toggleSidebar} />
+      </div>
+      <div className="flex-grow p-0 text-white md:ml-[240px] pt-28">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 md:w-full">
           <div id="Accordion" className="mb-6">
             <CardDisplay 
               title="Accordion" 
