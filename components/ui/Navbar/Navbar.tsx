@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Tabs } from "@src/ui/Navbar/Tabs";
 import { motion, Variants } from "framer-motion";
 import { MenuIcon, X } from "lucide-react";
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/utils/cn";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

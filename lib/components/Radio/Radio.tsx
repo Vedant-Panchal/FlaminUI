@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { cn } from "@lib/utils/cn";
+import { cn } from "@/utils/cn";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 
 type RadioProps = {

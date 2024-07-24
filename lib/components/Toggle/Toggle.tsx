@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@lib/utils/cn";
+import { cn } from "@/utils/cn";
 import React, { useState } from "react";
 
 type ToggleVariants = "squared" | "squashed" | "";

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { cn } from "@lib/utils/cn";
+import { cn } from "@/utils/cn";
 import { Label } from "./Label";
 import { HelperText } from "./HelperText";
 import { X, AlertCircle, Eye, EyeOff, ChevronUp, ChevronDown, Paperclip } from "lucide-react";

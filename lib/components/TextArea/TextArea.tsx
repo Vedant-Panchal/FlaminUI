@@ -1,4 +1,4 @@
-import { cn } from "@lib/utils/cn";
+import { cn } from "@/utils/cn";
 import React from "react";
 import { TextAreaVaraints } from "@lib/types/type";
 // const variants: TextAreaVaraints[] = ["info", "success", "warning", "error", "disabled", ""];

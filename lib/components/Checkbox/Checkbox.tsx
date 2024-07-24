@@ -1,7 +1,7 @@
 "use client"
 import { AnimatePresence, motion } from "framer-motion";
 import { Check } from "lucide-react";
-import { cn } from "@lib/utils/cn";
+import { cn } from "@/utils/cn";
 import React, { InputHTMLAttributes, useState } from "react";
 
 type ToggleProps = {

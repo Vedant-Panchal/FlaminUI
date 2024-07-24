@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@lib/utils/cn";
+import { cn } from "@/utils/cn";
 import { ClassNameValue } from "tailwind-merge";
 
 type Variant =

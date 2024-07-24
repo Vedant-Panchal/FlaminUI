@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/utils/cn";
 import React from "react";
 
 type SquareSize = "xs" | "sm" | "md" | "lg" | "xl";

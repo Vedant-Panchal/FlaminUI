@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/utils/cn";
 import React from "react";
 type dotSize = "xs" | "sm" | "md" | "lg";
 
