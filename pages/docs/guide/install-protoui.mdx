@@ -1,0 +1,90 @@
+--- 
+title: "Intsall ProtoUI"
+date: "2024-07-22"
+---
+
+import CodeCopy from "@src/CodePreview/CodeCopy";
+
+### Install the dependencies commonly used by the ProtoUI
+<CodeCopy
+  language="markdown"
+  code={`npm i framer-motion clsx tailwind-merge tw-merge`}
+/>
+
+### Add utility file
+
+Create a file at `./lib/utils.ts` with the follwing content
+
+<CodeCopy 
+  code={`import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}`}
+language="markdown"
+fileName="lib/utils.ts"
+/>
+
+### Configure TypeScript
+
+Add the following content in your typescript configuration
+
+<CodeCopy
+code=
+{`{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./*"],
+      "@components/*": ["lib/components/*"],
+      "@lib/*": ["lib/*"],
+      "@types/*": ["lib/types/*"],
+      "@src/*":["components/*"]
+    },
+    "target": "ES5",
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "theme.config.tsx","next.config.js","**/*.mdx"],
+  "exclude": ["node_modules"]
+}`}
+
+fileName="tsconfig.json"
+language="markdown"
+/>
+
+### Initialise ProtoUI
+
+Execute the follwing command to initialise ProtoUI in your project
+
+<CodeCopy
+code={`npx protoyoui init`}
+language="markdown"
+/>
+
+### Start using
+
+You are all set to use ProtoUI in your project. Add ProtoUI components as needed, For an example you can add the Button component by executing the following command
+
+<CodeCopy
+code={`npx protoyoui add Button`}
+language="markdown"
+/>
+
+Now you can import and use it as you want it. Refer to the docs for more information about available components and their usage.

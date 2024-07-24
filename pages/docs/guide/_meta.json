@@ -11,8 +11,8 @@
     "title": "Install Tailwind CSS",
     "order": 3
   },
-  "add-utilities": {
-    "title": "Add Utilities",
+  "install-protoui": {
+    "title": "Install ProtoUI",
     "order": 4
   }
 }
