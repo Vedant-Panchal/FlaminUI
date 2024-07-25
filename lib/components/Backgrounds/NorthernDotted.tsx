@@ -75,7 +75,7 @@ export const NorthernDotted = ({ dotSize="xs",className }: NorthernDottedProps) 
           right: ["5%", "8%", "35%", "50%"],
         }}
       ></motion.div>
-      <motion.div className="absolute inset-0 z-[1000] m-auto h-fit w-fit bg-gradient-to-b from-slate-200 to-slate-50/60 bg-clip-text text-center font-geist text-8xl font-extrabold tracking-tight text-transparent">
+      <motion.div className="absolute inset-0 z-[1000] m-auto h-fit w-fit bg-gradient-to-b from-slate-200 to-slate-50/60 bg-clip-text text-center font-geist text-7xl font-extrabold tracking-tight text-transparent">
         Northern Lights,
         <br />
        Dotted

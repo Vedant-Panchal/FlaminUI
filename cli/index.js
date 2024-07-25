@@ -27,7 +27,7 @@ program
     await fs.ensureDir(userUtilsDir);
    
     // Copy utils from the npm package to the user's project
-    const npmUtilsDir = path.join(__dirname, '..', 'lib', 'utils');
+    const npmUtilsDir = path.join(__dirname, '..', 'utils');
     console.log('npmUtilsDir:', npmUtilsDir); // Debug print
    
     await fs.copy(npmUtilsDir, userUtilsDir);

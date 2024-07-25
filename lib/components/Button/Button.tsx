@@ -57,8 +57,8 @@ const Button = ({
     <button
       className={cn(
         "flex items-center gap-3 rounded-lg bg-rose-500 px-6 py-2 font-geist font-semibold text-rose-100 shadow-md duration-200 ease-in-out hover:shadow-lg hover:brightness-95",
-        className,
-        switchVariant(variant)
+        switchVariant(variant),
+        className
       )}
       {...props}
     >
