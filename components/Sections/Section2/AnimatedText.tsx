@@ -25,7 +25,7 @@ function AnimatedText({ scrollValue }: AnimatedTextProps) {
         >
           <motion.span style={{ fontSize: introFontSize }} className="text-xl mb-0">
             <span className="bg-gradient-to-br from-[#FFF] to-[#999] bg-clip-text font-fira font-bold text-transparent">
-              {`Introducing <Proto>`}
+              {`Introducing Flamin`}
             </span>
             <span className="bg-gradient-to-r from-[#FB7185] to-[#F43F5E] bg-clip-text font-sans text-xl font-black text-transparent">
               UI
@@ -101,12 +101,12 @@ const Word = ({
         <motion.span
           className="absolute top-0 left-0 text-opacity-10 text-white"
         >
-          <span className="font-fira font-bold">{`<Proto>`}</span>
+          <span className="font-fira font-bold">{`Flamin`}</span>
           <span className="font-sans text-xl font-black">UI </span>
         </motion.span>
         <motion.span style={{ opacity }}>
           <span className="bg-gradient-to-br from-[#FFF] to-[#999] bg-clip-text font-fira font-bold text-transparent">
-            {`<Proto>`}
+            {`Flamin`}
           </span>
           <span className="bg-gradient-to-r from-[#FB7185] to-[#F43F5E] bg-clip-text font-sans text-xl font-black text-transparent">
             UI{" "}

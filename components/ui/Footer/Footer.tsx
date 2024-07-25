@@ -7,7 +7,7 @@ function Footer() {
       <Link href={"/"} className="flex-1">
         <p>
           <span className="bg-gradient-to-br from-[#FFF] to-[#999] bg-clip-text font-fira text-2xl font-bold text-transparent">
-            {"<"}Proto{">"}
+            Flamin
           </span>
           <span className="bg-gradient-to-r from-[#FB7185] to-[#F43F5E] bg-clip-text font-sans text-xl font-black text-transparent">
             UI
