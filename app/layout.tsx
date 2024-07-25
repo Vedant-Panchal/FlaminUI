@@ -7,7 +7,7 @@ import Footer from "@/components/ui/Footer/Footer";
 
 
 export const metadata: Metadata = {
-  title: "ProtoUI 🚀🚀",
+  title: "FlaminUI 🚀🚀",
   description:
     "A collection of UI components and backgrounds for your next project.",
 };

@@ -8,7 +8,7 @@
   "install-tailwind-css": {
     "title": "Install Tailwind CSS"
   },
-  "install-protoui": {
-    "title": "Install ProtoUI"
+  "install-flaminui": {
+    "title": "Install FlaminUI"
   }
 }

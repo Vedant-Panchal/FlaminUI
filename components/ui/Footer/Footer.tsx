@@ -17,12 +17,12 @@ function Footer() {
       <div className="md:flex md:flex-row flex-col absolute bottom-3 gap-2">
         <div>
           <p className="text-white/20 md:mt-14 font-fira md:text-xs text-[9px] font-semibold">
-            &copy; 2024 ProtoUI. All rights reserved.
+            &copy; 2024 FlaminUI. All rights reserved.
           </p>
         </div>
         <div>
           <p className="text-white/20 md:mt-14 mt-1 font-fira md:text-xs text-[9px] font-semibold">
-            Made with <span className="text-white/70">❤️</span> by ProtoUI Team
+            Made with <span className="text-white/70">❤️</span> by FlaminUI Team
           </p>
         </div>
       </div>

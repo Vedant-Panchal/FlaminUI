@@ -17,7 +17,7 @@ const CustomHead = () => {
   return (
     <>
       <meta property="og:url" content={url} />
-      <meta property="og:title" content={frontMatter.title || "ProtoUI"} />
+      <meta property="og:title" content={frontMatter.title || "FlaminUI"} />
       <meta
         property="og:description"
         content={
@@ -108,7 +108,7 @@ const themeConfig: DocsThemeConfig = {
   },
   useNextSeoProps: () => {
     return {
-      titleTemplate: "%s | ProtoUI",
+      titleTemplate: "%s | FlaminUI",
     };
   },
   primaryHue: 332,
