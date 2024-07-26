@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { PanelLeftOpen, PanelLeftClose } from 'lucide-react';
 
 interface ToggleSwitchProps {
   label?: string;
@@ -27,9 +27,9 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ label, onChange }) => {
         style={{ cursor: 'pointer' }}
       >
         {isChecked ? (
-          <X size={24} color="white" />
+          <PanelLeftClose size={24} color="white" />
         ) : (
-          <Menu size={24} color="white" />
+          <PanelLeftOpen size={24} color="white" />
         )}
       </div>
     </label>
