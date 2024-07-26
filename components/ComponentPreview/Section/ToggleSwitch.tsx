@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
 
 interface ToggleSwitchProps {
   label?: string;
@@ -26,11 +26,7 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ label, onChange }) => {
         }`}
         style={{ cursor: 'pointer' }}
       >
-        {isChecked ? (
-          <X size={24} color="white" />
-        ) : (
-          <Menu size={24} color="white" />
-        )}
+        <ChevronLeft size={24} className={`${isChecked ? "rotate-0": "rotate-180"} transition-transform duration-200 ease-in-out`} color="white" />
       </div>
     </label>
   );

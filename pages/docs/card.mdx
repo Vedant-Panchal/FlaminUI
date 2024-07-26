@@ -374,6 +374,223 @@ function CardDemo() {
 fileName="CardDemo.jsx"
 language="jsx"/>
 
+## Card with profile picture
+Cards that include a profile picture in the layout.
+
+<CodePreview
+preview={
+<div style={{display:"flex", flexDirection: "column", alignItems:"center", justifyContent:"center", flexWrap:"wrap", gap:"1rem"}}>
+<ComponentCard>
+    <Card className="min-h-28 w-72 rounded-xl p-4 text-center text-white shadow-lg">
+        <CardContainer>
+            <CardIcon className="mb-6 flex flex-row-reverse text-white">
+                <Dot className="-mx-1" />
+                <Dot className="-mx-1" />
+                <Dot className="-mx-1" />
+            </CardIcon>
+            <CardHeader className="flex flex-col items-center">
+                <CardImage
+                  src="https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Bonnie Green's profile picture"
+                  className="mx-auto mb-4 h-24 w-24 rounded-full"
+                />
+                <CardTitle>Bonnie Green</CardTitle>
+                <p className="text-gray-400">Visual Designer</p>
+            </CardHeader>
+            <CardFooter className="mt-10 flex justify-center space-x-4">
+                <CardButton className="rounded-lg px-4 py-2">
+                  Add friend
+                </CardButton>
+                <CardButton className="rounded-lg bg-[#FFF1F21A] px-4 py-2 text-white hover:bg-[#FFF1F21A]">
+                  Message
+                </CardButton>
+            </CardFooter>
+        </CardContainer>
+    </Card>
+</ComponentCard>
+</div>
+}
+
+code={`import {
+Card,
+CardContainer,
+CardHeader,
+CardTitle,
+CardImage,
+CardButton,
+CardBody,
+CardFooter,
+CardIcon,
+} from "@components/Card/Card";
+import {cn} from "@lib/utils/cn"
+
+function CardDemo() {
+  return (
+    <Card className="min-h-28 w-72 rounded-xl p-4 text-center text-white shadow-lg">
+      <ComponentCard>
+        <CardContainer>
+            <CardIcon className="mb-6 flex flex-row-reverse text-white">
+                <Dot className="-mx-1" />
+                <Dot className="-mx-1" />
+                <Dot className="-mx-1" />
+            </CardIcon>
+            <CardHeader className="flex flex-col items-center">
+                <CardImage
+                  src="https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Bonnie Green's profile picture"
+                  className="mx-auto mb-4 h-24 w-24 rounded-full"
+                />
+                <CardTitle>Bonnie Green</CardTitle>
+                <p className="text-gray-400">Visual Designer</p>
+            </CardHeader>
+            <CardFooter className="mt-10 flex justify-center space-x-4">
+                <CardButton className="rounded-lg px-4 py-2">
+                  Add friend
+                </CardButton>
+                <CardButton className="rounded-lg bg-[#FFF1F21A] px-4 py-2 text-white hover:bg-[#FFF1F21A]">
+                  Message
+                </CardButton>
+            </CardFooter>
+        </CardContainer>
+      </ComponentCard>
+    </Card>
+  );
+}`}
+
+fileName="CardDemo.jsx"
+language="jsx"/>
+
+## Card with Customer
+Cards that include a customer list in the layout.
+
+<CodePreview
+preview={
+<div style={{display:"flex", flexDirection: "column", alignItems:"center", justifyContent:"center", flexWrap:"wrap", gap:"1rem"}}>
+<ComponentCard>
+    <Card className="min-h-90 w-[384px]">
+        <CardHeader className="flex items-center justify-between p-2">
+            <CardTitle className="items-start">Latest Customers</CardTitle>
+            <CardLink href={"/backgrounds"} className="mr-1 items-center flex flex-row">
+                <p>View All</p>
+                <CardIcon>
+                  <SquareArrowOutUpRight className="ml-3 h-4 w-4 text-[#F65571] mt-1" />
+                </CardIcon>
+            </CardLink>
+        </CardHeader>
+        <CardBody>
+            <CardCustomer
+                imageSrc={
+                  "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+                name={"Neil Sims"}
+                email={"neilsims@email.com"}
+            ></CardCustomer>
+            <CardCustomer
+                imageSrc={
+                  "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+                name={"Neil Sims"}
+                email={"neilsims@email.com"}
+            ></CardCustomer>
+            <CardCustomer
+                imageSrc={
+                  "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+                name={"Neil Sims"}
+                email={"neilsims@email.com"}
+            ></CardCustomer>
+            <CardCustomer
+                imageSrc={
+                  "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+                name={"Neil Sims"}
+                email={"neilsims@email.com"}
+            ></CardCustomer>
+            <CardCustomer
+                imageSrc={
+                  "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+                name={"Neil Sims"}
+                email={"neilsims@email.com"}
+            ></CardCustomer>
+        </CardBody>
+    </Card>
+</ComponentCard>
+</div>
+}
+
+code={`import {
+Card,
+CardContainer,
+CardHeader,
+CardTitle,
+CardImage,
+CardButton,
+CardBody,
+CardFooter,
+CardIcon,
+} from "@components/Card/Card";
+import {cn} from "@lib/utils/cn"
+
+function CardDemo() {
+  return (
+    <Card className="min-h-90 w-[384px]">
+      <ComponentCard>
+        <CardHeader className="flex items-center justify-between p-2">
+            <CardTitle className="items-start">Latest Customers</CardTitle>
+            <CardLink href={"/backgrounds"} className="mr-1 items-center flex flex-row">
+                <p>View All</p>
+                <CardIcon>
+                  <SquareArrowOutUpRight className="ml-3 h-4 w-4 text-[#F65571] mt-1" />
+                </CardIcon>
+            </CardLink>
+        </CardHeader>
+        <CardBody>
+            <CardCustomer
+                imageSrc={
+                  "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+                name={"Neil Sims"}
+                email={"neilsims@email.com"}
+            ></CardCustomer>
+            <CardCustomer
+                imageSrc={
+                  "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+                name={"Neil Sims"}
+                email={"neilsims@email.com"}
+            ></CardCustomer>
+            <CardCustomer
+                imageSrc={
+                  "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+                name={"Neil Sims"}
+                email={"neilsims@email.com"}
+            ></CardCustomer>
+            <CardCustomer
+                imageSrc={
+                  "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+                name={"Neil Sims"}
+                email={"neilsims@email.com"}
+            ></CardCustomer>
+            <CardCustomer
+                imageSrc={
+                  "https://images.unsplash.com/photo-1719221253506-57f70fadfd0d?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+                name={"Neil Sims"}
+                email={"neilsims@email.com"}
+            ></CardCustomer>
+        </CardBody>
+      </ComponentCard>
+    </Card>
+  );
+}`}
+
+fileName="CardDemo.jsx"
+language="jsx"/>
+
+
 ## Props
 
 The Card component accepts the following props:
