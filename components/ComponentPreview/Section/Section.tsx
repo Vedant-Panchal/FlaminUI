@@ -59,18 +59,14 @@ const Section: React.FC = () => {
           border={true}
           className="gap-2 w-full md:w-[400px]"
         >
-          <AccordionItem index={0}>
-            <AccordionButton>Section 1</AccordionButton>
-            <AccordionContent>Content for section 1</AccordionContent>
-          </AccordionItem>
-          <AccordionItem index={1}>
-            <AccordionButton>Section 2</AccordionButton>
-            <AccordionContent>Content for section 2</AccordionContent>
-          </AccordionItem>
-          <AccordionItem index={2}>
-            <AccordionButton>Section 3</AccordionButton>
-            <AccordionContent>Content for section 3</AccordionContent>
-          </AccordionItem>
+          {Array.from({ length: 3 }, (_, index) => (
+            <AccordionItem key={index} index={index}>
+              <AccordionButton>Section {index + 1}</AccordionButton>
+              <AccordionContent>
+                Content for section {index + 1}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
         </Accordion>
       ),
     },
@@ -157,9 +153,11 @@ const Section: React.FC = () => {
           <DropdownButton defaultText="Select an option" />
           <DropdownContent>
             <DropdownLabel>Options</DropdownLabel>
-            <DropdownItem value="Option 1">Option 1</DropdownItem>
-            <DropdownItem value="Option 2">Option 2</DropdownItem>
-            <DropdownItem value="Option 3">Option 3</DropdownItem>
+            {["Option 1", "Option 2", "Option 3"].map((option, index) => (
+              <DropdownItem key={index} value={option}>
+                {option}
+              </DropdownItem>
+            ))}
           </DropdownContent>
         </Dropdown>
       ),
@@ -203,17 +201,19 @@ const Section: React.FC = () => {
   ];
 
   return (
-    <div className="flex mt-28">
+    <div className="md:flex-row md:items-start md:justify-start flex flex-col items-start justify-start relative">
       <div
         className={`relative ${sidebarVisible ? "block" : "hidden"} md:block`}
       >
         <Sidebar />
       </div>
-      <div className="flex-grow p-6 text-white mr-8 md:ml-[240px] ml-6">
-        <div className="md:hidden absolute top-28 left-0 mt-8">
-          <ToggleSwitch onChange={toggleSidebar} />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
+      <div
+        className={`md:hidden block sticky top-[125px] w-max h-max z-[1000] ${sidebarVisible ? "left-1/2" : "left-0"}`}
+      >
+        <ToggleSwitch onChange={toggleSidebar} />
+      </div>
+      <div className="flex-grow p-0 text-white md:ml-[240px] pt-28">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 md:w-full">
           {components.map((component) => (
             <div key={component.id} id={component.id} className="mb-6">
               <CardDisplay
