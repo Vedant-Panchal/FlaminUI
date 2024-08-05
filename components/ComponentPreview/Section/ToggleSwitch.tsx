@@ -5,10 +5,8 @@ interface ToggleSwitchProps {
   label?: string;
   onChange?: (checked: boolean) => void;
 }
-
 const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ label, onChange }) => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
-
   const handleToggle = () => {
     const newCheckedState = !isChecked;
     setIsChecked(newCheckedState);
@@ -16,7 +14,6 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ label, onChange }) => {
       onChange(newCheckedState);
     }
   };
-
   return (
     <label className="flex flex-col items-center cursor-pointer" onClick={handleToggle}>
       {label && <div className="mb-3 text-white font-medium">{label}</div>}
@@ -31,5 +28,4 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ label, onChange }) => {
     </label>
   );
 };
-
 export default ToggleSwitch;

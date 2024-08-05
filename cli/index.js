@@ -12,13 +12,13 @@ const program = new Command();
 
 program
   .version('1.0.2')
-  .description('ProtoUI CLI for adding components and utilities');
+  .description('FlaminUI CLI for adding components and utilities');
 
 program
   .command('init')
-  .description('Initialize ProtoUI in your project')
+  .description('Initialize FlaminUI in your project')
   .action(async () => {
-    console.log(chalk.blue('Initializing ProtoUI...'));
+    console.log(chalk.blue('Initializing FlaminUI...'));
    
     const userComponentDir = path.join(process.cwd(), 'components', 'ui');
     const userUtilsDir = path.join(process.cwd(), 'utils');
@@ -27,12 +27,12 @@ program
     await fs.ensureDir(userUtilsDir);
    
     // Copy utils from the npm package to the user's project
-    const npmUtilsDir = path.join(__dirname, '..', 'lib', 'utils');
+    const npmUtilsDir = path.join(__dirname, '..', 'utils');
     console.log('npmUtilsDir:', npmUtilsDir); // Debug print
    
     await fs.copy(npmUtilsDir, userUtilsDir);
    
-    console.log(chalk.green('ProtoUI initialized successfully!'));
+    console.log(chalk.green('FlaminUI initialized successfully!'));
     console.log(chalk.yellow(`Components will be added to: ${userComponentDir}`));
     console.log(chalk.yellow(`Utils folder created at: ${userUtilsDir}`));
   });

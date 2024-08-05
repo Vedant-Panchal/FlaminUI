@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import { ClassValue } from "clsx";
-import { cn } from "@lib/utils/cn";
+import { cn } from "@/utils/cn";
 import { useDropdown } from "./DropdownContext";
 
 interface DropdownLabelProps {

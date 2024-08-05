@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/utils/cn";
 import React from "react";
 type dotSize = "xs" | "sm" | "md" | "lg";
 
@@ -30,7 +30,7 @@ export const DottedGridFaded = ({ faded = false,className,dotSize="xs" }: Dotted
         }}
       />
       {/* Text */}
-      <div className="absolute inset-0 z-[1000] m-auto h-fit w-fit bg-gradient-to-b from-slate-200 to-slate-50/60 bg-clip-text text-center font-geist text-8xl font-extrabold tracking-tight text-transparent">
+      <div className="absolute inset-0 z-[1000] m-auto h-fit w-fit bg-gradient-to-b from-slate-200 to-slate-50/60 bg-clip-text text-center font-geist text-7xl font-extrabold tracking-tight text-transparent">
         Dotted Grid
       </div>
       {/* Fade out mask */}

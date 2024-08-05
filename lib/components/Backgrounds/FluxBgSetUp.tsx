@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/utils/cn";
 import React, { useEffect, useRef } from "react";
 
 // random object generation code

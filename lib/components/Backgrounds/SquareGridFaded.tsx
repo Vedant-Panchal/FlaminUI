@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/utils/cn";
 import React from "react";
 
 type SquareSize = "xs" | "sm" | "md" | "lg" | "xl";
@@ -41,7 +41,7 @@ export const SquareGridFaded = ({
       />
 
       {/* Text */}
-      <div className="absolute inset-0 z-[1000] m-auto h-fit w-fit bg-gradient-to-b from-slate-200 to-slate-50/60 bg-clip-text text-center font-geist text-8xl font-extrabold tracking-tight text-transparent">
+      <div className="absolute inset-0 z-[1000] m-auto h-fit w-fit bg-gradient-to-b from-slate-200 to-slate-50/60 bg-clip-text text-center font-geist text-7xl font-extrabold tracking-tight text-transparent">
         Square Grid
       </div>
 
