@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/utils/cn";
 import { motion } from "framer-motion";
 import React from "react";
 type squareSize = "xs" | "sm" | "md" | "lg";

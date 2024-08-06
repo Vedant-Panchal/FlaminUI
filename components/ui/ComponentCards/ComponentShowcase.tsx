@@ -1,6 +1,6 @@
 import React from "react";
 import { ClassNameValue } from "tailwind-merge";
-import { cn } from "@lib/utils/cn";
+import { cn } from "@/utils/cn";
 
 type ComponentShowcaseProps = {
   children?: React.ReactNode;

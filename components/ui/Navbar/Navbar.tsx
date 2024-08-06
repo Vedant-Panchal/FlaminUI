@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Tabs } from "@src/ui/Navbar/Tabs";
 import { motion, Variants } from "framer-motion";
 import { MenuIcon, X } from "lucide-react";
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/utils/cn";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
       <Link href={"/"} className="absolute left-4 text-sm md:left-32">
         <p>
           <span className="bg-gradient-to-br from-[#FFF] to-[#999] bg-clip-text font-fira text-2xl font-bold text-transparent">
-            {"<"}Proto{">"}
+            Flamin
           </span>
           <span className="bg-gradient-to-r from-[#FB7185] to-[#F43F5E] bg-clip-text font-sans text-xl font-black text-transparent">
             UI

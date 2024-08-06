@@ -1,18 +1,14 @@
 {
   "introduction": {
-    "title": "Introduction",
-    "order": 1
+    "title": "Introduction"
   },
   "install-nextjs": {
-    "title": "Install NextJS",
-    "order": 2
+    "title": "Install NextJS"
   },
   "install-tailwind-css": {
-    "title": "Install Tailwind CSS",
-    "order": 3
+    "title": "Install Tailwind CSS"
   },
-  "add-utilities": {
-    "title": "Add Utilities",
-    "order": 4
+  "install-flaminui": {
+    "title": "Install FlaminUI"
   }
 }

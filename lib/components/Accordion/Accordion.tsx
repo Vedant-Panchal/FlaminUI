@@ -7,7 +7,7 @@ import React, {
   ReactNode,
   useLayoutEffect,
 } from "react";
-import { cn } from "@lib/utils/cn";
+import { cn } from "@/utils/cn";
 import { motion, AnimatePresence, Spring } from "framer-motion";
 import { ClassNameValue } from "tailwind-merge";
 import { ChevronDown } from "lucide-react";

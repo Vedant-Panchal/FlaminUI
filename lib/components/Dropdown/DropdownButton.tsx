@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@lib/utils/cn";
+import { cn } from "@/utils/cn";
 import { ClassValue } from "clsx";
 import { ChevronDown } from "lucide-react";
 import { useDropdown } from "./DropdownContext";

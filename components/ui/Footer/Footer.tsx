@@ -7,7 +7,7 @@ function Footer() {
       <Link href={"/"} className="flex-1">
         <p>
           <span className="bg-gradient-to-br from-[#FFF] to-[#999] bg-clip-text font-fira text-2xl font-bold text-transparent">
-            {"<"}Proto{">"}
+            Flamin
           </span>
           <span className="bg-gradient-to-r from-[#FB7185] to-[#F43F5E] bg-clip-text font-sans text-xl font-black text-transparent">
             UI
@@ -17,12 +17,12 @@ function Footer() {
       <div className="md:flex md:flex-row flex-col absolute bottom-3 gap-2">
         <div>
           <p className="text-white/20 md:mt-14 font-fira md:text-xs text-[9px] font-semibold">
-            &copy; 2024 ProtoUI. All rights reserved.
+            &copy; 2024 FlaminUI. All rights reserved.
           </p>
         </div>
         <div>
           <p className="text-white/20 md:mt-14 mt-1 font-fira md:text-xs text-[9px] font-semibold">
-            Made with <span className="text-white/70">❤️</span> by ProtoUI Team
+            Made with <span className="text-white/70">❤️</span> by FlaminUI Team
           </p>
         </div>
       </div>
