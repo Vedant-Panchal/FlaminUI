@@ -9,12 +9,12 @@ import Avatar from '@/lib/components/Avatar/Avatar';
 import Button from '@/lib/components/Button/Button';
 import { Card, CardHeader, CardTitle, CardFooter, CardContainer, CardIcon, CardLink, CardBody } from "@components/Card/Card";
 import { Gift, SquareArrowOutUpRight } from 'lucide-react';
-// import Checkbox from '@/lib/components/Checkbox/Checkbox';
-// import { Dropdown, DropdownButton, DropdownItem, DropdownContent, DropdownLabel } from "@components/Dropdown/Dropdown";
-// import { Input } from '@/lib/components/Input/Input';
-// import Radio from '@/lib/components/Radio/Radio';
-// import { TextArea } from '@/lib/components/TextArea/TextArea';
-// import { Toggle } from '@/lib/components/Toggle/Toggle';
+import Checkbox from '@/lib/components/Checkbox/Checkbox';
+import { Dropdown, DropdownButton, DropdownItem, DropdownContent, DropdownLabel } from "@components/Dropdown/Dropdown";
+import { Input } from '@/lib/components/Input/Input';
+import Radio from '@/lib/components/Radio/Radio';
+import { TextArea } from '@/lib/components/TextArea/TextArea';
+import { Toggle } from '@/lib/components/Toggle/Toggle';
 import CodeCopy from '../CodePreview/CodeCopy';
 import { componentStyles } from './styles';
 
@@ -208,7 +208,129 @@ const ComponentSelect: React.FC = () => {
             </div>
           </div>
         );
-      // more components to add
+      case 'Checkbox':
+        code = `
+          import Checkbox from '@/lib/components/Checkbox/Checkbox';
+          
+          function CheckboxDemo() {
+            return <Checkbox label="Checkbox" />;
+          }
+        `;
+        return (
+          <div id='Checkbox' className='mb-6'>
+            <ComponentCard>
+              <Checkbox label="Checkbox" />
+            </ComponentCard>
+            <div className="mt-4 p-4 rounded-lg max-w-[700px]">
+              <CodeCopy code={code} language="jsx" />
+            </div>
+          </div>
+        );
+        case 'Dropdown':
+        code = `
+          import { Dropdown, DropdownButton, DropdownItem, DropdownContent, DropdownLabel } from "@components/Dropdown/Dropdown";
+          
+          function DropdownDemo() {
+            return (
+              <Dropdown>
+                <DropdownButton defaultText="Select an option" />
+                  <DropdownContent>
+                    <DropdownLabel>Options</DropdownLabel>
+                    <DropdownItem value="Option 1">Option 1</DropdownItem>
+                    <DropdownItem value="Option 2">Option 2</DropdownItem>
+                    <DropdownItem value="Option 3">Option 3</DropdownItem>
+                  </DropdownContent>
+              </Dropdown>
+            );
+          }
+        `;
+        return (
+          <div id='Dropdown' className='mb-6'>
+            <ComponentCard>
+            <Dropdown>
+                <DropdownButton defaultText="Select an option" />
+                  <DropdownContent>
+                    <DropdownLabel>Options</DropdownLabel>
+                    <DropdownItem value="Option 1">Option 1</DropdownItem>
+                    <DropdownItem value="Option 2">Option 2</DropdownItem>
+                    <DropdownItem value="Option 3">Option 3</DropdownItem>
+                  </DropdownContent>
+              </Dropdown>
+            </ComponentCard>
+            <div className="mt-4 p-4 rounded-lg max-w-[700px]">
+              <CodeCopy code={code} language="jsx" />
+            </div>
+          </div>
+        );
+      case 'Input':
+        code = `
+          import { Input } from '@/lib/components/Input/Input';
+          
+          function InputDemo() {
+            return <Input placeholder="Enter some text" type="password" showIcon={true} variant="${selectedStyle || 'default'}" className="input-field" />;
+          }
+        `;
+        return (
+          <div id='Input' className='mb-6'>
+            <ComponentCard>
+              <Input placeholder="Enter some text" type="password" showIcon={true} variant={selectedStyle || 'default'} className="input-field" />
+            </ComponentCard>
+            <div className="mt-4 p-4 rounded-lg max-w-[700px]">
+              <CodeCopy code={code} language="jsx" />
+            </div>
+          </div>
+        );
+      case 'Radio':
+        code = `
+          import { Radio } from '@lib/components/Radio/Radio';
+
+          function RadioDemo() {  
+            return <Radio label="Label" />
+          }
+        `;
+        return (
+          <div id='Radio' className='mb-6'>
+            <ComponentCard>
+              <Radio varaint={selectedStyle || 'default'} label="Label" />
+            </ComponentCard>
+          </div>
+        )
+      case 'Textarea':
+        code = `
+          import { TextArea } from '@/lib/components/TextArea/TextArea';
+          
+          function TextAreaDemo() {
+            return <TextArea placeholder="Enter some text" variant="${selectedStyle || 'default'}" className="input-field" />;
+          }
+        `;
+        return (
+          <div id='Textarea' className='mb-6'>
+            <ComponentCard>
+              <TextArea placeholder="Enter some text" variant={selectedStyle || 'default'} className="input-field" />
+            </ComponentCard>
+            <div className="mt-4 p-4 rounded-lg max-w-[700px]">
+              <CodeCopy code={code} language="jsx" />
+            </div>
+          </div>
+        );
+      case 'Toggle':
+        code = `
+          import { Toggle } from '@/lib/components/Toggle/Toggle';
+          
+          function ToggleDemo() {
+            return <Toggle />;
+          }
+        `;
+        return (
+          <div id='Toggle' className='mb-6'>
+            <ComponentCard>
+              <Toggle label="Default Toggle"/>
+            </ComponentCard>
+            <div className="mt-4 p-4 rounded-lg max-w-[700px]">
+              <CodeCopy code={code} language="jsx" />
+            </div>
+          </div>
+        );
       default:
         return null;
     }
