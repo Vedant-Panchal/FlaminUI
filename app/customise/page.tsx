@@ -1,7 +1,14 @@
+"use client"
+
+import Section from "@/components/Customise/Section";
 import React from "react";
 
-const Customise = () => {
-  return <div>Customise</div>;
-};
+const Components = () => {
+  return (
+    <div className="w-full h-max">
+      <Section />
+    </div>
+  );
+}
 
-export default Customise;
+export default Components;
