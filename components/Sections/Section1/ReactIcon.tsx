@@ -12,44 +12,44 @@ function ReactIcon() {
       <path
         d="M4.7295 6.53326C2.778 7.07551 1.5 7.97776 1.5 9.00001C1.5 10.6575 4.85775 12 9 12C9.57975 12 10.1445 11.9738 10.686 11.9235"
         stroke="#999999"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M13.269 11.4667C15.2212 10.9252 16.5 10.0223 16.5 9C16.5 7.3425 13.1422 6 9 6C8.42025 6 7.8555 6.02625 7.3125 6.0765"
         stroke="#999999"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M4.72877 11.4652C4.22177 13.4265 4.36502 14.985 5.25002 15.495C6.68477 16.3237 9.52727 14.0872 11.598 10.5C11.8883 9.9975 12.1478 9.49575 12.375 9"
         stroke="#999999"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M13.2703 6.53701C13.778 4.57501 13.6355 3.01501 12.7498 2.50501C11.315 1.67626 8.47252 3.91276 6.40177 7.50001C6.11152 8.00251 5.85202 8.50501 5.62402 9.00001"
         stroke="#999999"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M9.00002 4.06799C7.55627 2.64899 6.13502 1.99349 5.25002 2.50499C3.81527 3.33299 4.33052 6.91274 6.40202 10.5C6.69152 11.0025 6.99677 11.478 7.31102 11.922"
         stroke="#999999"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M9 13.9305C10.4445 15.3503 11.8657 16.0065 12.75 15.495C14.1847 14.667 13.6695 11.0873 11.598 7.50002C11.3167 7.01252 11.013 6.53777 10.689 6.07727"
         stroke="#999999"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M8.62509 9.64952C8.71042 9.69954 8.8048 9.73219 8.90279 9.74559C9.00079 9.75899 9.10047 9.75287 9.1961 9.72759C9.29172 9.70231 9.3814 9.65836 9.45997 9.59828C9.53854 9.5382 9.60445 9.46317 9.65391 9.37751C9.70337 9.29185 9.73539 9.19726 9.74814 9.09917C9.76089 9.00109 9.75411 8.90145 9.7282 8.806C9.70228 8.71054 9.65774 8.62116 9.59714 8.54299C9.53654 8.46482 9.46107 8.3994 9.37509 8.35052C9.20292 8.25263 8.99902 8.22681 8.80789 8.27871C8.61676 8.3306 8.45391 8.45598 8.35488 8.6275C8.25585 8.79901 8.22869 9.00273 8.27931 9.19421C8.32993 9.38568 8.45423 9.54935 8.62509 9.64952Z"
         stroke="#999999"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

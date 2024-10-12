@@ -16,581 +16,581 @@ function DottedDesign({className}:{className:string}) {
           cy="19.4128"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="228.778"
           cy="3.63498"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="210.746"
           cy="3.63498"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="192.714"
           cy="3.63498"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="192.714"
           cy="53.2223"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="244.556"
           cy="53.2223"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="244.556"
           cy="37.4445"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="280.619"
           cy="71.254"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="262.587"
           cy="71.254"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="228.778"
           cy="71.254"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="176.937"
           cy="71.254"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="158.905"
           cy="87.0318"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="244.556"
           cy="87.0318"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="262.587"
           cy="87.0318"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="210.746"
           cy="105.064"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="176.937"
           cy="105.064"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="143.127"
           cy="105.064"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="140.873"
           cy="138.873"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="91.2857"
           cy="123.095"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="91.2857"
           cy="107.317"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="3.38095"
           cy="192.968"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="21.4127"
           cy="192.968"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="5.63486"
           cy="260.587"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="23.6666"
           cy="260.587"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="5.63486"
           cy="276.365"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="3.38095"
           cy="330.46"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="3.38095"
           cy="346.238"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="3.38095"
           cy="380.048"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="3.38095"
           cy="431.889"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="3.38095"
           cy="483.73"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="3.38095"
           cy="501.762"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="3.38095"
           cy="553.603"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="3.38095"
           cy="623.476"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="39.4444"
           cy="623.476"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="73.254"
           cy="623.476"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="91.2857"
           cy="623.476"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="91.2857"
           cy="605.444"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="73.254"
           cy="605.444"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="21.4127"
           cy="571.635"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="21.4127"
           cy="553.603"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="39.4444"
           cy="519.794"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="21.4127"
           cy="501.762"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="91.2857"
           cy="501.762"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="109.317"
           cy="501.762"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="109.317"
           cy="483.73"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="91.2857"
           cy="467.952"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="57.4762"
           cy="467.952"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="57.4762"
           cy="449.921"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="107.064"
           cy="449.921"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="125.095"
           cy="449.921"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="125.095"
           cy="431.889"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="125.095"
           cy="413.857"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="107.064"
           cy="398.079"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="107.064"
           cy="380.048"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="176.937"
           cy="364.27"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="125.095"
           cy="364.27"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="91.2857"
           cy="364.27"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="55.2223"
           cy="364.27"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="73.254"
           cy="330.46"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="91.2857"
           cy="330.46"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="107.064"
           cy="330.46"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="158.905"
           cy="346.238"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="140.873"
           cy="330.46"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="158.905"
           cy="330.46"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="176.937"
           cy="330.46"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="158.905"
           cy="312.429"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="143.127"
           cy="294.397"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="176.937"
           cy="294.397"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="228.778"
           cy="294.397"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="246.809"
           cy="312.429"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="89.0318"
           cy="380.048"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="71.0001"
           cy="380.048"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="52.9684"
           cy="380.048"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="89.0318"
           cy="398.079"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="158.905"
           cy="431.889"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="73.254"
           cy="431.889"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="57.4762"
           cy="485.984"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="109.317"
           cy="623.476"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="109.317"
           cy="639.254"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="91.2857"
           cy="639.254"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="158.905"
           cy="138.873"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="176.937"
           cy="138.873"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
         <circle
           cx="210.746"
           cy="138.873"
           r="3.38095"
           fill="#6A6A6A"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
       </svg>
     </div>

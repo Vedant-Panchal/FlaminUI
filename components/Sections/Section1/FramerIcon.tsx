@@ -12,14 +12,14 @@ function FramerIcon() {
       <path
         d="M9 9L3 3V15L15 3V15L12 12"
         stroke="#999999"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M15 9L9 15L6 12"
         stroke="#999999"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

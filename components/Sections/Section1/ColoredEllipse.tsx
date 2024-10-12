@@ -50,10 +50,10 @@ export function ColoredEllipse({ className }: { className: string }) {
             y2="532.428"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#A578FF" />
-            <stop offset="0.3333" stop-color="#FF83BD" />
-            <stop offset="0.6667" stop-color="#FFBA6D" />
-            <stop offset="1" stop-color="#FBE9BE" />
+            <stop stopColor="#A578FF" />
+            <stop offset="0.3333" stopColor="#FF83BD" />
+            <stop offset="0.6667" stopColor="#FFBA6D" />
+            <stop offset="1" stopColor="#FBE9BE" />
           </linearGradient>
         </defs>
       </svg>

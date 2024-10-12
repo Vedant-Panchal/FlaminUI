@@ -25,12 +25,12 @@ export function EllipseRight({ className }: { className: string }) {
           ry="558.5"
           transform="rotate(-95.3114 559.975 689.067)"
           fill="url(#paint1_linear_495_6792)"
-          fill-opacity="0.2"
+          fillOpacity="0.2"
         />
         <path
           d="M496.148 2.52774C802.907 -25.9911 1080.32 258.145 1115.58 637.414C1150.84 1016.68 930.56 1347.09 623.801 1375.61C317.043 1404.13 39.6307 1119.99 4.37069 740.721C-30.8893 361.452 189.39 31.0466 496.148 2.52774Z"
           stroke="url(#paint2_linear_495_6792)"
-          stroke-opacity="0.2"
+          strokeOpacity="0.2"
         />
         <defs>
           <linearGradient
@@ -41,8 +41,8 @@ export function EllipseRight({ className }: { className: string }) {
             y2="1247.57"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#000000" />
-            <stop offset="1" stop-color="#6F6F6F" />
+            <stop stopColor="#000000" />
+            <stop offset="1" stopColor="#6F6F6F" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_495_6792"
@@ -52,8 +52,8 @@ export function EllipseRight({ className }: { className: string }) {
             y2="727.567"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" stop-opacity="0.5" />
-            <stop offset="0.314326" stop-opacity="0" />
+            <stop stopColor="white" stopOpacity="0.5" />
+            <stop offset="0.314326" stopOpacity="0" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_495_6792"
@@ -63,8 +63,8 @@ export function EllipseRight({ className }: { className: string }) {
             y2="685.226"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" stop-opacity="0.4" />
-            <stop offset="1" stop-color="#999999" stop-opacity="0" />
+            <stop stopColor="white" stopOpacity="0.4" />
+            <stop offset="1" stopColor="#999999" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
@@ -97,12 +97,12 @@ export function EllipseLeft({ className }: { className: string }) {
           ry="558.5"
           transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 1117 1380)"
           fill="url(#paint1_linear_495_6791)"
-          fill-opacity="0.2"
+          fillOpacity="0.2"
         />
         <path
           d="M558.5 0.500024C250.419 0.500038 0.499953 309.096 0.49997 690C0.499986 1070.9 250.419 1379.5 558.5 1379.5C866.581 1379.5 1116.5 1070.9 1116.5 690C1116.5 309.096 866.581 0.500011 558.5 0.500024Z"
           stroke="url(#paint2_linear_495_6791)"
-          stroke-opacity="0.2"
+          strokeOpacity="0.2"
         />
         <defs>
           <linearGradient
@@ -113,8 +113,8 @@ export function EllipseLeft({ className }: { className: string }) {
             y2="1117"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#000000" />
-            <stop offset="1" stop-color="#6F6F6F" />
+            <stop stopColor="#000000" />
+            <stop offset="1" stopColor="#6F6F6F" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_495_6791"
@@ -124,8 +124,8 @@ export function EllipseLeft({ className }: { className: string }) {
             y2="597"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" stop-opacity="0.5" />
-            <stop offset="0.314326" stop-opacity="0" />
+            <stop stopColor="white" stopOpacity="0.5" />
+            <stop offset="0.314326" stopOpacity="0" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_495_6791"
@@ -135,8 +135,8 @@ export function EllipseLeft({ className }: { className: string }) {
             y2="690"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" stop-opacity="0.4" />
-            <stop offset="1" stop-color="#999999" stop-opacity="0" />
+            <stop stopColor="white" stopOpacity="0.4" />
+            <stop offset="1" stopColor="#999999" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
