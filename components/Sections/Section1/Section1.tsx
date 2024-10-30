@@ -94,7 +94,7 @@ function Section1() {
       <div className="relative z-[100] flex flex-col items-center md:justify-center justify-start pt-40 md:pt-0 h-full">
         <h1 className="md:text-6xl text-3xl font-geist text-transparent  md:leading-[70px] font-bold md:text-center text-center px-4">
           <span className="bg-clip-text bg-gradient-to-b from-[#fffff7] to-[#727267]">
-            Redifing Component Flexibility
+            Redifining Component Flexibility
           </span>{" "}
           <br />
           <span className="bg-clip-text bg-gradient-to-b from-[#fffff7] to-[#727267]">

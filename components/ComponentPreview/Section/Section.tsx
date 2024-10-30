@@ -52,29 +52,36 @@ const Section: React.FC = () => {
   };
 
   return (
-    <div className="md:flex-row md:items-start md:justify-start flex flex-col items-start justify-start relative">
+    <div className="md:flex-row md:items-start md:justify-between flex flex-col items-start justify-start relative md:gap-10 md:pt-16 pt-0">
       <div
-        className={`relative ${sidebarVisible ? "block" : "hidden"} md:block`}
+        className={`md:hidden w-screen h-max ${sidebarVisible ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out z-[1000] fixed bg-zinc-900`}
       >
         <Sidebar />
       </div>
       <div
-        className={`md:hidden block sticky top-[75px] w-max h-max z-[1000] ${sidebarVisible ? "left-[80%]" : "left-0"}`}
+        className={`md:hidden bg-zinc-900 fixed flex items-center justify-start w-1 h-screen z-[1000] transition-transform duration-[600ms] ease-in-out ${sidebarVisible ? "left-[99%] flex-row-reverse" : "left-0"}`}
       >
         <ToggleSwitch onChange={toggleSidebar} />
       </div>
-      <div className="flex-grow p-0 text-white md:ml-[240px] pt-28">
-        <div className="md:hidden w-full flex justify-center">
-          <h1 className="font-bold text-3xl">All Components</h1>
+      <div className="text-white h-screen md:flex justify-between w-screen items-center overflow-y-scroll custom-scrollbar">
+        <div className="md:hidden w-full flex mt-20 justify-center">
+          <h1 className="font-bold font-geist text-2xl">Components</h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 md:w-full">
-          <div id="Accordion" className="mb-6">
+        <div
+          className={`relative hidden w-max h-full ${sidebarVisible ? "block" : "hidden"} md:block`}
+        >
+          <Sidebar />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 md:w-full px-3 md:mt-10 md:mb-10 md:overflow-y-scroll h-screen md:custom-scrollbar">
+          <div id="Accordion" className="">
             <CardDisplay
               title="Accordion"
               description="An accordion component with expand/collapse functionality."
-              buttonText="Try Now"
+              buttonText=""
               buttonLink="/docs/accordion"
-              buttonIcon={<ChevronRight className="h-6 w-6" />}
+              buttonIcon={
+                <ChevronRight className="h-6 w-6 text-white" strokeWidth={3} />
+              }
             >
               <Accordion
                 variant="rounded"
@@ -96,7 +103,7 @@ const Section: React.FC = () => {
               </Accordion>
             </CardDisplay>
           </div>
-          <div id="Card" className="mb-6">
+          <div id="Card" className="">
             <CardDisplay
               title="CardDisplay"
               description="A CardDisplay component to display content."
@@ -133,7 +140,7 @@ const Section: React.FC = () => {
               </ComponentCard>
             </CardDisplay>
           </div>
-          <div id="Alert" className="mb-6">
+          <div id="Alert" className="">
             <CardDisplay
               title="Alert"
               description="An alert component to display messages."
@@ -147,7 +154,7 @@ const Section: React.FC = () => {
               </Alert>
             </CardDisplay>
           </div>
-          <div id="Avatar" className="mb-6">
+          <div id="Avatar" className="">
             <CardDisplay
               title="Avatar"
               description="An avatar component to display user profile images."
@@ -159,7 +166,7 @@ const Section: React.FC = () => {
               <Avatar status="online" />
             </CardDisplay>
           </div>
-          <div id="Button" className="mb-6">
+          <div id="Button" className="">
             <CardDisplay
               title="Button"
               description="A button component to trigger actions."
@@ -170,7 +177,7 @@ const Section: React.FC = () => {
               <Button variant="success">dont you dare</Button>
             </CardDisplay>
           </div>
-          <div id="Checkbox" className="mb-6">
+          <div id="Checkbox" className="">
             <CardDisplay
               title="Checkbox"
               description="A checkbox component to select options."
@@ -181,7 +188,7 @@ const Section: React.FC = () => {
               <Checkbox label="Label" />
             </CardDisplay>
           </div>
-          <div id="Dropdown" className="mb-6">
+          <div id="Dropdown" className="">
             <CardDisplay
               title="Dropdown"
               description="A dropdown component to select options."
@@ -200,7 +207,7 @@ const Section: React.FC = () => {
               </Dropdown>
             </CardDisplay>
           </div>
-          <div id="Input" className="mb-6">
+          <div id="Input" className="">
             <CardDisplay
               title="Input"
               description="An input component to enter data."
@@ -217,7 +224,7 @@ const Section: React.FC = () => {
               />
             </CardDisplay>
           </div>
-          <div id="Radio" className="mb-6">
+          <div id="Radio" className="">
             <CardDisplay
               title="Radio"
               description="A radio component to select options."
@@ -228,7 +235,7 @@ const Section: React.FC = () => {
               <Radio label="Label" />
             </CardDisplay>
           </div>
-          <div id="Textarea" className="mb-6">
+          <div id="Textarea" className="">
             <CardDisplay
               title="Textarea"
               description="A textarea component to enter multiple lines of text."
@@ -239,7 +246,7 @@ const Section: React.FC = () => {
               <TextArea placeholder="Enter your text here..." variant="" />
             </CardDisplay>
           </div>
-          <div id="Toggle" className="mb-6">
+          <div id="Toggle" className="">
             <CardDisplay
               title="Toggle"
               description="A toggle component to switch between two states."

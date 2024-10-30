@@ -23,11 +23,11 @@ function AnimatedText({ scrollValue }: AnimatedTextProps) {
           }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
         >
-          <motion.span style={{ fontSize: introFontSize }} className="text-xl mb-0">
-            <span className="bg-gradient-to-br from-[#FFF] to-[#999] bg-clip-text font-fira font-bold text-transparent">
+          <motion.span style={{ fontSize: introFontSize }} className="mb-0">
+            <span className="bg-gradient-to-br from-[#FFF] to-[#999] bg-clip-text font-geist text-4xl font-bold text-transparent">
               {`Introducing Flamin`}
             </span>
-            <span className="bg-gradient-to-r from-[#FB7185] to-[#F43F5E] bg-clip-text font-sans text-xl font-black text-transparent">
+            <span className="bg-gradient-to-r from-[#FB7185] to-[#F43F5E] bg-clip-text font-sans text-2xl font-black text-transparent">
               UI
             </span>
           </motion.span>
@@ -37,9 +37,9 @@ function AnimatedText({ scrollValue }: AnimatedTextProps) {
           {words.map((word, i) => {
             const start = 0.2 + (i / words.length) * 0.8; // Start after the intro animation
             const end = start + 0.8 / words.length;
-            if (word === "ProtoUI") {
+            if (word === "FlaminUI") {
               return (
-                <ProtoWord
+                <FlaminWord
                   key={i}
                   progress={scrollValue}
                   range={[start, end]}
@@ -87,7 +87,7 @@ const Word = ({
     );
   };
   
-  const ProtoWord = ({
+  const FlaminWord = ({
     progress,
     range,
   }: {
@@ -101,14 +101,14 @@ const Word = ({
         <motion.span
           className="absolute top-0 left-0 text-opacity-10 text-white"
         >
-          <span className="font-fira font-bold">{`Flamin`}</span>
-          <span className="font-sans text-xl font-black">UI </span>
+          <span className="font-geist font-bold">{`Flamin`}</span>
+          <span className="font-sans text-2xl font-black">UI </span>
         </motion.span>
         <motion.span style={{ opacity }}>
-          <span className="bg-gradient-to-br from-[#FFF] to-[#999] bg-clip-text font-fira font-bold text-transparent">
+          <span className="bg-gradient-to-br from-[#FFF] to-[#999] bg-clip-text font-geist font-bold text-transparent">
             {`Flamin`}
           </span>
-          <span className="bg-gradient-to-r from-[#FB7185] to-[#F43F5E] bg-clip-text font-sans text-xl font-black text-transparent">
+          <span className="bg-gradient-to-r from-[#FB7185] to-[#F43F5E] bg-clip-text font-sans text-2xl font-black text-transparent">
             UI{" "}
           </span>
         </motion.span>

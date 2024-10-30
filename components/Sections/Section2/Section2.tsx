@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useRef } from "react";
 import DottedDesign from "./DottedDesign";
 import DottedMask from "./DottedMask";
@@ -19,8 +20,7 @@ function Section2() {
   }, [scrollYProgress]);
 
   return (
-    <div className="h-[300vh] w-full relative max-h-max" ref={containerRef}>
-      {" "}
+    <div className="h-[300vh] w-full relative top-0" ref={containerRef}>
       {/* Increased height for scrolling */}
       <div className="w-full h-screen sticky md:top-0 top-10 flex items-center justify-center bg-red-500/0">
         <div className="flex items-center justify-center md:w-2/3 md:h-96 h-full bg-black px-4 md:px-0">

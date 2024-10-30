@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Sidebar: React.FC = () => {
   return (
-    <div className="fixed top-[90px] md:mt-6 md:mb-8 md:left-8 md:w-64 md:bottom-16 overflow-y-auto md:p-4 z-10 text-white custom-scrollbar md:bg-transparent bg-black w-screen h-full md:h-4/5 p-8 -mt-[40px]">
+    <div className="absolute mt-12 md:mt-0 md:relative md:w-max md:overflow-y-hidden font-geist text-white custom-scrollbar bg-black z-20 md:z-0 w-screen h-screen md:h-max p-8">
       <h2 className="text-2xl font-bold mb-8">All Components</h2>
       <div className="flex-grow bottom-16 md:bottom-0">
         <ul>

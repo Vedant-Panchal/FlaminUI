@@ -3,10 +3,10 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="relative md:h-24 h-max md:px-32 px-4 py-8 flex w-full md:items-center items-start md:justify-center gap-2 backdrop-blur-xl  bg-black/50 after:content-[''] after:absolute after:w-full after:h-[1px] after:bg-gradient-to-r from-[#787878]/0 via-[#DEDEDE] to-[#787878]/0 after:top-[0] after:right-0 after:opacity-50">
+    <div className="relative md:h-24 h-max bottom-0 md:px-32 px-4 py-8 flex w-full md:items-center items-start md:justify-center gap-2 backdrop-blur-xl  bg-black/50 after:content-[''] after:absolute after:w-full after:h-[1px] after:bg-gradient-to-r from-[#787878]/0 via-[#DEDEDE] to-[#787878]/0 after:top-[0] after:right-0 after:opacity-50">
       <Link href={"/"} className="flex-1">
         <p>
-          <span className="bg-gradient-to-br from-[#FFF] to-[#999] bg-clip-text font-fira text-2xl font-bold text-transparent">
+          <span className="bg-gradient-to-br from-[#FFF] to-[#999] bg-clip-text font-geist text-2xl font-bold text-transparent">
             Flamin
           </span>
           <span className="bg-gradient-to-r from-[#FB7185] to-[#F43F5E] bg-clip-text font-sans text-xl font-black text-transparent">
