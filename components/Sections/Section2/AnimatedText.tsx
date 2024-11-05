@@ -8,7 +8,7 @@ type AnimatedTextProps = {
 
 function AnimatedText({ scrollValue }: AnimatedTextProps) {
   const paragraph =
-    "We know what's going on. You need highly customizable components to create unique interfaces, but building them from scratch can be frustrating and time consuming. That's when FlaminUI comes in. It's a collection of components that you can use to create stunning components.";
+    "We know what's going on, You need highly customizable components to create unique interfaces, but building them from scratch can be frustrating and time consuming. That's when FlaminUI comes in. It's a collection of components that you can use to create stunning components.";
   const words = paragraph.split(" ");
 
   const introOpacity = useTransform(scrollValue, [0, 0.1], [0, 1]);
