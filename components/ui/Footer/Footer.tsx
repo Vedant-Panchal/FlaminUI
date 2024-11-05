@@ -33,7 +33,7 @@ function Footer() {
         <Link href={"/categories"} className="text-white/80 font-semibold md:text-sm text-xs">
           Categories
         </Link>
-        <Link href={"https://x.com/home"} target="_blank" className="text-white/80 font-semibold md:text-sm text-xs">
+        <Link href={"https://x.com/FlaminUI"} target="_blank" className="text-white/80 font-semibold md:text-sm text-xs">
           Twitter
         </Link>
       </div>
