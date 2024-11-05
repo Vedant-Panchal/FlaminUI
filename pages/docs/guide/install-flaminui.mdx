@@ -1,26 +1,77 @@
 --- 
-title: "Intsall FlaminUI"
-date: "2024-07-22"
+title: "Configure FlaminUI"
+date: "2024-11-05"
 ---
 
 import CodeCopy from "@src/CodePreview/CodeCopy";
 
-### Initialise FlaminUI
 
-Once you've created a Next App as descirbed, Execute the follwing command inside of you NextJS project to initialise FlaminUI
+Once a React project is created, you can follow given steps to configure FlaminUI in Your project.
+
+### Install dependencies 
+<CodeCopy
+  language="markdown"
+  code={`npm i framer-motion clsx tailwind-merge tw-merge`}
+/>
+
+### Add utility file
+
+Create a file at `@/lib/utils.ts` with the follwing content
+
+<CodeCopy 
+  code={`import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}`}
+language="markdown"
+fileName="lib/utils.ts"
+/>
+
+### Configure TypeScript
+
+Add the following content in your typescript configuration
 
 <CodeCopy
-code={`npx flamin-ui init`}
+code=
+{`{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./*"],
+      "@components/*": ["lib/components/*"],
+      "@lib/*": ["lib/*"],
+      "@types/*": ["lib/types/*"],
+      "@src/*":["components/*"]
+    },
+    "target": "ES5",
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "theme.config.tsx","next.config.js","**/*.mdx"],
+  "exclude": ["node_modules"]
+}`}
+
+fileName="tsconfig.json"
 language="markdown"
 />
 
-### Start using
+### Start Using
 
-You are all set to use FlaminUI in your project. Add FlaminUI components as needed, For an example you can add the Button component by executing the following command
-
-<CodeCopy
-code={`npx flamin-ui add Button`}
-language="markdown"
-/>
-
-Now you can import and use it as you want it. Refer to the docs for more information about available components and their usage.
+You're all set to use FlaminUI in your porject, Now you may refer to components docs for more information.
