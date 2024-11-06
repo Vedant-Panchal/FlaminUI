@@ -94,11 +94,11 @@ function Section1() {
       <div className="relative z-[100] flex flex-col items-center md:justify-center justify-start pt-40 md:pt-0 h-full">
         <h1 className="md:text-6xl text-3xl font-geist text-transparent  md:leading-[70px] font-bold md:text-center text-center px-4">
           <span className="bg-clip-text bg-gradient-to-b from-[#fffff7] to-[#727267]">
-            Redifining Component Flexibility
-          </span>{" "}
+            Flexible Components
+          </span>
           <br />
           <span className="bg-clip-text bg-gradient-to-b from-[#fffff7] to-[#727267]">
-            &quot;Make Your Interfaces 10x Unique&quot;
+            That Make Your Interfaces 10x Unique
           </span>
         </h1>
         <div className="flex md:flex-row md:items-center md:justify-center md:space-x-5 mt-10 flex-col gap-3 w-full px-10">

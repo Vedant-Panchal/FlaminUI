@@ -2,10 +2,10 @@
   "introduction": {
     "title": "Introduction"
   },
-  "install-nextjs": {
-    "title": "Install NextJS"
+  "setup-react-project": {
+    "title": "Setup React Project"
   },
   "install-flaminui": {
-    "title": "Install FlaminUI"
+    "title": "Configure FlaminUI"
   }
 }
