@@ -234,16 +234,36 @@ export const Input = ({
                 <>
                   <div className="mt-2 flex w-full">
                     <div
-                      className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 1 ? "bg-red-500" : "bg-transparent"}`}
+                      className={
+                        "h-1 flex-1 " +
+                        (passwordStrength !== null && passwordStrength >= 1
+                          ? "bg-red-500"
+                          : "bg-transparent")
+                      }
                     ></div>
                     <div
-                      className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 2 ? "bg-yellow-500" : "bg-transparent"}`}
+                      className={
+                        "h-1 flex-1 " +
+                        (passwordStrength !== null && passwordStrength >= 2
+                          ? "bg-yellow-500"
+                          : "bg-transparent")
+                      }
                     ></div>
                     <div
-                      className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 3 ? "bg-amber-600" : "bg-transparent"}`}
+                      className={
+                        "h-1 flex-1 " +
+                        (passwordStrength !== null && passwordStrength >= 3
+                          ? "bg-amber-600"
+                          : "bg-transparent")
+                      }
                     ></div>
                     <div
-                      className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 4 ? "bg-green-500" : "bg-transparent"}`}
+                      className={
+                        "h-1 flex-1 " +
+                        (passwordStrength !== null && passwordStrength >= 4
+                          ? "bg-green-500"
+                          : "bg-transparent")
+                      }
                     ></div>
                   </div>
                   <div className="mt-1 text-sm text-red-100">
@@ -268,9 +288,11 @@ const getIconForVariant = (
   switch (variant) {
     case "focused":
     case "filled":
-      return <X className="text-rose-100" onClick={handleClear} />;
+      return <X className="text-white" onClick={handleClear} />;
+    case "disabled":
+      return <AlertCircle className="text-white" onClick={handleAlert} />;
     case "error":
-      return <AlertCircle className="text-red-500" onClick={handleAlert} />;
+      return <AlertCircle className="text-white" onClick={handleAlert} />;
     default:
       return null;
   }
@@ -279,13 +301,13 @@ const getIconForVariant = (
 const switchInputVariant = (variant: InputVariants) => {
   switch (variant) {
     case "focused":
-      return "focus:ring-2 focus:ring-primary";
+      return "focus:outline focus:outline-rose-500";
     case "filled":
-      return "bg-gray-800";
+      return "bg-gray-700/50 focus:bg-transparent";
     case "disabled":
-      return "opacity-50 cursor-not-allowed";
+      return "bg-gray-500/40 cursor-not-allowed";
     case "error":
-      return "border-rose-600";
+      return "border-rose-500 focus:outline focus:outline-rose-500";
     default:
       return "";
   }
