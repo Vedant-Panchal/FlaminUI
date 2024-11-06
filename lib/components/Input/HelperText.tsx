@@ -9,11 +9,8 @@ export const HelperText = ({
   variant = "default",
   className,
 }: HelperTextProps) => {
-  return (
-    <p
-      className={`mt-2 text-sm ${variant === "error" ? "text-red-500" : "text-rose-200"} ${className}`}
-    >
-      {text}
-    </p>
-  );
+  const variantClass = variant === "error" ? "text-red-500" : "text-rose-200";
+  const combinedClass =
+    "mt-2 text-sm " + variantClass + " " + (className || "");
+  return <p className={combinedClass}>{text}</p>;
 };
