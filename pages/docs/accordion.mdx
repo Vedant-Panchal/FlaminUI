@@ -6,6 +6,8 @@ import {
   AccordionContent,
 } from "@components/Accordion/Accordion";
 import {cn} from "@/utils/cn"
+import CodeCopy from "@src/CodePreview/CodeCopy";
+
 
 ## Accordion
 
@@ -65,6 +67,20 @@ function AccordionDemo() {
 fileName="AccordionDemo.jsx"
 language="jsx" 
 />
+
+## Installation
+
+<CodeCopy 
+  code={`import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}`}
+language="tsx"
+fileName="Accordion.tsx"
+/>
+
 
 ## Props
 
