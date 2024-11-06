@@ -2,10 +2,47 @@ import React, { useState } from "react";
 import { cn } from "@/utils/cn";
 import { Label } from "./Label";
 import { HelperText } from "./HelperText";
-import { X, AlertCircle, Eye, EyeOff, ChevronUp, ChevronDown, Paperclip } from "lucide-react";
-import Button from "../Button/Button";
+import {
+  X,
+  AlertCircle,
+  Eye,
+  EyeOff,
+  ChevronUp,
+  ChevronDown,
+  Paperclip,
+} from "lucide-react";
+import { ClassNameValue } from "tailwind-merge";
 
-type InputVariants = "default" | "focused" | "filled" | "disabled" | "error" | "";
+// !! button for file upload
+
+type ButtonProps = {
+  children?: React.ReactNode;
+  className?: ClassNameValue;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+const Button = ({ children, className, ...props }: ButtonProps) => {
+  return (
+    <button
+      className={cn(
+        "flex items-center gap-3 rounded-lg bg-rose-500 px-6 py-2 font-geist font-semibold text-rose-100 shadow-md duration-200 ease-in-out hover:shadow-lg hover:brightness-95",
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};
+
+// !! button for file upload
+
+type InputVariants =
+  | "default"
+  | "focused"
+  | "filled"
+  | "disabled"
+  | "error"
+  | "";
 
 type InputProps = {
   label?: string;
@@ -33,7 +70,9 @@ export const Input = ({
   step = 1,
   ...props
 }: InputProps) => {
-  const [inputValue, setInputValue] = useState(type === "number" ? props.value || 0 : "");
+  const [inputValue, setInputValue] = useState(
+    type === "number" ? props.value || 0 : ""
+  );
   const [showPassword, setShowPassword] = useState(false);
   const [passwordStrength, setPasswordStrength] = useState<number | null>(null);
   const [fileName, setFileName] = useState<string | null>(null);
@@ -43,8 +82,10 @@ export const Input = ({
   const evaluatePassword = (password: string) => {
     if (!password) return setPasswordStrength(null);
     if (password.length < 6) return setPasswordStrength(1);
-    if (/^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/.test(password)) return setPasswordStrength(4);
-    if (/^(?=.*[A-Z])(?=.*\d).{6,}$/.test(password)) return setPasswordStrength(3);
+    if (/^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/.test(password))
+      return setPasswordStrength(4);
+    if (/^(?=.*[A-Z])(?=.*\d).{6,}$/.test(password))
+      return setPasswordStrength(3);
     return setPasswordStrength(2);
   };
 
@@ -109,9 +150,17 @@ export const Input = ({
     return getIconForVariant(variant, handleClear, handleAlert);
   };
 
+  const inputVariantClass = switchInputVariant(variant);
+  const iconClass = showIcon ? "pr-10" : "";
+
   return (
     <div className="relative space-y-1 font-geist font-normal text-zinc-100">
-      {label && <Label text={label} htmlFor={type === "file" ? "file-input" : undefined} />}
+      {label && (
+        <Label
+          text={label}
+          htmlFor={type === "file" ? "file-input" : undefined}
+        />
+      )}
       <div className="relative flex flex-col items-start">
         {type === "file" && (
           <>
@@ -126,9 +175,10 @@ export const Input = ({
               <label htmlFor="file-input" className="cursor-pointer">
                 <Paperclip className="text-white" />
               </label>
-              <span className="flex-1 text-zinc-400">{fileName || "Add a file"}</span>
+              <span className="flex-1 text-zinc-400">
+                {fileName || "Add a file"}
+              </span>
               <Button
-                variant=""
                 className="p-2 bg-white text-black rounded-lg"
                 onClick={() => document.getElementById("file-input")?.click()}
               >
@@ -144,7 +194,12 @@ export const Input = ({
                 {getIcon()}
               </span>
             )}
-            <div style={{ minHeight: "6rem" /* Adjust height as needed */, position: 'relative' }}>
+            <div
+              style={{
+                minHeight: "6rem" /* Adjust height as needed */,
+                position: "relative",
+              }}
+            >
               <input
                 type={type === "password" && showPassword ? "text" : type}
                 placeholder={placeholder}
@@ -158,8 +213,8 @@ export const Input = ({
                 className={cn(
                   "min-h-14 min-w-80 appearance-none rounded-lg bg-transparent px-3 py-2 font-geist text-base font-normal text-zinc-100 outline outline-1 outline-gray-100/10 selection:bg-gray-400/40 placeholder:text-zinc-400 focus:outline focus:outline-gray-100/80",
                   className,
-                  showIcon ? "pr-10" : "",
-                  switchInputVariant(variant),
+                  iconClass,
+                  inputVariantClass
                 )}
                 {...props}
               />
@@ -179,16 +234,36 @@ export const Input = ({
                 <>
                   <div className="mt-2 flex w-full">
                     <div
-                      className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 1 ? "bg-red-500" : "bg-transparent"}`}
+                      className={
+                        "h-1 flex-1 " +
+                        (passwordStrength !== null && passwordStrength >= 1
+                          ? "bg-red-500"
+                          : "bg-transparent")
+                      }
                     ></div>
                     <div
-                      className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 2 ? "bg-yellow-500" : "bg-transparent"}`}
+                      className={
+                        "h-1 flex-1 " +
+                        (passwordStrength !== null && passwordStrength >= 2
+                          ? "bg-yellow-500"
+                          : "bg-transparent")
+                      }
                     ></div>
                     <div
-                      className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 3 ? "bg-amber-600" : "bg-transparent"}`}
+                      className={
+                        "h-1 flex-1 " +
+                        (passwordStrength !== null && passwordStrength >= 3
+                          ? "bg-amber-600"
+                          : "bg-transparent")
+                      }
                     ></div>
                     <div
-                      className={`h-1 flex-1 ${passwordStrength !== null && passwordStrength >= 4 ? "bg-green-500" : "bg-transparent"}`}
+                      className={
+                        "h-1 flex-1 " +
+                        (passwordStrength !== null && passwordStrength >= 4
+                          ? "bg-green-500"
+                          : "bg-transparent")
+                      }
                     ></div>
                   </div>
                   <div className="mt-1 text-sm text-red-100">
@@ -208,12 +283,14 @@ export const Input = ({
 const getIconForVariant = (
   variant: InputVariants,
   handleClear: () => void,
-  handleAlert: () => void,
+  handleAlert: () => void
 ) => {
   switch (variant) {
     case "focused":
     case "filled":
       return <X className="text-white" onClick={handleClear} />;
+    case "disabled":
+      return <AlertCircle className="text-white" onClick={handleAlert} />;
     case "error":
       return <AlertCircle className="text-white" onClick={handleAlert} />;
     default:
@@ -223,16 +300,14 @@ const getIconForVariant = (
 
 const switchInputVariant = (variant: InputVariants) => {
   switch (variant) {
-    case "default":
-      return "border border-gray-300 focus:border-gray-500";
     case "focused":
-      return "border border-red-500 focus:border-red-500 focus:outline-red-500";
+      return "focus:outline focus:outline-rose-500";
     case "filled":
-      return "border border-gray-300 focus:border-gray-500";
-    case "error":
-      return "border border-red-500 focus:border-red-500 focus:outline-red-500";
+      return "bg-gray-700/50 focus:bg-transparent";
     case "disabled":
-      return "bg-white border text-gray-800 opacity-50 cursor-not-allowed";
+      return "bg-gray-500/40 cursor-not-allowed";
+    case "error":
+      return "border-rose-500 focus:outline focus:outline-rose-500";
     default:
       return "";
   }

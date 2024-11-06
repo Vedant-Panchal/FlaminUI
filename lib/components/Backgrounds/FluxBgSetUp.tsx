@@ -2,22 +2,21 @@
 import { cn } from "@/utils/cn";
 import React, { useEffect, useRef } from "react";
 
-// random object generation code
 const generateRandomColor = (): string => {
   const red = Math.floor(Math.random() * 256);
   const green = Math.floor(Math.random() * 256);
   const blue = Math.floor(Math.random() * 256);
-  return `${red}, ${green}, ${blue}`;
+  return [red, green, blue].join(", ");
 };
 
 const generateRandomSize = (): string => {
   const size = Math.floor(Math.random() * 101);
-  return `${size}%`;
+  return size + "%";
 };
 
 const generateRandomPosition = (): { top: string; left: string } => {
-  const top = `${Math.floor(Math.random() * 100)}%`;
-  const left = `${Math.floor(Math.random() * 100)}%`;
+  const top = Math.floor(Math.random() * 100) + "%";
+  const left = Math.floor(Math.random() * 100) + "%";
   return { top, left };
 };
 
@@ -29,7 +28,7 @@ const generateRandomAnimation = (): string => {
 
 const generateRandomDuration = (): string => {
   const duration = Math.floor(Math.random() * 20);
-  return `${duration}s`;
+  return duration + "s";
 };
 
 const generateRandomObject = (): {
@@ -48,7 +47,6 @@ const generateRandomObject = (): {
     duration: generateRandomDuration(),
   };
 };
-// random object generation code
 
 interface GradientProps {
   color: string;
@@ -152,7 +150,8 @@ const FluxBg: React.FC<FluxBg> = ({
       curX += (tgX - curX) / 30;
       curY += (tgY - curY) / 30;
       if (interBubbleRef.current) {
-        interBubbleRef.current.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+        interBubbleRef.current.style.transform =
+          "translate(" + Math.round(curX) + "px, " + Math.round(curY) + "px)";
       }
       requestAnimationFrame(move);
     }
@@ -177,18 +176,29 @@ const FluxBg: React.FC<FluxBg> = ({
     return gradients.map((gradient, index) => {
       const style: React.CSSProperties = {
         position: "absolute",
-        background: `radial-gradient(circle at center, rgba(${gradient.color}, 0.8) 0, rgba(${gradient.color}, 0) 50%) no-repeat`,
+        background:
+          "radial-gradient(circle at center, rgba(" +
+          gradient.color +
+          ", 0.8) 0, rgba(" +
+          gradient.color +
+          ", 0) 50%) no-repeat",
         mixBlendMode: blendingMode,
         width: gradient.size || "80%",
         height: gradient.size || "80%",
         top: gradient.top || "50%",
         left: gradient.left || "50%",
         transform: "translate(-50%, -50%)",
-        animation: `${gradient.animation} ${gradient.duration || "30s"} ${gradient.timing || "ease"} infinite`,
+        animation:
+          gradient.animation +
+          " " +
+          (gradient.duration || "30s") +
+          " " +
+          (gradient.timing || "ease") +
+          " infinite",
         opacity: gradient.opacity || 1,
       };
 
-      return <div key={index} className={``} style={style}></div>;
+      return <div key={index} className="" style={style}></div>;
     });
   };
 
@@ -197,7 +207,14 @@ const FluxBg: React.FC<FluxBg> = ({
       className={cn("h-full w-full relative overflow-hidden", className)}
       ref={containerRef}
       style={{
-        background: `linear-gradient(109.6deg, ${backgroundColor1} 11.2%, ${backgroundColor2} 51.2%, ${backgroundColor3} 98.6%)`,
+        background:
+          "linear-gradient(109.6deg, " +
+          backgroundColor1 +
+          " 11.2%, " +
+          backgroundColor2 +
+          " 51.2%, " +
+          backgroundColor3 +
+          " 98.6%)",
       }}
     >
       <div className="absolute inset-0 p-2 z-[1000] m-auto h-fit w-fit bg-gradient-to-b from-slate-200 to-slate-50/60 bg-clip-text text-center font-geist text-7xl font-extrabold tracking-tight text-transparent">
@@ -221,13 +238,18 @@ const FluxBg: React.FC<FluxBg> = ({
           </filter>
         </defs>
       </svg>
-      <div className="w-full h-full" style={{ filter: `url(#goo) blur(40px)` }}>
+      <div className="w-full h-full" style={{ filter: "url(#goo) blur(40px)" }}>
         {generateGradients()}
         <div
           className="interactive"
           ref={interBubbleRef}
           style={{
-            background: `radial-gradient(circle at center, rgba(${interactiveColor}, 0.8) 0, rgba(${interactiveColor}, 0) 50%) no-repeat`,
+            background:
+              "radial-gradient(circle at center, rgba(" +
+              interactiveColor +
+              ", 0.8) 0, rgba(" +
+              interactiveColor +
+              ", 0) 50%) no-repeat",
             mixBlendMode: blendingMode,
           }}
         ></div>

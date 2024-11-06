@@ -2,7 +2,7 @@ import { motion, Transition } from "framer-motion";
 import { Code, TvMinimal } from "lucide-react";
 
 const TOGGLE_CLASSES =
-  "text-sm font-medium font-geist flex items-center py px-6 gap-2.5 md:py-2 transition-colors relative z-10";
+  "text-sm font-medium font-geist flex items-center py-3 px-6 gap-2.5 md:py-2 transition-colors relative z-10";
 
 interface SwitchButtonProps {
   selected: "preview" | "code";

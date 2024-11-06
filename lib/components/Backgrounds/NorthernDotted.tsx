@@ -19,7 +19,7 @@ type NorthernDottedProps = {
 
 export const NorthernDotted = ({ dotSize="xs",className }: NorthernDottedProps) => {
   const size = sizeMap[dotSize];
-  const bgSize = `${size}rem ${size}rem`;
+  const bgSize = size + "rem " + size + "rem";
   return (
     <div className={cn("relative h-screen w-screen overflow-hidden bg-transparent",className)}>
       <motion.div

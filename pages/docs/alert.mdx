@@ -3,6 +3,7 @@ import Alert from "@components/Alert/Alert";
 import AlertTitle from "@components/Alert/AlertTitle";
 import AlertDescription from "@components/Alert/AlertDescription";
 import { cn } from "@/utils/cn";
+import CodeCopy from "@src/CodePreview/CodeCopy"
 
 ## Alert
 
@@ -35,6 +36,129 @@ function AlertDemo() {
 fileName="AlertDemo.jsx"
 language="jsx"
 />
+
+## Installation
+
+Create following files to use the alert component
+
+<CodeCopy 
+  code={`import React, { useState, useEffect, ReactNode } from "react";
+import { cn } from "@/utils/cn";
+import { motion } from "framer-motion";
+
+interface AlertProps {
+  onClose?: () => void;
+  dismissAfter?: number;
+  children?: ReactNode;
+  className?: string;
+}
+
+const Alert: React.FC<AlertProps> = ({
+  children,
+  className,
+  onClose,
+  dismissAfter = 1000,
+  ...props
+}) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleClose = () => {
+    setIsVisible(false);
+    if (onClose) onClose();
+  };
+
+  useEffect(() => {
+    setIsVisible(true);
+
+    const timer = setTimeout(() => {
+      setIsVisible(false);
+      if (onClose) onClose();
+    }, dismissAfter);
+
+    return () => clearTimeout(timer);
+  }, [dismissAfter, onClose]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -10 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.3 }}
+      className={cn(
+        "flex min-w-80 items-center rounded-lg border border-rose-50 bg-zinc-950 p-5",
+        className,
+      )}
+      {...props}
+    >
+      <div className="flex flex-col space-y-2">{children}</div>
+      <button
+        onClick={handleClose}
+        className="ml-auto text-3xl leading-none text-rose-50"
+      >
+        ×
+      </button>
+    </motion.div>
+  );
+};
+
+export default Alert;
+`}
+language="tsx"
+fileName="Alert.tsx"
+/>
+
+<CodeCopy 
+  code={`import React from "react";
+import { cn } from "@/utils/cn";
+
+interface AlertDescriptionProps
+  extends React.HTMLAttributes<HTMLParagraphElement> {}
+
+const AlertDescription: React.FC<AlertDescriptionProps> = ({
+  children,
+  className,
+  ...props
+}) => {
+  return (
+    <p className={cn("font-geist text-rose-50", className)} {...props}>
+      {children}
+    </p>
+  );
+};
+
+export default AlertDescription;
+`}
+language="tsx"
+fileName="AlertDescription.tsx"
+/>
+
+<CodeCopy 
+  code={`import React from "react";
+import { cn } from "@/utils/cn";
+
+interface AlertTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {}
+
+const AlertTitle: React.FC<AlertTitleProps> = ({
+  children,
+  className,
+  ...props
+}) => {
+  return (
+    <h2
+      className={cn("font-geist font-extrabold text-rose-50", className)}
+      {...props}
+    >
+      {children}
+    </h2>
+  );
+};
+
+export default AlertTitle;
+`}
+language="tsx"
+fileName="AlertTitle.tsx"
+/>
+
 
 ## Props
 

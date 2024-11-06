@@ -96,10 +96,15 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
 
   return (
     <motion.div
-      className={cn(
-        `h-max w-full overflow-hidden bg-zinc-950 ${borderVariant === true ? "border border-white/20" : ""} ${itemVariant === "rounded" ? "rounded-lg" : ""} ${itemVariant === "rectangle" ? "rounded-none" : ""} ${itemVariant === "default" ? "rounded-sm" : ""}`,
-        className,
-      )}
+    className={cn(
+      "h-max w-full overflow-hidden bg-zinc-950",
+      { "border border-white/20": borderVariant },
+      { "rounded-lg": itemVariant === "rounded" },
+      { "rounded-none": itemVariant === "rectangle" },
+      { "rounded-sm": itemVariant === "default" },
+      className,
+    )}
+    
       animate={{ height }}
       transition={springConfig}
     >
