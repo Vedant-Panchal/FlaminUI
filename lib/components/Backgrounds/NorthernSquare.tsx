@@ -15,11 +15,19 @@ type NorthernSquareProps = {
   className?: string;
 };
 
-export const NorthernSquare = ({ squareSize="sm",className }: NorthernSquareProps) => {
+export const NorthernSquare = ({
+  squareSize = "sm",
+  className,
+}: NorthernSquareProps) => {
   const size = sizeMap[squareSize];
   const bgSize = `${size}em ${size}em`;
   return (
-    <div className={cn("relative h-screen w-screen overflow-hidden bg-transparent",className)}>
+    <div
+      className={cn(
+        "relative h-screen w-screen overflow-hidden bg-transparent",
+        className
+      )}
+    >
       {/* Existing motion.div elements remain unchanged */}
       <motion.div
         className="absolute z-10 h-[700px] w-[700px] rounded-full bg-blue-500 blur-3xl"
@@ -71,8 +79,8 @@ export const NorthernSquare = ({ squareSize="sm",className }: NorthernSquareProp
           bottom: ["-10%", "15%", "-20%", "-18%"],
           right: ["-10%", "-5%", "20%", "50%"],
         }}
-      ></motion.div> 
-       <motion.div
+      ></motion.div>
+      <motion.div
         className="absolute -bottom-[20%] right-[10%] z-10 h-[400px] w-[400px] rounded-full bg-blue-500 blur-3xl"
         initial={{
           bottom: "-20%",
@@ -94,7 +102,8 @@ export const NorthernSquare = ({ squareSize="sm",className }: NorthernSquareProp
       <div
         className="absolute inset-0 z-50 h-full w-full"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 17 17'%3E%3Crect width='16' opacity='1' height='16' x='0' y='0' fill='%23000000' /%3E%3C/svg%3E")`,
+          backgroundImage:
+            "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 17 17'%3E%3Crect width='16' opacity='1' height='16' x='0' y='0' fill='%23000000' /%3E%3C/svg%3E\")",
           backgroundRepeat: "repeat",
           backgroundSize: bgSize,
           backgroundPosition: "center center",

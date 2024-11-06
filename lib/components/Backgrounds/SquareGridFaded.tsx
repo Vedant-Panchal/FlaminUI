@@ -20,23 +20,27 @@ type SquareGridFadedProps = {
 export const SquareGridFaded = ({
   squareSize = "md",
   faded = false,
-  className
+  className,
 }: SquareGridFadedProps) => {
   const size =
     typeof squareSize === "number" ? squareSize : sizeMap[squareSize];
-  const gridSize = `${size}em ${size}em`;
+  const gridSize = size + "em " + size + "em";
 
   return (
-    <div className={cn("relative h-screen w-screen overflow-hidden bg-black",className)}>
+    <div
+      className={cn(
+        "relative h-screen w-screen overflow-hidden bg-black",
+        className
+      )}
+    >
       {/* Grid */}
       <div
         className="absolute inset-0 h-full w-full"
         style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: gridSize,
+          backgroundImage:
+            "linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px), " +
+            "linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px)",
+          backgroundSize: gridSize, 
         }}
       />
 
