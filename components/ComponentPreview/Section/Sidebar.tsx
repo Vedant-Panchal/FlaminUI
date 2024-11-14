@@ -28,9 +28,9 @@ const Sidebar: React.FC = () => {
           <li className="mb-2 hover:text-[#F65571] hover:pl-4 transition-all p-2 rounded-md">
             <Link href="/docs/checkbox">Checkbox</Link>
           </li>
-          {/* <li className="mb-2 hover:text-[#F65571] hover:pl-4 transition-all p-2 rounded-md">
+          <li className="mb-2 hover:text-[#F65571] hover:pl-4 transition-all p-2 rounded-md">
             <Link href="/docs/dropdown">Dropdown</Link>
-          </li> */}
+          </li>
           <li className="mb-2 hover:text-[#F65571] hover:pl-4 transition-all p-2 rounded-md">
             <Link href="/docs/input">Input</Link>
           </li>

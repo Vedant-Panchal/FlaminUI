@@ -188,7 +188,7 @@ const Section: React.FC = () => {
               <Checkbox label="Label" />
             </CardDisplay>
           </div>
-          {/* <div id="Dropdown" className="">
+          <div id="Dropdown" className="">
             <CardDisplay
               title="Dropdown"
               description="A dropdown component to select options."
@@ -206,7 +206,7 @@ const Section: React.FC = () => {
                 </DropdownContent>
               </Dropdown>
             </CardDisplay>
-          </div> */}
+          </div>
           <div id="Input" className="">
             <CardDisplay
               title="Input"
