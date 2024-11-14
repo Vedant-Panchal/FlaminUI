@@ -103,7 +103,7 @@ const Section: React.FC = () => {
               </Accordion>
             </CardDisplay>
           </div>
-          {/* <div id="Card" className="">
+          <div id="Card" className="">
             <CardDisplay
               title="CardDisplay"
               description="A CardDisplay component to display content."
@@ -139,7 +139,7 @@ const Section: React.FC = () => {
                 </Card>
               </ComponentCard>
             </CardDisplay>
-          </div> */}
+          </div>
           <div id="Alert" className="">
             <CardDisplay
               title="Alert"
@@ -188,7 +188,7 @@ const Section: React.FC = () => {
               <Checkbox label="Label" />
             </CardDisplay>
           </div>
-          {/* <div id="Dropdown" className="">
+          <div id="Dropdown" className="">
             <CardDisplay
               title="Dropdown"
               description="A dropdown component to select options."
@@ -206,7 +206,7 @@ const Section: React.FC = () => {
                 </DropdownContent>
               </Dropdown>
             </CardDisplay>
-          </div> */}
+          </div>
           <div id="Input" className="">
             <CardDisplay
               title="Input"
