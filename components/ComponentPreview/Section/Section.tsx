@@ -103,7 +103,7 @@ const Section: React.FC = () => {
               </Accordion>
             </CardDisplay>
           </div>
-          {/* <div id="Card" className="">
+          <div id="Card" className="">
             <CardDisplay
               title="CardDisplay"
               description="A CardDisplay component to display content."
@@ -139,7 +139,7 @@ const Section: React.FC = () => {
                 </Card>
               </ComponentCard>
             </CardDisplay>
-          </div> */}
+          </div>
           <div id="Alert" className="">
             <CardDisplay
               title="Alert"
