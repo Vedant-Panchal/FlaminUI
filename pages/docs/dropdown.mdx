@@ -1,4 +1,61 @@
-"use client";
+import {
+  Dropdown,
+  DropdownButton,
+  DropdownItem,
+  DropdownContent,
+  DropdownLabel,
+} from "@components/Dropdown/Dropdown";
+import CodePreview from "/components/CodePreview/CodePreview.tsx"
+
+## Dropdown
+
+Displays a menu to the user, such as a set of actions or functions. Triggered by a button.
+
+## Usage
+
+<CodePreview preview={<>
+<Dropdown>
+  <DropdownButton defaultText="Select an option" />
+  <DropdownContent>
+    <DropdownLabel>Options</DropdownLabel>
+    <DropdownItem value="Option 1">Option 1</DropdownItem>
+    <DropdownItem value="Option 2">Option 2</DropdownItem>
+    <DropdownItem value="Option 3">Option 3</DropdownItem>
+  </DropdownContent>
+</Dropdown>
+</>
+} 
+code={`import {
+  Dropdown,
+  DropdownButton,
+  DropdownItem,
+  DropdownContent,
+  DropdownLabel,
+} from "@components/Dropdown/Dropdown";
+
+function DropdownDemo() {
+  return (
+  <Dropdown>
+      <DropdownButton defaultText="Select an option" />
+      <DropdownContent>
+        <DropdownLabel>Options</DropdownLabel>
+        <DropdownItem value="Option 1">Option 1</DropdownItem>
+        <DropdownItem value="Option 2">Option 2</DropdownItem>
+        <DropdownItem value="Option 3">Option 3</DropdownItem>
+      </DropdownContent>
+  </Dropdown>
+  );
+}
+`}
+
+fileName="DropdownDemo.jsx"
+language="jsx"/>
+
+
+## Installation
+
+<CodeCopy 
+  code={`"use client";
 import React, { useEffect, useRef, useState } from "react";
 import { Variants } from "framer-motion";
 import { motion, AnimatePresence } from "framer-motion";
@@ -399,4 +456,64 @@ export const Dropdown: React.FC<DropdownProps> = ({
   );
 };
 
-export { DropdownButton, DropdownContent, DropdownItem, DropdownLabel };
+export { DropdownButton, DropdownContent, DropdownItem, DropdownLabel };`}
+language="tsx"
+fileName="Dropdown.tsx"
+/>
+
+
+## Props
+
+### Dropdown Props
+
+The `Dropdown` component accepts the following props:
+
+| Prop                | Type                           | Default    | Description                                                                                               |
+| ------------------- | ------------------------------ | ---------- | --------------------------------------------------------------------------------------------------------- |
+| `children`          | `React.ReactNode`              | -          | The dropdown button and content components.                                                               |
+| `dropdownAnimation` | `{}` | Slide down animation    | Animation variant for the Dropdown container. You can pass an animation object here to get a custom animation.                                                             |
+| `itemAnimation`     | `{}` | Slide up animation    | Animation variant for the Dropdown Items.You can pass an animation object here to get a custom animation.                                                                 |
+| `staggerItems`      | `boolean`                      | `false`    | Whether to stagger the children items.                                                                   |
+
+### DropdownButton Props
+
+The `DropdownButton` component accepts the following props:
+
+| Prop        | Type       | Default        | Description                                        |
+| ----------- | ---------- | -------------- | -------------------------------------------------- |
+| `defaultText` | `string`   | -              | Default text displayed on the button.               |
+| `className`  | `ClassValue` | -              | Additional CSS classes for the button.             |
+
+### DropdownContent Props
+
+The `DropdownContent` component accepts the following props:
+
+| Prop      | Type       | Default | Description        |
+| --------- | ---------- | ------- | ------------------ |
+| `children` | `React.ReactNode` | -       | The dropdown items and labels. |
+
+### DropdownItem Props
+
+The `DropdownItem` component accepts the following props:
+
+| Prop      | Type       | Default | Description           |
+| --------- | ---------- | ------- | --------------------- |
+| `value`   | `string`   | -       | The value of the item. |
+| `children` | `React.ReactNode` | -       | The text or content of the item. |
+| `className` | `ClassValue` | -       | Additional CSS classes for the item. |
+
+### DropdownLabel Props
+
+The `DropdownLabel` component accepts the following props:
+
+| Prop      | Type       | Default | Description        |
+| --------- | ---------- | ------- | ------------------ |
+| `children` | `React.ReactNode` | -       | The label text. |
+
+### DropdownList Props
+
+The `DropdownList` component is a wrapper for the dropdown items. It accepts the following props:
+
+| Prop       | Type       | Default | Description       |
+| ---------- | ---------- | ------- | ----------------- |
+| `className` | `string`   | -       | Additional CSS classes for the list. |
